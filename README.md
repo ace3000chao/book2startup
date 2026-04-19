@@ -365,8 +365,8 @@ book2startup/
 
 ## 📬 联系方式
 
-- **Gitee**：待配置
-- **GitHub**：待配置
+- **Gitee**：https://gitee.com/zhiyao-zhongshan-g_0/
+- **GitHub**：https://github.com/ace3000chao/
 
 ---
 
