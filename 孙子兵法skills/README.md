@@ -291,7 +291,7 @@ sunzi-skills/
 
 ```bash
 # 克隆仓库
-git clone https://github.com/待补充/孙子兵法skills.git
+git clone https://gitee.com/zhiyao-zhongshan-g_0/book2startup/孙子兵法skills.git
 
 # 查看所有Skills
 cd 孙子兵法skills
