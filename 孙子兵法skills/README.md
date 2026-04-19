@@ -442,7 +442,7 @@ curl -O https://raw.githubusercontent.com/待补充/孙子兵法skills/main/知�
 
 - **原文作者：** 孙武（春秋时期）
 - **译注者：** 刘建立《孙子兵法》华中科技大学出版社 2019
-- **生成工具：** [book2skill](https://github.com/nickmackenzie/book2skill)
+- **生成工具：** [book2skill](https://github.com/kangarooking/cangjie-skill)
 - **灵感来源：** 创业教育和AI辅助创业的实践探索
 
 ---
