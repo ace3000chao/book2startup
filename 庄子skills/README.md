@@ -3,7 +3,7 @@
 > 用现代语言重述庄子千年智慧，让AI agent能在真实场景中调用
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Built with book2skill](https://img.shields.io/badge/Built%20with-book2skill-green.svg)](https://github.com/cangjie-skill/book2skill)
+[![Built with book2skill](https://img.shields.io/badge/Built%20with-book2skill-green.svg)](https://github.com/kangarooking/cangjie-skill)
 
 ---
 
@@ -381,8 +381,8 @@ MIT License - 可自由使用、修改、分发。
 ## 🙏 致谢
 
 - **原著**：[庄周](https://zh.wikipedia.org/wiki/%E5%BA%84%E5%91%AA)（约前369-前286），战国时期道家学派代表
-- **蒸馏方法**：基于 [book2skill](https://github.com/cangjie-skill/book2skill) 方法论
-- **AI-Agent工具**：[OpenClaw](https://github.com/openclaw/openclaw) AI助手
+- **蒸馏方法**：基于 [book2skill](https://github.com/kangarooking/cangjie-skill) 方法论
+- **AI-Agent工具**：[OpenClaw](https://github.com/openclaw/openclaw) openclaw-AI助手
 
 ---
 
