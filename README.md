@@ -131,9 +131,10 @@
 #### 方法1：克隆整个仓库
 
 ```bash
-# 克隆book2startup仓库
+# 克隆gitee的book2startup仓库
 git clone https://gitee.com/zhiyao-zhongshan-g_0/book2startup.git
-# 或 GitHub（待配置）
+
+# 或 GitHub的book2startup仓库
 # git clone https://github.com/ace3000chao/book2startup.git
 
 cd book2startup
