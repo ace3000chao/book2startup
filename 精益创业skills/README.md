@@ -372,7 +372,7 @@ lean-startup-skills/
 
 1. **下载Skills**
    ```bash
-   git clone https://github.com/待补充/精益创业skills.git
+   git clone https://gitee.com/zhiyao-zhongshan-g_0/book2startup.git
    ```
 
 2. **配置到你的AI平台**
@@ -430,7 +430,7 @@ lean-startup-skills/
 
 - **book2skill流水线**：https://github.com/zhisheng-foo/book2skill
 - **《精益创业》原书**：Eric Ries, 2011
-- **孙子兵法Skills**（另一套东方商业智慧）：https://github.com/待补充/孙子兵法skills
+- **孙子兵法Skills**（另一套东方商业智慧）：https://gitee.com/zhiyao-zhongshan-g_0/book2startup/孙子兵法skills
 
 ---
 
@@ -475,7 +475,7 @@ Your AI agent can now think like a seasoned startup advisor:
 ### Quick Start
 
 ```bash
-git clone https://github.com/待补充/孙子兵法skills.git
+git clone https://gitee.com/zhiyao-zhongshan-g_0/book2startup.git
 ```
 
 See `INDEX.md` for full skill reference.
