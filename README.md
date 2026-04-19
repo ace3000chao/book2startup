@@ -132,7 +132,7 @@
 
 ```bash
 # 克隆book2startup仓库
-git clone https://gitee.com/你的用户名/book2startup.git
+git clone https://gitee.com/zhiyao-zhongshan-g_0/book2startup.git
 # 或 GitHub（待配置）
 # git clone https://github.com/你的用户名/book2startup.git
 
@@ -146,10 +146,10 @@ ls -la */
 
 ```bash
 # 只安装孙子兵法Skills
-git clone https://gitee.com/你的用户名/孙子兵法skills.git
+git clone https://gitee.com/zhiyao-zhongshan-g_0/book2startup/孙子兵法skills.git
 
 # 只安装精益创业Skills
-git clone https://gitee.com/你的用户名/精益创业skills.git
+git clone https://gitee.com/zhiyao-zhongshan-g_0/book2startup/精益创业skills.git
 ```
 
 ### 使用方法
