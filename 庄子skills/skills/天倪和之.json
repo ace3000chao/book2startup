@@ -1,0 +1,56 @@
+{
+  "skill": "tian-ni-he-zhi",
+  "version": "0.1.0",
+  "source": "《庄子》内篇·齐物论",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我和配偶在家务分配上吵了无数次，谁都不肯让步",
+      "expected_behavior": "调用天倪和之，引导用户看到家务之争是'相待'结构——一方多做，另一方就少做；用天倪：家务的'天倪'是什么？——是让双方都能接受、关系能继续运转",
+      "notes": "典型场景：亲密关系冲突"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我要调解两个部门的矛盾，A说B不配合，B说A不尊重他",
+      "expected_behavior": "调用天倪和之，分析两个部门的'相待'结构；找到共同目标（A和B都希望项目成功），用天倪让双方各安其位",
+      "notes": "典型场景：调解冲突"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我在团队里站队了，现在两派斗争，我夹在中间很难受",
+      "expected_behavior": "调用天倪和之，指出：你不需要选择站哪一派，而是看到两派的共同根基（团队的存续）；不参与相待的游戏，但帮助两派回到共同目标",
+      "notes": "典型场景：职场政治"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我看看这个表格的数据有没有问题",
+      "expected_behavior": "不调用任何skill，这是数据核实问题",
+      "notes": "诱饵：技术性任务"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "今天天气怎么样？",
+      "expected_behavior": "不调用任何skill，纯信息查询",
+      "notes": "诱饵：日常琐事"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "对方一直在用PUA操控我，天倪能帮我吗？",
+      "expected_behavior": "谨慎调用——如果存在严重的权力不平等和操控，天倪可能被误用为'你也让一步我也让一步'，实际上是在为操控者背书；应该先识别这是不平等关系",
+      "notes": "边界：权力不平等情境"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "他们争论的是我的基本权利，这种情况下能用天倪吗？",
+      "expected_behavior": "不调用天倪——当涉及基本人权时，没有'共同的根基'可以调和，必须明确立场",
+      "notes": "边界：基本人权情境"
+    }
+  ]
+}

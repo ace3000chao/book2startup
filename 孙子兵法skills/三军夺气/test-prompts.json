@@ -1,0 +1,36 @@
+{
+  "skill_name": "三军夺气",
+  "description": "攻心与夺气的竞争策略",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "竞争对手刚发了全员奖金包，士气正旺，我们怎么应对？",
+      "expected_behavior": "should_use",
+      "reason": "典型的夺气场景"
+    },
+    {
+      "id": "t02",
+      "prompt": "团队连续拿了三个大项目，开始骄傲了，怎么破？",
+      "expected_behavior": "should_use",
+      "reason": "己方需要治气"
+    },
+    {
+      "id": "t03",
+      "prompt": "谈判对手一直在施压，我应该强硬回击还是示弱？",
+      "expected_behavior": "should_use",
+      "reason": "需要夺心策略"
+    },
+    {
+      "id": "t04",
+      "prompt": "我想让员工每天打了鸡血一样工作",
+      "expected_behavior": "should_not_use",
+      "reason": "夺气是战术手段，不是日常管理"
+    },
+    {
+      "id": "t05",
+      "prompt": "竞品创始人在媒体上放话要碾压我们，团队有点慌",
+      "expected_behavior": "should_use",
+      "reason": "需要应对对手的夺心"
+    }
+  ]
+}

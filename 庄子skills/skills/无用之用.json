@@ -1,0 +1,56 @@
+{
+  "skill": "wu-yong-zhi-yong",
+  "version": "0.1.0",
+  "source": "《庄子》内篇·逍遥游",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我想Gap一年去思考人生，但所有人都说这是浪费时间",
+      "expected_behavior": "调用无用之用，引导用户质疑：'浪费时间'是谁的标准？Gap年对社会标准的'有用'是什么？对自己呢？",
+      "notes": "典型场景：被有用标准质疑"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我不想升职当管理者，但大家都说当不上管理者就是失败",
+      "expected_behavior": "调用无用之用，指出：'当管理者=成功'是社会标准，问用户：谁在定义这个标准？管理的'用'对你意味着什么？",
+      "notes": "典型场景：职业选择的价值重估"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我的创业项目不赚钱，我不知道该不该继续",
+      "expected_behavior": "调用无用之用，引导用户问：赚钱是'谁定义的成功'？项目本身创造了什么'无用之用'（比如学习、关系、经验）？",
+      "notes": "典型场景：创业价值评估"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我算一下这个月的收入支出",
+      "expected_behavior": "不调用任何skill，财务管理计算不需要无用之用",
+      "notes": "诱饵：技术性财务问题"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想学画画，但学画画能干什么呢？",
+      "expected_behavior": "谨慎调用——如果用户的'能干什么'是在找功利用途，说明还在有用框架里；但如果用户是真的在问职业方向，应该用顺势而为",
+      "notes": "诱饵：功利性询问 vs 真诚探索"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我没有存款，家里还有老人要养，这时候谈无用之用是不是太奢侈了？",
+      "expected_behavior": "不调用无用之用——生存需求尚未满足时，先解决基本生存，无用之用是上层需求",
+      "notes": "边界：基本生存 vs 精神追求"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我不想工作，只想躺平，这是无用之用吗？",
+      "expected_behavior": "谨慎调用——躺平如果是主动选择'不参与社会竞争'，可以是无用之用；如果是消极逃避，不是",
+      "notes": "边界：主动选择 vs 消极逃避"
+    }
+  ]
+}

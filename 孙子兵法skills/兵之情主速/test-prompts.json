@@ -1,0 +1,36 @@
+{
+  "skill_name": "兵之情主速",
+  "description": "速度优先的竞争法则",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "ChatGPT火了，我们公司想快速入局AI领域，有什么建议？",
+      "expected_behavior": "should_use",
+      "reason": "典型的风口速度战"
+    },
+    {
+      "id": "t02",
+      "prompt": "我们比竞品慢了三个月，用户已经被对方锁定了，还有机会吗？",
+      "expected_behavior": "should_use",
+      "reason": "需要分析速度劣势"
+    },
+    {
+      "id": "t03",
+      "prompt": "我们在做一个重大战略决策，涉及公司未来五年发展，应该快一点还是慢一点？",
+      "expected_behavior": "should_not_use",
+      "reason": "重大战略决策需要深度思考"
+    },
+    {
+      "id": "t04",
+      "prompt": "团队总是完不成任务，是执行速度有问题吗？",
+      "expected_behavior": "should_use",
+      "reason": "需要诊断速度问题"
+    },
+    {
+      "id": "t05",
+      "prompt": "为什么字节跳动做什么都能成功？是因为速度快吗？",
+      "expected_behavior": "should_use",
+      "reason": "需要分析字节的速度优势"
+    }
+  ]
+}

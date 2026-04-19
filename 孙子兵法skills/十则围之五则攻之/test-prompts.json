@@ -1,0 +1,42 @@
+{
+  "skill_name": "十则围之五则攻之",
+  "description": "兵力对比决策框架",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我们是一个50人的小团队，竞品是一个500人的大公司，怎么打？",
+      "expected_behavior": "should_use",
+      "reason": "典型的以少敌多场景"
+    },
+    {
+      "id": "t02",
+      "prompt": "投资人问我，如果腾讯做同样的产品你怎么办？",
+      "expected_behavior": "should_use",
+      "reason": "需要用此框架分析"
+    },
+    {
+      "id": "t03",
+      "prompt": "我比竞争对手强30%，应该进攻还是防守？",
+      "expected_behavior": "should_use",
+      "reason": "需要判断胜率"
+    },
+    {
+      "id": "t04",
+      "prompt": "我要不要和行业老大正面对抗？",
+      "expected_behavior": "should_use",
+      "reason": "需要先做实力对比评估"
+    },
+    {
+      "id": "t05",
+      "prompt": "今天中午吃什么？",
+      "expected_behavior": "should_not_use",
+      "reason": "日常决策无需此框架"
+    },
+    {
+      "id": "t06",
+      "prompt": "我想创业但没有资源，是不是完全不可能成功？",
+      "expected_behavior": "should_use",
+      "reason": "需要评估资源差距和应对策略"
+    }
+  ]
+}

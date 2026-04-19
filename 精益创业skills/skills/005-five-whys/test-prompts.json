@@ -1,0 +1,48 @@
+{
+  "skill_id": "leanstartup-005",
+  "skill_name": "五个为什么分析",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我们App最近一周的崩溃率是平时的3倍，开发团队说修好了，但下周又出现类似问题，怎么从根本上解决？",
+      "expected_behavior": "SHOULD_CALL — 重复出现的问题需要根本原因分析，五个为什么直接适用",
+      "category": "should_call"
+    },
+    {
+      "id": "t02",
+      "prompt": "这个月销售团队的业绩比上个月低了30%，老板让我查原因，我该怎么分析？",
+      "expected_behavior": "SHOULD_CALL — 业务指标异常需要根因分析，五个为什么是合适的工具",
+      "category": "should_call"
+    },
+    {
+      "id": "t03",
+      "prompt": "我在管理一家奶茶店，我发现最近客单价下降了，一般的解决办法是促销或加新品，我该怎么做？",
+      "expected_behavior": "PARTIAL_CALL — 这个问题相对简单，可能不需要5个为什么究根问底，但可以用",
+      "category": "boundary_fuzzy"
+    },
+    {
+      "id": "t04",
+      "prompt": "我们是一家小创业公司，团队5个人，每天都在处理紧急问题，这种状况该怎么改善？",
+      "expected_behavior": "SHOULD_CALL — 团队反复救火是系统问题，需要用五个为什么找到根本原因",
+      "category": "should_call"
+    },
+    {
+      "id": "t05",
+      "prompt": "工厂的生产线出了故障，设备部门已经换了零件，但下周又坏了，这是个技术问题不需要分析方法",
+      "expected_behavior": "SHOULD_NOT_CALL — 这是紧急故障处理场景，应该先恢复生产，事后复盘才用五个为什么",
+      "category": "should_not_call"
+    },
+    {
+      "id": "t06",
+      "prompt": "我的合伙人总是和我意见不一致，经常因为小事吵架，怎么用五个为什么分析？",
+      "expected_behavior": "SHOULD_NOT_CALL — 人际冲突不适合用五个为什么分析，管理和沟通问题不适用这个框架",
+      "category": "should_not_call"
+    },
+    {
+      "id": "t07",
+      "prompt": "我们每次发布新版本都会出现用户投诉增加的情况，但团队总说是'版本正常波动'，怎么证明这不是正常现象？",
+      "expected_behavior": "SHOULD_CALL — 反复出现的'版本波动'可能掩盖了系统性问题，需要追问根本原因",
+      "category": "should_call"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "skill": "wu-dai-xiaoyao",
+  "version": "0.1.0",
+  "source": "《庄子》内篇·逍遥游",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我想辞职去创业，但担心万一失败别人会怎么看我",
+      "expected_behavior": "调用无待逍遥法，引导用户检验'别人怎么看'是否是决策的依赖条件（有待），追问'如果没有这个条件还会做吗'",
+      "notes": "典型场景：功名依赖→无待检验"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我在一份稳定工作和高薪offer之间纠结",
+      "expected_behavior": "调用无待逍遥法，分析两个选项各依赖什么条件，哪个更接近'无待'",
+      "notes": "典型场景：条件比较→无待分析"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我应该读研究生还是直接工作？",
+      "expected_behavior": "调用无待逍遥法，引导用户问自己：读研/工作是否是'无待'的选择，还是在满足某种条件依赖",
+      "notes": "教育决策场景"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我查一下今天天气怎么样",
+      "expected_behavior": "不调用任何skill，纯信息查询不需要无待分析",
+      "notes": "诱饵：纯信息查询"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想学Python，该从哪里开始？",
+      "expected_behavior": "不调用无待逍遥法，这是具体技能学习问题，应该调用顺势而为或其他skill",
+      "notes": "诱饵：技术学习问题"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我有一笔债务需要下个月还清，否则会有严重后果",
+      "expected_behavior": "不调用无待逍遥法——紧急生存情境，无待反思会耽误行动",
+      "notes": "边界：紧急求生 vs 精神自由"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我刚买了新手机很开心",
+      "expected_behavior": "不调用无待逍遥法——日常小愉悦不需要上升到'是否有所待'的反思",
+      "notes": "边界：日常小事 vs 人生重大选择"
+    }
+  ]
+}

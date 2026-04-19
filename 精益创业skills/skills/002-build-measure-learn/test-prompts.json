@@ -1,0 +1,36 @@
+{
+  "skill_id": "leanstartup-002",
+  "skill_name": "Build-Measure-Learn循环",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我们刚发布了产品第一版，下一步该怎么安排工作优先级？感觉什么都要做",
+      "expected_behavior": "SHOULD_CALL — 产品刚发布，需要评估反馈决定下一步，BML循环直接适用",
+      "category": "should_call"
+    },
+    {
+      "id": "t02",
+      "prompt": "产品上线三个月了，团队每天都在加班，但我不确定我们是否在正确的方向上",
+      "expected_behavior": "SHOULD_CALL — 需要评估进展方向，BML循环的'Learn'阶段直接适用",
+      "category": "should_call"
+    },
+    {
+      "id": "t03",
+      "prompt": "我是做销售的，每天见客户，客户反馈都不一样，我不知道该听谁的，我该用什么框架来整理这些反馈？",
+      "expected_behavior": "SHOULD_NOT_CALL — 这是销售技巧问题，不是创业产品迭代框架的范畴",
+      "category": "should_not_call"
+    },
+    {
+      "id": "t04",
+      "prompt": "我们公司有个创新项目，集团要求每季度做一次汇报，我该怎么向领导展示进展？",
+      "expected_behavior": "PARTIAL_CALL — 大企业创新汇报部分适用，但BML的'快速循环'在季度汇报场景不匹配",
+      "category": "boundary_fuzzy"
+    },
+    {
+      "id": "t05",
+      "prompt": "投资人问我们现在的迭代速度是多少，我怎么衡量和回答？",
+      "expected_behavior": "SHOULD_CALL — 迭代速度是BML循环的核心指标，评估进展的典型问题",
+      "category": "should_call"
+    }
+  ]
+}

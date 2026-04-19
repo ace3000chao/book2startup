@@ -1,0 +1,42 @@
+{
+  "skill_name": "合于利而动",
+  "description": "理性决策的过滤器",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "朋友拉我去投资一个'稳赚'的项目，我有点心动，要不要投？",
+      "expected_behavior": "should_use",
+      "reason": "需要用'利'来过滤决策"
+    },
+    {
+      "id": "t02",
+      "prompt": "看到政策鼓励某个行业，想追风口又怕风险",
+      "expected_behavior": "should_use",
+      "reason": "典型的利弊权衡场景"
+    },
+    {
+      "id": "t03",
+      "prompt": "竞争对手融资了，我们要不要也融？",
+      "expected_behavior": "should_use",
+      "reason": "需要理性分析是否'有利'"
+    },
+    {
+      "id": "t04",
+      "prompt": "我想辞职创业，但舍不得现在的薪资",
+      "expected_behavior": "should_use",
+      "reason": "需要'合于利而动'来帮助决策"
+    },
+    {
+      "id": "t05",
+      "prompt": "今天心情不好，要不要吃顿好的犒劳自己？",
+      "expected_behavior": "should_not_use",
+      "reason": "情绪驱动的日常决定，不需要理性分析"
+    },
+    {
+      "id": "t06",
+      "prompt": "供应商给我回扣了，我要不要拿？",
+      "expected_behavior": "should_use",
+      "reason": "涉及道德风险和长期利益的决策"
+    }
+  ]
+}

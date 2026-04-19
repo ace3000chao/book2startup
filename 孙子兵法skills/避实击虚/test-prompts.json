@@ -1,0 +1,36 @@
+{
+  "skill_name": "避实击虚",
+  "description": "以小博大的竞争策略",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "巨头进入了我们的赛道，直接竞争根本打不过，我该怎么活？",
+      "expected_behavior": "should_use",
+      "reason": "典型的以小博大场景"
+    },
+    {
+      "id": "t02",
+      "prompt": "我们的资源有限，无法和竞品正面PK，推广策略怎么定？",
+      "expected_behavior": "should_use",
+      "reason": "资源约束下的策略选择"
+    },
+    {
+      "id": "t03",
+      "prompt": "我想找投资人融资，但市场上头部项目太多了",
+      "expected_behavior": "should_use",
+      "reason": "投资市场的差异化思考"
+    },
+    {
+      "id": "t04",
+      "prompt": "我的产品质量很好，但就是卖不过那些价格低的竞品",
+      "expected_behavior": "should_use",
+      "reason": "需要找对手的'虚'而不是硬碰硬"
+    },
+    {
+      "id": "t05",
+      "prompt": "公司团建去哪里玩？",
+      "expected_behavior": "should_not_use",
+      "reason": "与竞争策略完全无关"
+    }
+  ]
+}

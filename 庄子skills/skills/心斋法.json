@@ -1,0 +1,56 @@
+{
+  "skill": "xin-zhai",
+  "version": "0.1.0",
+  "source": "《庄子》内篇·人间世",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我明天要去见投资人，很紧张，脑子里全是杂念",
+      "expected_behavior": "调用心斋法，引导用户进行三阶段练习：听之以耳→听之以心→听之以气，达到虚空状态",
+      "notes": "典型场景：高压情境前的心理准备"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我要在全员大会上演讲，但我一上台就紧张得说不出话",
+      "expected_behavior": "调用心斋法，指出：这是典型的耳（听权威）和心（自我评判）干扰，需要进入'气'的状态",
+      "notes": "典型场景：公开演讲焦虑"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "谈判前周围人给了太多意见，我不知道该听谁的",
+      "expected_behavior": "调用心斋法，引导用户空掉所有外部意见，进入虚空心境，直接感应谈判现场",
+      "notes": "典型场景：意见过载"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "今天吃什么？",
+      "expected_behavior": "不调用任何skill，日常琐事不需要心斋",
+      "notes": "诱饵：日常琐事"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我的代码有个bug帮我看看",
+      "expected_behavior": "不调用心斋法，这是技术问题，需要具体分析",
+      "notes": "诱饵：技术问题"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我现在正在被持刀抢劫，心斋能帮我吗？",
+      "expected_behavior": "不调用心斋法——紧急求生情境，需要的是快速反应能力，不是虚空心境",
+      "notes": "边界：紧急求生 vs 心理准备"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "心斋和冥想/正念有什么区别？",
+      "expected_behavior": "调用心斋法，指出：心斋更具体有三阶段操作（耳→心→气），不是简单的'关注呼吸'或'放空头脑'",
+      "notes": "边界：与其他冥想方法的区分"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "skill": "an-shi-chu-shun",
+  "version": "0.1.0",
+  "source": "《庄子》内篇·养生主",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我的创业项目失败了，所有投资都打了水漂，我已经尽力了但还是失败了",
+      "expected_behavior": "调用安时处顺法，引导用户接受'适去'——项目失败是当时当地的结果，不是个人的失败；内心接纳后问自己：下一步能做什么",
+      "notes": "典型场景：事业失败"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我失去了最亲的人，每天都很痛苦，走不出来",
+      "expected_behavior": "调用安时处顺法，引导用户：悲伤是自然的，但不要让'哀'占据内心；允许悲伤流过，同时问自己：此刻我能做什么",
+      "notes": "典型场景：丧失挚爱"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我被确诊了慢性病，需要长期治疗，我觉得老天对我太不公平了",
+      "expected_behavior": "调用安时处顺法，指出：这是'适来'——疾病在这个时间发生，先接纳；然后问：在接纳之后，我能做什么来改善",
+      "notes": "典型场景：疾病"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我这次考试没考好，有点难过",
+      "expected_behavior": "不调用安时处顺法——这只是小挫折，不是'人力不可逆转'的重大困境；可以用顺势而为或以明来反思考试失败",
+      "notes": "诱饵：日常小挫折"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我选一个旅游目的地",
+      "expected_behavior": "不调用任何skill，这不需要面对不可改变的困境",
+      "notes": "诱饵：日常选择"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我刚创业失败，但我还有力气重新开始，安时处顺是不是在让我放弃？",
+      "expected_behavior": "调用安时处顺法澄清：不是放弃努力，而是接纳已经失败这个事实，然后继续努力；接纳是继续行动的前提，不是替代",
+      "notes": "边界：接纳 vs 放弃"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "安时处顺和认命/躺平有什么区别？",
+      "expected_behavior": "调用安时处顺法澄清：认命是'算了，反正也没用'；安时处顺是'知道了，但我还在'——事后的接纳不是事前的消极",
+      "notes": "边界：安时处顺 vs 认命"
+    }
+  ]
+}

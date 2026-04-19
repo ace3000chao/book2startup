@@ -1,0 +1,36 @@
+{
+  "skill_name": "进不求名退不避罪",
+  "description": "独立担当的决策法则",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "老板让我裁员来省成本，但我认为这会伤害公司长期发展，我该怎么选？",
+      "expected_behavior": "should_use",
+      "reason": "典型的进退抉择"
+    },
+    {
+      "id": "t02",
+      "prompt": "团队决定了一个我认为有问题的方向，但我没有坚持己见，最后果然失败了",
+      "expected_behavior": "should_use",
+      "reason": "需要复盘是否应该'不避罪'"
+    },
+    {
+      "id": "t03",
+      "prompt": "我做了一个艰难的决定，没人表扬我，还要承担失败的责任，值不值得？",
+      "expected_behavior": "should_use",
+      "reason": "需要理解'进不求名'"
+    },
+    {
+      "id": "t04",
+      "prompt": "领导让我按他的方案做，但我觉得有问题，我应该听吗？",
+      "expected_behavior": "should_use",
+      "reason": "需要判断是否应该违抗"
+    },
+    {
+      "id": "t05",
+      "prompt": "朋友让我帮忙做一件我不认同的事，我该怎么拒绝？",
+      "expected_behavior": "should_not_use",
+      "reason": "这是人际关系问题，不是领导力问题"
+    }
+  ]
+}

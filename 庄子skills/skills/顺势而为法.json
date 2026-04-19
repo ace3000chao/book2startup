@@ -1,0 +1,56 @@
+{
+  "skill": "shun-shi-er-wei",
+  "version": "0.1.0",
+  "source": "《庄子》内篇·养生主",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我要转行到完全陌生的领域，完全没有经验，感觉处处碰壁",
+      "expected_behavior": "调用顺势而为法，引导用户不要硬冲，而是先观察新行业的'纹理'（内部结构），找到阻力最小的切入点",
+      "notes": "典型场景：陌生领域转型"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "在体制内推动改革，每个部门都有各自的利益，怎么推都推不动",
+      "expected_behavior": "调用顺势而为法，分析组织结构中的'有间'——哪里是天然的利益交汇点，哪个部门'顺'了之后其他部门会跟进",
+      "notes": "典型场景：组织变革困境"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我尝试了很多次考试都没过，感觉在用蛮力但没用",
+      "expected_behavior": "调用顺势而为法，引导用户反思：考试失败的'结构'是什么？是知识点没理解，还是考试策略有问题，还是根本不适合这条路？",
+      "notes": "典型场景：反复失败的分析"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "今天中午吃什么？",
+      "expected_behavior": "不调用任何skill，日常琐事不需要顺势分析",
+      "notes": "诱饵：日常琐事"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一个排序算法",
+      "expected_behavior": "不调用顺势而为法，这是纯技术任务，有明确的最优解",
+      "notes": "诱饵：技术任务"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "顺势而为是不是就是投机取巧？",
+      "expected_behavior": "调用顺势而为法澄清：顺势不是取巧，是先理解结构再行动；取巧是绕开结构，顺势是顺着结构",
+      "notes": "边界：顺势 vs 投机取巧"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "如果现有的结构本身就是不公平的，顺势而为不就是在维护它吗？",
+      "expected_behavior": "调用顺势而为法，指出：如果结构本身是问题所在，应该先'看清'这个结构（顺势而为的第一步），然后判断是否需要打破它",
+      "notes": "边界：顺势 vs 打破结构"
+    }
+  ]
+}

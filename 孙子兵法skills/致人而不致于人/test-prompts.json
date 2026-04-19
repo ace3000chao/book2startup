@@ -1,0 +1,36 @@
+{
+  "skill_name": "致人而不致于人",
+  "description": "掌握行动主动权的框架",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "竞品在疯狂打广告，我感觉被他们牵着鼻子走，该怎么办？",
+      "expected_behavior": "should_use",
+      "reason": "典型的'致于人'困境"
+    },
+    {
+      "id": "t02",
+      "prompt": "客户总是压价，我们团队疲于应对，如何夺回主动权？",
+      "expected_behavior": "should_use",
+      "reason": "需要改变被动局面"
+    },
+    {
+      "id": "t03",
+      "prompt": "我想让用户主动帮我们传播产品口碑，应该怎么做？",
+      "expected_behavior": "should_use",
+      "reason": "典型的'致人'策略"
+    },
+    {
+      "id": "t04",
+      "prompt": "每天被各种会议打断，关键任务无法推进",
+      "expected_behavior": "should_use",
+      "reason": "个人层面的'致于人'问题"
+    },
+    {
+      "id": "t05",
+      "prompt": "苹果公司发布新产品了，我们要跟进吗？",
+      "expected_behavior": "should_not_use",
+      "reason": "这是'要不要行动'的问题，不是'如何致人'的问题"
+    }
+  ]
+}

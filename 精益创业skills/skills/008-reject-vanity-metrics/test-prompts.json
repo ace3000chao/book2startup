@@ -1,0 +1,48 @@
+{
+  "skill_id": "leanstartup-008",
+  "skill_name": "拒绝虚荣指标",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我们产品月活50万，但转化率很低，我不知道该怎么向投资人解释这个数据",
+      "expected_behavior": "SHOULD_CALL — MAU是典型的虚荣指标，需要找到可执行的真正指标",
+      "category": "should_call"
+    },
+    {
+      "id": "t02",
+      "prompt": "我们的运营团队每周在周会上报'本周新增10万注册用户'，但实际付费只有1000人，这说明什么？",
+      "expected_behavior": "SHOULD_CALL — 注册数是虚荣指标，付费转化才是可执行指标",
+      "category": "should_call"
+    },
+    {
+      "id": "t03",
+      "prompt": "我在做年度总结报告，该怎么展示团队一年的工作成果才能让领导满意？",
+      "expected_behavior": "PARTIAL_CALL — 年度总结通常需要包装成绩，虚荣指标可能有用但应该两者结合",
+      "category": "boundary_fuzzy"
+    },
+    {
+      "id": "t04",
+      "prompt": "我们的App store评分4.8分，但评分高就代表产品真的好吗？",
+      "expected_behavior": "SHOULD_CALL — 评分是主观的虚荣指标，需要结合行为数据（留存、使用频率）判断",
+      "category": "should_call"
+    },
+    {
+      "id": "t05",
+      "prompt": "我们是电商品牌，双十一当天销售额5000万，这个数据该怎么分析？",
+      "expected_behavior": "PARTIAL_CALL — 大促数据是虚荣指标，需要拆解为：新增用户、复购率、客单价等可执行指标",
+      "category": "boundary_fuzzy"
+    },
+    {
+      "id": "t06",
+      "prompt": "团队里有人说'我们的数据在变好'，但具体哪里好说不清楚，怎么让讨论更有建设性？",
+      "expected_behavior": "SHOULD_CALL — 用三个问题验证指标，能把模糊的'感觉变好'变成可执行的讨论",
+      "category": "should_call"
+    },
+    {
+      "id": "t07",
+      "prompt": "我现在要给投资人发月报，该怎么用指标展示我们真实的进展？",
+      "expected_behavior": "SHOULD_CALL — 月报需要展示真实进展，虚荣指标 vs 可执行指标的区分直接适用",
+      "category": "should_call"
+    }
+  ]
+}

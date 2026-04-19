@@ -1,0 +1,42 @@
+{
+  "skill_id": "leanstartup-006",
+  "skill_name": "增长引擎选择与优化",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我们的社交App用户增长很慢，口碑不错但自然传播很少，该怎么加速增长？",
+      "expected_behavior": "SHOULD_CALL — 需要识别增长引擎类型，社交App应该是病毒式但目前没有启动",
+      "category": "should_call"
+    },
+    {
+      "id": "t02",
+      "prompt": "我们是B2B企业软件，一个销售员每月能成3单，每单5万，要不要投线上广告？",
+      "expected_behavior": "PARTIAL_CALL — B2B的付费式增长引擎需要评估LTV/CAC比值，线上广告不一定是最佳渠道",
+      "category": "boundary_fuzzy"
+    },
+    {
+      "id": "t03",
+      "prompt": "我们的产品用户留存率60%，复购也不错，但获客成本太高了，有什么优化方法？",
+      "expected_behavior": "SHOULD_CALL — 留存好但获客成本高，需要识别和优化增长引擎",
+      "category": "should_call"
+    },
+    {
+      "id": "t04",
+      "prompt": "我们是一个新的电商品牌，小红书种草效果不错，抖音也在投，该怎么分配预算？",
+      "expected_behavior": "PARTIAL_CALL — 需要先识别增长引擎，但电商品牌通常有多种引擎同时运作",
+      "category": "boundary_fuzzy"
+    },
+    {
+      "id": "t05",
+      "prompt": "我们的产品刚上线，还没有多少用户，要不要先花钱投广告获客？",
+      "expected_behavior": "SHOULD_NOT_CALL — 产品/市场契合未达到之前不适合追求增长，应该先验证MVP",
+      "category": "should_not_call"
+    },
+    {
+      "id": "t06",
+      "prompt": "我们是做 SaaS 的，月费99元，用户挺喜欢产品但增长很慢，我该怎么做？",
+      "expected_behavior": "SHOULD_CALL — SaaS 通常是黏着式增长，需要先判断留存是否足够支撑增长引擎",
+      "category": "should_call"
+    }
+  ]
+}

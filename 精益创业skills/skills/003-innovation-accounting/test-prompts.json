@@ -1,0 +1,42 @@
+{
+  "skill_id": "leanstartup-003",
+  "skill_name": "创新核算三步骤",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我们创业半年了，产品一直在迭代但不知道怎么衡量进展，有什么方法可以客观评价我们是否在进步？",
+      "expected_behavior": "SHOULD_CALL — 早期创业进展衡量问题，直接适用创新核算",
+      "category": "should_call"
+    },
+    {
+      "id": "t02",
+      "prompt": "投资人问我'你们现在做到哪一步了'，我该给他看什么数据？",
+      "expected_behavior": "SHOULD_CALL — 向投资人证明进展，创新核算的同期群方法直接适用",
+      "category": "should_call"
+    },
+    {
+      "id": "t03",
+      "prompt": "我们的App日活用户在增长，但我感觉不是真正的好，你觉得我该怎么分析？",
+      "expected_behavior": "SHOULD_CALL — 需要区分同期群和总量指标，创新核算直接适用",
+      "category": "should_call"
+    },
+    {
+      "id": "t04",
+      "prompt": "我是一家有10年历史的中型公司，年收入5000万，现在想开发新产品，怎么用精益创业衡量进展？",
+      "expected_behavior": "PARTIAL_CALL — 大企业创新项目部分适用，但需要调整框架，成熟业务不适合创新核算",
+      "category": "boundary_fuzzy"
+    },
+    {
+      "id": "t05",
+      "prompt": "我们公司是卖软件的，每个月收入很稳定，我该怎么向董事会汇报工作进展？",
+      "expected_behavior": "SHOULD_NOT_CALL — 成熟软件业务的衡量标准是收入和合同，不是创新核算的同期群逻辑",
+      "category": "should_not_call"
+    },
+    {
+      "id": "t06",
+      "prompt": "我们的用户说产品好，但为什么付费转化率一直上不去？",
+      "expected_behavior": "SHOULD_CALL — 口碑好但转化低，同期群分析能揭示问题所在",
+      "category": "should_call"
+    }
+  ]
+}

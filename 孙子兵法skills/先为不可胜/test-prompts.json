@@ -1,0 +1,42 @@
+{
+  "skill_name": "先为不可胜",
+  "description": "防御哲学与护城河构建",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我想让公司在未来3-5年不被竞争对手超越，应该构建什么能力？",
+      "expected_behavior": "should_use",
+      "reason": "典型的构建'不可胜'问题"
+    },
+    {
+      "id": "t02",
+      "prompt": "投资人问我们的护城河是什么，我们答不上来",
+      "expected_behavior": "should_use",
+      "reason": "需要梳理不可胜来源"
+    },
+    {
+      "id": "t03",
+      "prompt": "我们公司目前发展顺利，要不要考虑建立竞争壁垒？",
+      "expected_behavior": "should_use",
+      "reason": "居安思危，构建不可胜"
+    },
+    {
+      "id": "t04",
+      "prompt": "我们的产品技术领先，但担心被抄，我该怎么办？",
+      "expected_behavior": "should_use",
+      "reason": "需要构建多层次'不可胜'"
+    },
+    {
+      "id": "t05",
+      "prompt": "创业初期，应该先盈利还是先抢市场？",
+      "expected_behavior": "should_not_use",
+      "reason": "这是资源分配问题，不是防御哲学问题"
+    },
+    {
+      "id": "t06",
+      "prompt": "中小企业应该和大企业拼技术吗？",
+      "expected_behavior": "should_use",
+      "reason": "需要理解'不可胜在己'的含义"
+    }
+  ]
+}

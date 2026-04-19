@@ -1,0 +1,36 @@
+{
+  "skill_name": "诡道十二法",
+  "description": "示形惑敌的竞争策略",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我们要发布一款颠覆性新产品，如何让竞争对手措手不及？",
+      "expected_behavior": "should_use",
+      "reason": "需要设计出其不意的发布策略"
+    },
+    {
+      "id": "t02",
+      "prompt": "谈判中我想知道对方的真实底线，有什么技巧？",
+      "expected_behavior": "should_use",
+      "reason": "典型的示形试探场景"
+    },
+    {
+      "id": "t03",
+      "prompt": "朋友问我对他的看法，我该说实话还是敷衍？",
+      "expected_behavior": "should_not_use",
+      "reason": "亲密关系中的真诚优先"
+    },
+    {
+      "id": "t04",
+      "prompt": "大公司可能要进入我们的市场，我们应该如何应对？",
+      "expected_behavior": "should_use",
+      "reason": "需要诡道策略争取时间"
+    },
+    {
+      "id": "t05",
+      "prompt": "我想在朋友圈展示自己过得很好，以获得某种社交优势",
+      "expected_behavior": "should_not_use",
+      "reason": "个人社交场景，非商业博弈"
+    }
+  ]
+}

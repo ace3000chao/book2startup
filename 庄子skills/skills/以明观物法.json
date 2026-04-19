@@ -1,0 +1,56 @@
+{
+  "skill": "yi-ming-guan-wu",
+  "version": "0.1.0",
+  "source": "《庄子》内篇·齐物论",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我要不要转行，看了20篇分析文章，越看越迷茫",
+      "expected_behavior": "调用以明观物法，引导用户暂停分析，清空已有的20篇文章的结论，直接观照'转行这件事本身让你感受到什么'",
+      "notes": "典型场景：信息过载"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "两个offer选哪个，A工资高但没成长，B成长快但工资低",
+      "expected_behavior": "调用以明观物法，引导用户不要在'工资vs成长'的二元框架里分析，而是直接问自己'五年后我想成为什么样的人'",
+      "notes": "典型场景：二元抉择困境"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我该信哪个专家的？专家A说AI会改变一切，专家B说AI被过度吹捧",
+      "expected_behavior": "调用以明观物法，指出两个专家都是'小成'——局部真相，引导用户回到'AI对你自己意味着什么'这个本质问题",
+      "notes": "典型场景：权威冲突"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这杯咖啡多少钱？",
+      "expected_behavior": "不调用任何skill，纯信息查询",
+      "notes": "诱饵：日常琐事"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一段Python代码",
+      "expected_behavior": "不调用以明观物法，这是技术任务",
+      "notes": "诱饵：技术任务"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我完全不了解这个行业，以明是不是说我不应该去研究？",
+      "expected_behavior": "调用以明，指出：不是不研究，是研究完之后要空掉研究结果，以明才有效。以明是学习的消化功夫，不是学习的替代",
+      "notes": "边界：以明不是不学习的借口"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我现在急性过敏，需要决定要不要打激素",
+      "expected_behavior": "不调用以明——紧急医疗决策需要快速判断，不适合'空掉判断等自然浮现'",
+      "notes": "边界：紧急医疗决策"
+    }
+  ]
+}

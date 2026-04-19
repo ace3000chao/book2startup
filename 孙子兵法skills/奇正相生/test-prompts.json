@@ -1,0 +1,42 @@
+{
+  "skill_name": "奇正相生",
+  "description": "创新与变化的战术设计",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "产品同质化严重，价格战打不起，有什么创新的解法？",
+      "expected_behavior": "should_use",
+      "reason": "需要'奇'来打破僵局"
+    },
+    {
+      "id": "t02",
+      "prompt": "营销预算有限，常规推广手段效果越来越差，有何新招？",
+      "expected_behavior": "should_use",
+      "reason": "需要创新的营销'奇'招"
+    },
+    {
+      "id": "t03",
+      "prompt": "我们团队只会老实干活，看不到什么创新的机会",
+      "expected_behavior": "should_use",
+      "reason": "需要启发创新思维"
+    },
+    {
+      "id": "t04",
+      "prompt": "如何让用户主动帮我们传播？",
+      "expected_behavior": "should_use",
+      "reason": "需要'正'（产品）和'奇'（机制）的组合"
+    },
+    {
+      "id": "t05",
+      "prompt": "我应该先做产品还是先做营销？",
+      "expected_behavior": "should_not_use",
+      "reason": "这是资源配置问题，不是'奇正'问题"
+    },
+    {
+      "id": "t06",
+      "prompt": "乔布斯说苹果的创新是'人文科技'，这是什么意思？",
+      "expected_behavior": "should_not_use",
+      "reason": "分析类问题，不是应用类问题"
+    }
+  ]
+}

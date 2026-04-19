@@ -1,0 +1,36 @@
+{
+  "skill_name": "全胜为上",
+  "description": "不战而屈人之兵的竞争哲学",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我们有机会收购一个竞争对手，对方创始人不抗拒但要价很高，我应该买还是打？",
+      "expected_behavior": "should_use",
+      "reason": "典型的全胜vs破胜选择"
+    },
+    {
+      "id": "t02",
+      "prompt": "谈判中我比对方强势，是应该压到底还是给对方留点空间？",
+      "expected_behavior": "should_use",
+      "reason": "需要考虑长期关系"
+    },
+    {
+      "id": "t03",
+      "prompt": "团队被大公司看上了，我是应该卖还是继续独立发展？",
+      "expected_behavior": "should_use",
+      "reason": "全国vs破国的战略选择"
+    },
+    {
+      "id": "t04",
+      "prompt": "竞争对手一直在攻击我们，我要不要反击？",
+      "expected_behavior": "should_not_use",
+      "reason": "需要先判断是否有'不战而屈'的可能"
+    },
+    {
+      "id": "t05",
+      "prompt": "滴滴和快的当年为什么要合并？",
+      "expected_behavior": "should_use",
+      "reason": "经典的'全胜'商业案例"
+    }
+  ]
+}

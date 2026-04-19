@@ -1,0 +1,42 @@
+{
+  "skill_name": "五间俱起",
+  "description": "情报网络建设方法",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我想了解竞争对手的研发方向，有什么合法的方法？",
+      "expected_behavior": "should_use",
+      "reason": "典型的商业情报收集场景"
+    },
+    {
+      "id": "t02",
+      "prompt": "要投资一个项目，但不了解创始团队的真实背景，怎么查？",
+      "expected_behavior": "should_use",
+      "reason": "需要'五间'方法"
+    },
+    {
+      "id": "t03",
+      "prompt": "竞品刚融了一大笔钱，他们下一步会做什么？",
+      "expected_behavior": "should_use",
+      "reason": "需要多源情报交叉验证"
+    },
+    {
+      "id": "t04",
+      "prompt": "我想知道行业下一个风口在哪里",
+      "expected_behavior": "should_use",
+      "reason": "需要建立情报网络来判断趋势"
+    },
+    {
+      "id": "t05",
+      "prompt": "朋友推荐了一本书，我想知道作者靠不靠谱",
+      "expected_behavior": "should_not_use",
+      "reason": "个人层面的简单查询，不需要系统情报网络"
+    },
+    {
+      "id": "t06",
+      "prompt": "我要挖竞品的技术VP，有什么技巧？",
+      "expected_behavior": "should_use",
+      "reason": "涉及'内间'的策略"
+    }
+  ]
+}

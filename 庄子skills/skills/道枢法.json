@@ -1,0 +1,56 @@
+{
+  "skill": "dao-shu-huan-zhong",
+  "version": "0.1.0",
+  "source": "《庄子》内篇·齐物论",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我和合伙人在股权分配上各执一词，我觉得我贡献更大，他认为他资源更多",
+      "expected_behavior": "调用道枢法，引导用户跳出'谁贡献大'的对立结构，找到双方的共同根基（公司活下去），站在枢纽视角应对",
+      "notes": "典型场景：立场对立→找共同根基"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "团队两个方案争了一周都没结论，A方案技术更好，B方案商业价值更高",
+      "expected_behavior": "调用道枢法，分析两个方案都是手段不是目的，找到'为什么要做这个项目'的共同根基",
+      "notes": "典型场景：方案之争"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我和我妈在结婚这件事上观念完全不同，怎么谈都没用",
+      "expected_behavior": "调用道枢法，引导用户问：母子俩的共同关心点是什么？——都是希望'你过得好'",
+      "notes": "家庭冲突场景"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "明天的会议几点开始？",
+      "expected_behavior": "不调用任何skill，纯信息查询",
+      "notes": "诱饵：日常信息查询"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我计算一下投资回报率",
+      "expected_behavior": "不调用道枢法，这是纯技术计算问题",
+      "notes": "诱饵：技术性问题"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "对方完全不讲道理，就是要搞我，这种情况下道枢法怎么用？",
+      "expected_behavior": "调用道枢法，但需要明确指出：如果对方完全不认可任何共同前提，道枢效果有限，此时应该用安时处顺或天倪和之",
+      "notes": "边界：对方无共同前提"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我在法庭上需要证明对方违约了",
+      "expected_behavior": "不调用道枢法——法律判断需要明确输赢，不是找共同根基的情境",
+      "notes": "边界：法律/合规情境"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "skill_name": "知彼知己",
+  "description": "用于重大决策前的敌我态势分析",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我要推出一款新产品，但不了解竞争对手的研发进度，我该如何决策？",
+      "expected_behavior": "should_use",
+      "reason": "典型的'不知彼'场景，需要调用此skill"
+    },
+    {
+      "id": "t02",
+      "prompt": "我想转行到AI领域，但不确定现在是否是最佳时机",
+      "expected_behavior": "should_use",
+      "reason": "需要评估外部环境和内部准备"
+    },
+    {
+      "id": "t03",
+      "prompt": "每天吃早饭对身体好吗？",
+      "expected_behavior": "should_not_use",
+      "reason": "与竞争/决策无关的日常问题"
+    },
+    {
+      "id": "t04",
+      "prompt": "我和竞争对手实力相当，最近他们拿到了融资，我该怎么办？",
+      "expected_behavior": "should_use",
+      "reason": "典型的竞争态势分析场景"
+    },
+    {
+      "id": "t05",
+      "prompt": "团队连续三个月完不成KPI，是什么原因？",
+      "expected_behavior": "should_not_use",
+      "reason": "内部管理问题，不是'知彼'问题"
+    },
+    {
+      "id": "t06",
+      "prompt": "投资人说我们的护城河不够深，我怎么评估？",
+      "expected_behavior": "should_use",
+      "reason": "知己层面的评估"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "skill_name": "无所不备则无所不寡",
+  "description": "集中原则与分散陷阱",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我们公司有5条产品线，每条都不强，应该怎么办？",
+      "expected_behavior": "should_use",
+      "reason": "典型的'无所不备'问题"
+    },
+    {
+      "id": "t02",
+      "prompt": "创业初期资源有限，想做的事太多，怎么聚焦？",
+      "expected_behavior": "should_use",
+      "reason": "需要集中原则指导"
+    },
+    {
+      "id": "t03",
+      "prompt": "我们感觉四面都是竞争对手，防不胜防，团队很累",
+      "expected_behavior": "should_use",
+      "reason": "需要理解'备人'vs'使人备己'"
+    },
+    {
+      "id": "t04",
+      "prompt": "投资人说我们业务太单一了，风险太高，应该多元化",
+      "expected_behavior": "should_use",
+      "reason": "需要辩证看集中与分散"
+    },
+    {
+      "id": "t05",
+      "prompt": "今天出门穿什么衣服？",
+      "expected_behavior": "should_not_use",
+      "reason": "日常琐事无需此框架"
+    }
+  ]
+}

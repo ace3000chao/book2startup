@@ -1,0 +1,36 @@
+{
+  "skill_name": "杂于利害",
+  "description": "辩证思维能力训练",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "有个大客户给了我们一笔订单，但价格压得很低，接不接？",
+      "expected_behavior": "should_use",
+      "reason": "需要辩证看利弊"
+    },
+    {
+      "id": "t02",
+      "prompt": "老板说这个项目做好了可以上市，但三年内没有工资",
+      "expected_behavior": "should_use",
+      "reason": "典型的利中见害、害中见利"
+    },
+    {
+      "id": "t03",
+      "prompt": "政策突然收紧了，对我们是好事还是坏事？",
+      "expected_behavior": "should_use",
+      "reason": "需要杂于利害分析"
+    },
+    {
+      "id": "t04",
+      "prompt": "竞争对手倒闭了，我应该高兴还是担心？",
+      "expected_behavior": "should_use",
+      "reason": "需要看到对手倒下的'利'和潜在'害'"
+    },
+    {
+      "id": "t05",
+      "prompt": "今天天气不错，心情也很好",
+      "expected_behavior": "should_not_use",
+      "reason": "纯粹的描述性陈述，无需分析"
+    }
+  ]
+}

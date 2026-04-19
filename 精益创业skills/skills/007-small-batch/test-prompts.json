@@ -1,0 +1,42 @@
+{
+  "skill_id": "leanstartup-007",
+  "skill_name": "小批量原则",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我们App每次发布都是大版本，积累了几十个功能，用户反馈周期很长，怎么改进发布流程？",
+      "expected_behavior": "SHOULD_CALL — 大批量发布导致反馈周期长，小批量原则直接适用",
+      "category": "should_call"
+    },
+    {
+      "id": "t02",
+      "prompt": "我们是一个游戏开发团队，每个版本开发周期3个月，感觉节奏很慢但不知道怎么改",
+      "expected_behavior": "SHOULD_CALL — 游戏开发的迭代节奏问题，小批量可以显著改善反馈速度",
+      "category": "should_call"
+    },
+    {
+      "id": "t03",
+      "prompt": "我们是一家做硬件产品的公司，开模一次要几十万，不可能小批量生产，这个方法适用吗？",
+      "expected_behavior": "SHOULD_NOT_CALL — 硬件/制造业的小批量成本极高，不是这个框架的适用场景",
+      "category": "should_not_call"
+    },
+    {
+      "id": "t04",
+      "prompt": "我们的开发团队说，我们已经在用Scrum敏捷开发了，每次迭代2周，是不是已经是小批量了？",
+      "expected_behavior": "PARTIAL_CALL — Scrum的2周迭代是小批量的一种形式，但需要看每轮是否真正获取用户反馈",
+      "category": "boundary_fuzzy"
+    },
+    {
+      "id": "t05",
+      "prompt": "我是创业公司CEO，团队10个人，想推行小批量工作方式，但开发团队反对说更麻烦，怎么推动？",
+      "expected_behavior": "SHOULD_CALL — 小批量的文化转型挑战，Skill提供了执行步骤和注意事项",
+      "category": "should_call"
+    },
+    {
+      "id": "t06",
+      "prompt": "我们公司是医院信息系统，每次更新都需要严格测试和合规审批，无法快速迭代",
+      "expected_behavior": "SHOULD_NOT_CALL — 高度监管行业（医疗/金融）的合规限制使小批量不适用",
+      "category": "should_not_call"
+    }
+  ]
+}

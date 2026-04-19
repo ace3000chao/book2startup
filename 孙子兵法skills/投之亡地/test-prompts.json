@@ -1,0 +1,36 @@
+{
+  "skill_name": "投之亡地",
+  "description": "绝境激发团队潜力的框架",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "团队连续三个月没完成KPI，常规激励都失效了，还有什么办法？",
+      "expected_behavior": "should_use",
+      "reason": "典型的绝境激发场景"
+    },
+    {
+      "id": "t02",
+      "prompt": "创业公司只剩两个月资金，团队士气低落，该怎么办？",
+      "expected_behavior": "should_use",
+      "reason": "真实绝境需要激发背水一战"
+    },
+    {
+      "id": "t03",
+      "prompt": "每次考试前我都会临时抱佛脚，这是不是就是'投之亡地'？",
+      "expected_behavior": "should_use",
+      "reason": "个人层面的绝境激发现象"
+    },
+    {
+      "id": "t04",
+      "prompt": "我想让员工每天加班到凌晨来完成项目",
+      "expected_behavior": "should_not_use",
+      "reason": "这是过度消耗，不是激发"
+    },
+    {
+      "id": "t05",
+      "prompt": "公司每年设定高目标，然后用'达不成就走人'来压迫团队",
+      "expected_behavior": "should_not_use",
+      "reason": "长期高压会破坏组织文化"
+    }
+  ]
+}

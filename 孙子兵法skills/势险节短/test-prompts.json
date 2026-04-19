@@ -1,0 +1,36 @@
+{
+  "skill_name": "势险节短",
+  "description": "攻势节奏的原理",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我们花了很多预算做产品发布会，但用户反馈很平淡，问题出在哪里？",
+      "expected_behavior": "should_use",
+      "reason": "典型的势险节短诊断场景"
+    },
+    {
+      "id": "t02",
+      "prompt": "营销活动很用力但转化率很低，是文案问题还是节奏问题？",
+      "expected_behavior": "should_use",
+      "reason": "需要诊断势与节"
+    },
+    {
+      "id": "t03",
+      "prompt": "为什么有的人说话很有影响力，有的人说了同样的话却没人听？",
+      "expected_behavior": "should_use",
+      "reason": "势能积累的差异"
+    },
+    {
+      "id": "t04",
+      "prompt": "我们应该如何蓄积产品发布前的势能？",
+      "expected_behavior": "should_use",
+      "reason": "需要理解如何造势"
+    },
+    {
+      "id": "t05",
+      "prompt": "每天工作都很忙，但没什么成效",
+      "expected_behavior": "should_not_use",
+      "reason": "这是效率问题，不是势险节短问题"
+    }
+  ]
+}

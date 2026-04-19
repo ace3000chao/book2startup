@@ -1,0 +1,42 @@
+{
+  "skill_name": "五事七计",
+  "description": "战略规划与竞争分析框架",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我要写一份商业计划书来融资，应该从哪些维度分析我的项目？",
+      "expected_behavior": "should_use",
+      "reason": "典型的战略规划场景"
+    },
+    {
+      "id": "t02",
+      "prompt": "竞争对手刚融了5000万，我们差距有多大？",
+      "expected_behavior": "should_use",
+      "reason": "需要用七计做对比分析"
+    },
+    {
+      "id": "t03",
+      "prompt": "今天午饭吃什么？",
+      "expected_behavior": "should_not_use",
+      "reason": "日常琐事，无需战略分析"
+    },
+    {
+      "id": "t04",
+      "prompt": "我的创业项目能否成功？",
+      "expected_behavior": "should_not_use",
+      "reason": "问题过于模糊，需要先拆解成五事维度"
+    },
+    {
+      "id": "t05",
+      "prompt": "我想在东南亚市场创业，和国内市场有什么不同？",
+      "expected_behavior": "should_use",
+      "reason": "涉及天时地利和团队能力的比较"
+    },
+    {
+      "id": "t06",
+      "prompt": "下周要给投资人做汇报，团队觉得我们产品不如竞品，我该怎么分析？",
+      "expected_behavior": "should_use",
+      "reason": "典型的竞争分析场景"
+    }
+  ]
+}

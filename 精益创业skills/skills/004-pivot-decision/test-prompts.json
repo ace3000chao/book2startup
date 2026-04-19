@@ -1,0 +1,42 @@
+{
+  "skill_id": "leanstartup-004",
+  "skill_name": "转型决策树",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我们做了10个月的产品，核心指标已经3个月没有改进了，团队意见分歧，是继续优化还是换个方向？",
+      "expected_behavior": "SHOULD_CALL — 典型的转型决策场景，核心指标停滞触发转型评估",
+      "category": "should_call"
+    },
+    {
+      "id": "t02",
+      "prompt": "我们最初服务大学生市场，现在发现职场新人更喜欢我们的产品，要不要改变目标用户？",
+      "expected_behavior": "SHOULD_CALL — 客户细分转型，直接适用转型决策树",
+      "category": "should_call"
+    },
+    {
+      "id": "t03",
+      "prompt": "竞争对手刚融了一个亿，我们是不是也应该跟着换个赛道？",
+      "expected_behavior": "SHOULD_NOT_CALL — 竞争对手融资不是转型的依据，转型应该基于自己的数据",
+      "category": "should_not_call"
+    },
+    {
+      "id": "t04",
+      "prompt": "我是公司内部创新项目的负责人，老板问我项目进展不行要不要停掉，怎么判断？",
+      "expected_behavior": "SHOULD_CALL — 大企业内创新项目的转型决策，适用转型决策树框架",
+      "category": "should_call"
+    },
+    {
+      "id": "t05",
+      "prompt": "我们做了MVP，数据还可以，但是增速不够快，是不是应该转型？",
+      "expected_behavior": "PARTIAL_CALL — 增速不够快不一定需要转型，要看是否达到产品/市场契合",
+      "category": "boundary_fuzzy"
+    },
+    {
+      "id": "t06",
+      "prompt": "我们一直在优化产品，但用户留存率始终在20%左右，怎么判断是该坚持还是改变用户群体？",
+      "expected_behavior": "SHOULD_CALL — 留存率停滞是典型触发信号，需要评估是优化还是转型",
+      "category": "should_call"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "skill_id": "leanstartup-001",
+  "skill_name": "MVP构建法",
+  "test_prompts": [
+    {
+      "id": "t01",
+      "prompt": "我有一个在线教育平台的创业想法，想在投入开发之前先验证市场，帮我用MVP的方式设计一个验证方案",
+      "expected_behavior": "SHOULD_CALL — 用户明确想验证市场需求，且有资源约束，MVP是最佳选择",
+      "category": "should_call"
+    },
+    {
+      "id": "t02",
+      "prompt": "我要做一个社交App，功能很多，团队在争论该不该把所有功能做完再发布，你建议什么时候发布？",
+      "expected_behavior": "SHOULD_CALL — 涉及发布时机和产品范围决策，MVP直接适用",
+      "category": "should_call"
+    },
+    {
+      "id": "t03",
+      "prompt": "我们是一家开了10年的连锁餐厅，生意一直很稳定，现在想开第二家分店，需要做MVP测试吗？",
+      "expected_behavior": "SHOULD_NOT_CALL — 成熟业务的复制型扩张逻辑与早期创业MVP不同",
+      "category": "should_not_call"
+    },
+    {
+      "id": "t04",
+      "prompt": "我现在是公司CEO，公司有200人，产品线很复杂，每个月烧200万，我该怎么用精益创业管理团队？",
+      "expected_behavior": "PARTIAL_CALL — 大规模组织需要调整，MVP的核心原则仍然适用但需要调整执行方式",
+      "category": "boundary_fuzzy"
+    },
+    {
+      "id": "t05",
+      "prompt": "我是大学生，想创业但完全没有资源，只有一台电脑，我该怎么开始验证我的想法？",
+      "expected_behavior": "SHOULD_CALL — MVP正是为资源受限情况设计的，核心场景匹配",
+      "category": "should_call"
+    }
+  ]
+}
