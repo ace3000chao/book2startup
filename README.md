@@ -3,7 +3,7 @@
 > 从经典书籍中蒸馏AI-Agent可用的Skills，让知识真正转化为创业者的认知框架和执行方案
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Built with book2skill](https://img.shields.io/badge/Built%20with-book2skill-green.svg)](https://github.com/cangjie-skill/book2skill)
+[![Built with book2skill](https://img.shields.io/badge/Built%20with-book2skill-green.svg)](https://github.com/kangarooking/cangjie-skill)
 [![English](https://img.shields.io/badge/English-README-)](./README.en.md)
 
 ---
@@ -357,7 +357,7 @@ book2startup/
 ## 🙏 致谢
 
 - **原著作者**：庄周、孙武、Eric Ries 等经典书籍作者
-- **蒸馏方法**：基于 [book2skill](https://github.com/cangjie-skill/book2skill) 方法论
+- **蒸馏方法**：基于 [book2skill](https://github.com/kangarooking/cangjie-skill) 方法论
 - **AI-Agent工具**：[OpenClaw](https://github.com/openclaw/openclaw)
 - **启发来源**：袋鼠帝 kangarooking 的 [cangjie-skill](https://github.com/kangarooking/cangjie-skill) 项目
 
