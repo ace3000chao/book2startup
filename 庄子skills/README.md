@@ -232,16 +232,15 @@ zhuangzi-skills/
 ├── BOOK_OVERVIEW.md       # 《庄子》整书理解（万字长文）
 │
 ├── skills/                # 8个可用的Skills
-│   ├── 无待逍遥法/
-│   │   ├── README.md     # Skill说明
-│   │   └── test-prompts.json  # 测试用例
-│   ├── 道枢法/
-│   ├── 以明观物法/
-│   ├── 心斋法/
-│   ├── 无用之用/
-│   ├── 顺势而为法/
-│   ├── 安时处顺法/
-│   └── 天倪和之/
+│   ├── 无待逍遥法.md            # Skill说明   
+│   │── 无待逍遥法.json          # 测试用例
+│   ├── 道枢法.md &.json
+│   ├── 以明观物法.md &.json
+│   ├── 心斋法.md &.json
+│   ├── 无用之用.md &.json
+│   ├── 顺势而为法.md &.json
+│   ├── 安时处顺法.md &.json
+│   └── 天倪和之.md &.json
 │
 ├── candidates/           # 原始候选池（审计用）
 │   ├── frameworks.md
@@ -309,9 +308,9 @@ description: |
 每个Skill都写得完整自洽，可以直接阅读作为《庄子》的现代解读：
 
 ```
-skills/无待逍遥法/README.md   → 适合想理解"逍遥游"核心思想
-skills/心斋法/README.md        → 适合想学习冥想/正念方法
-skills/顺势而为法/README.md    → 适合想理解"庖丁解牛"的智慧
+skills/无待逍遥法.md   → 适合想理解"逍遥游"核心思想
+skills/心斋法.md        → 适合想学习冥想/正念方法
+skills/顺势而为法.md    → 适合想理解"庖丁解牛"的智慧
 ```
 
 ---
