@@ -398,7 +398,7 @@ lean-startup-skills/
 
 **适用于**：想用book2skill流水线蒸馏其他书籍
 
-1. 安装 [book2skill](https://github.com/zhisheng-foo/book2skill)
+1. 安装 [book2skill](https://github.com/kangarooking/cangjie-skill)
 2. 参考本仓库的 `candidates/` 目录结构
 3. 按照六阶段流水线执行
 
@@ -428,7 +428,7 @@ lean-startup-skills/
 
 ## 📚 相关资源
 
-- **book2skill流水线**：https://github.com/zhisheng-foo/book2skill
+- **book2skill流水线**：https://github.com/kangarooking/cangjie-skill
 - **《精益创业》原书**：Eric Ries, 2011
 - **孙子兵法Skills**（另一套东方商业智慧）：https://gitee.com/zhiyao-zhongshan-g_0/book2startup/孙子兵法skills
 
@@ -482,6 +482,6 @@ See `INDEX.md` for full skill reference.
 
 ### Generated Automatically
 
-Built with [book2skill](https://github.com/zhisheng-foo/book2skill) pipeline:
+Built with [book2skill](https://github.com/kangarooking/cangjie-skill) pipeline:
 - 61 candidates → 8 verified skills
 - Each skill has RIA++ structure + test prompts
