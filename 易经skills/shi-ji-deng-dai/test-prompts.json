@@ -1,0 +1,76 @@
+{
+  "skill": "shi-ji-deng-dai",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "项目方向对但市场还没起来，团队和投资人都很焦虑，我应该现在行动还是继续等？",
+      "expected_behavior": "应该调用 shi-ji-deng-dai（时机等待法）",
+      "notes": "用户明确处于'条件不成熟、是否该等待'的决策困境，触发时机等待法"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "面试终面后公司没有立刻发offer，HR说还要走流程，我应该催促还是继续等？",
+      "expected_behavior": "应该调用 shi-ji-deng-dai（时机等待法）",
+      "notes": "用户处于等待期，需要判断这是理性等待还是拖延，触发时机诊断"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "行业机会出现了，但资源不足，行业巨头已入场，我是该正面竞争还是等细分机会？",
+      "expected_behavior": "应该调用 shi-ji-deng-dai（时机等待法）",
+      "notes": "用户面对'险在前'的竞争格局，需要判断等待是智慧还是怯懦"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我现在做的事再等等看吧，反正时机不对",
+      "expected_behavior": "应该调用 shi-ji-deng-dai（时机等待法）",
+      "notes": "用户使用'时机不对'核心关键词，同时有'等待'意愿，需激活判断是战略性等待还是拖延"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "明天天气怎么样？适合出门吗？",
+      "expected_behavior": "不应调用 shi-ji-deng-dai",
+      "notes": "诱饵场景：问天气预报是具体时间点判断，不是'等待时机成熟'的战略决策问题"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "双十一活动什么时候开始，我应该什么时候下单最划算？",
+      "expected_behavior": "不应调用 shi-ji-deng-dai",
+      "notes": "诱饵场景：具体时间点决策，不涉及'险在前'的战略等待，而是具体行动时间的选择"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我不知道该选什么专业，等我再想想",
+      "expected_behavior": "不应调用 shi-ji-deng-dai",
+      "notes": "诱饵场景：没有方向的'再等等'属于方向迷茫，不是有准备的等待（需卦式等待有明确险境和等待目标）"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "再等等看吧，反正不着急（没有任何具体的等待目标和触发条件）",
+      "expected_behavior": "不应调用 shi-ji-deng-dai（边界：没有触发条件的等待=拖延）",
+      "notes": "边界场景：用户说'再等等'但没有说等什么、什么时候触发行动，属于拖延而非时机等待法"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "竞争对手已经出手了，客户开始流失，我是该等还是该反应？",
+      "expected_behavior": "此时需区分：若已处于'需于血'阶段则不适用，等待法需要重新评估",
+      "notes": "边界场景：危险已经临近（寇已至），此时需要启动蹇卦/解卦而非继续等待法"
+    },
+    {
+      "id": "edge-03",
+      "type": "edge_case",
+      "prompt": "我等了三年的机会最近出现了，但同时我资金快耗尽了，等下去会拖垮公司",
+      "expected_behavior": "触发 shi-ji-deng-dai，但需同时考虑资源耗尽判停条件",
+      "notes": "边界场景：等待法警告'资源耗尽时不适用'，需判断是否还有等待的本钱"
+    }
+  ]
+}

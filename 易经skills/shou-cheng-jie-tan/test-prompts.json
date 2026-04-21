@@ -1,0 +1,76 @@
+{
+  "skill": "shou-cheng-jie-tan",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "公司做成功了，业务稳定了，我要不要扩张？还是先守成？",
+      "expected_behavior": "应该调用 shou-cheng-jie-tan（守成戒贪法）",
+      "notes": "用户面临'成功后要不要扩张'的战略抉择，直接触发守成方法论"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "赚了一些钱，现在有两个选择：加大投入扩大规模，还是保守经营保住成果",
+      "expected_behavior": "应该调用 shou-cheng-jie-tan（守成戒贪法）",
+      "notes": "用户处于成功后的资源分配决策，触发'亢龙有悔'警戒+'节卦'节制原则"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "事业发展顺利，但感觉扩张资源不够，人手和资金都紧张，要怎么判断该不该投入？",
+      "expected_behavior": "应该调用 shou-cheng-jie-tan（守成戒贪法）",
+      "notes": "用户问'资源够不够'来判断扩张，触发'苦节不可贞'（过度节约也是病）的辨析"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "成功了之后反而更焦虑，担心扩张失败丧失现有成果，怎么决策？",
+      "expected_behavior": "应该调用 shou-cheng-jie-tan（守成戒贪法）",
+      "notes": "成功后焦虑属于'亢龙有悔'前兆，触发守成三原则"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "怎么省钱？怎么少花钱多办事？",
+      "expected_behavior": "不应调用 shou-cheng-jie-tan",
+      "notes": "诱饵场景：个人消费节俭问题，不是组织成功后的守成战略问题"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我现在有一笔钱，该不该拿来投资？",
+      "expected_behavior": "不应调用 shou-cheng-jie-tan",
+      "notes": "诱饵场景：投资决策是风险管理问题，守成戒贪法核心是'成功后如何不亢龙有悔'而非一般投资判断"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "公司亏钱了，要怎么止损？",
+      "expected_behavior": "不应调用 shou-cheng-jie-tan",
+      "notes": "诱饵场景：亏损止损属于失败后决策，不是'成功后守成'情境"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "小有成就但还没大成，要不要先守住等机会？",
+      "expected_behavior": "视情况判断：若尚在积累期则适用厚积薄发法(f14)，若已有实质成功则适用守成戒贪法",
+      "notes": "边界场景：'小有成就'的界定模糊，需要区分是成功后的守成还是积累期的蛰伏"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我一直很节省不舍得花钱，这是好事还是坏事？",
+      "expected_behavior": "可考虑调用 shou-cheng-jie-tan，重点诊断'苦节'（过度节俭）问题",
+      "notes": "边界场景：个人节俭行为需要用'苦节不可贞'来判断，过度节约同样是病"
+    },
+    {
+      "id": "edge-03",
+      "type": "edge_case",
+      "prompt": "公司成功了，领导说要加大投入快速扩张，但我担心步子太大",
+      "expected_behavior": "直接触发 shou-cheng-jie-tan 的守成原则",
+      "notes": "边界场景：用户已面临扩张压力与守成节制的对立，属于方法论的精准触发场景"
+    }
+  ]
+}

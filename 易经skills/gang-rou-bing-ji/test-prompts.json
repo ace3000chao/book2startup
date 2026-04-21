@@ -1,0 +1,34 @@
+{
+  "skill": "gang-rou-bing-ji",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我现在团队太激进了，冲突不断，要不要缓和一下？",
+      "expected_behavior": "应调用刚柔并济法",
+      "notes": "大壮状态需要用柔平衡"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "公司到了必须撤退的时刻，但要怎么退得漂亮？",
+      "expected_behavior": "应调用刚柔并济法",
+      "notes": "遯状态需要用刚果断"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这个人性格太刚了，怎么让他柔和一点？",
+      "expected_behavior": "不应调用",
+      "notes": "个人性格调整，非组织战略层面的刚柔"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "创业初期应该刚还是柔？",
+      "expected_behavior": "视情况判断",
+      "notes": "创业初期多为遯状态（蛰伏期），偏柔积累为主"
+    }
+  ]
+}

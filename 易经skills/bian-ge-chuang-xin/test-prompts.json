@@ -1,0 +1,76 @@
+{
+  "skill": "bian-ge-chuang-xin",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "公司做了十年传统业务，现在必须转型，但我不知道该不该变、怎么变",
+      "expected_behavior": "应该调用 bian-ge-chuang-xin（变革创新论）",
+      "notes": "用户面临'要不要变'的战略决策，触发变革方法论"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "听说行业要洗牌了，我们要不要先动手做变革？还是等别人先动？",
+      "expected_behavior": "应该调用 bian-ge-chuang-xin（变革创新论）",
+      "notes": "用户询问变革时机（己日乃孚），且涉及'先动还是等'的决策"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我想推动公司制度改革，但担心触动利益格局而失败，改革应该怎么推进？",
+      "expected_behavior": "应该调用 bian-ge-chuang-xin（变革创新论）",
+      "notes": "用户明确要'变革'且担心推进方式，触发变革三问（时机+准备+巩固）"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "上次改革失败了反弹很快，这次怎么避免？",
+      "expected_behavior": "应该调用 bian-ge-chuang-xin（变革创新论）",
+      "notes": "用户关注'变革后续巩固'问题，触发'鼎'（固化成果）机制"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我想改掉熬夜的习惯，有什么好方法？",
+      "expected_behavior": "不应调用 bian-ge-chuang-xin",
+      "notes": "诱饵场景：个人习惯改变是微观调整，不是《易经》'革'卦描述的'己日乃孚'式重大变革"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "把报告格式调整一下，从表格换成图表，这样看起来更直观",
+      "expected_behavior": "不应调用 bian-ge-chuang-xin",
+      "notes": "诱饵场景：小幅优化调整，不是重大组织/战略变革，属于日常工作改进"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想把杯子从桌上挪到窗边，这样看得更清楚",
+      "expected_behavior": "不应调用 bian-ge-chuang-xin",
+      "notes": "诱饵场景：无关紧要的位置调整，不涉及组织变革或战略转型"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "公司要不要换个logo和VI系统？ branding是否算变革？",
+      "expected_behavior": "视情况判断：若只是形象调整则不触发；若涉及战略定位根本改变则触发",
+      "notes": "边界场景：Branding变化可能是重大变革（若涉及战略重定位）也可能只是形象更新，需进一步判断变革深度"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我现在做的事情好像方向偏了，要不要调整一下策略？",
+      "expected_behavior": "可考虑调用 bian-ge-chuang-xin，但需区分是'方向修正'还是'战略变革'",
+      "notes": "边界场景：小幅策略调整（纠偏）与重大变革之间存在模糊地带，需根据影响范围和深度判断"
+    },
+    {
+      "id": "edge-03",
+      "type": "edge_case",
+      "prompt": "变革时机成熟了吗？（孚够了吗？）",
+      "expected_behavior": "直接触发 bian-ge-chuang-xin 的时机判断子环节",
+      "notes": "边界场景：用户已具备变革意识，在问时机是否成熟，属于方法论的精准触发"
+    }
+  ]
+}

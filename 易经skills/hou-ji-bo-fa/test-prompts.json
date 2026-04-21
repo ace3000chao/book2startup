@@ -1,0 +1,34 @@
+{
+  "skill": "hou-ji-bo-fa",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我现在积累得差不多了，是不是可以开始发力了？",
+      "expected_behavior": "应调用厚积薄发法",
+      "notes": "判断是否真正准备好"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "学了一个月AI，感觉自己牛了，可以出去接单了？",
+      "expected_behavior": "应调用厚积薄发法",
+      "notes": "判断是否真正到达临界点"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "减肥三个月了，要不要加大运动量？",
+      "expected_behavior": "不应调用",
+      "notes": "个人习惯改变，不涉及事业临界点判断"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "看到机会来了，但感觉准备还不够，要冲吗？",
+      "expected_behavior": "视情况判断",
+      "notes": "辉光日新标准：积累是否充分到可以抓住机会"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "skill": "de-wei-pipei",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "刚升职当部门主管，下属都不听我的，阳奉阴违，这种情况是我问题还是团队问题？",
+      "expected_behavior": "应该调用 de-wei-pipei（德位匹配论）",
+      "notes": "用户出现'升职后权力失效、团队不服管'信号，触发德位诊断"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "融资后当了CEO，但原来一起创业的合伙人开始疏远我，决策阻力变大了",
+      "expected_behavior": "应该调用 de-wei-pipei（德位匹配论）",
+      "notes": "有权无威、贤人（合伙人）开始疏远，典型德不配位信号"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "空降当高管后发现孤立无援，下属不配合，怎么判断是我领导力问题还是公司文化问题？",
+      "expected_behavior": "应该调用 de-wei-pipei（德位匹配论）",
+      "notes": "空降孤立+贤人无辅，触发德位三信号诊断"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我是不是德不配位？升职后反而更累了",
+      "expected_behavior": "应该调用 de-wei-pipei（德位匹配论）",
+      "notes": "用户主动使用'德不配位'关键词，直接触发"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我想提升自己的品德修养，有什么建议？",
+      "expected_behavior": "不应调用 de-wei-pipei",
+      "notes": "诱饵场景：纯道德修养问题，没有组织诊断信号，属于个人成长类问题而非权力/能力匹配诊断"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "作为一个管理者，怎么提高领导力？",
+      "expected_behavior": "不应调用 de-wei-pipei",
+      "notes": "诱饵场景：通用领导力问题，没有'位高德薄'的具体信号，问的是普遍方法而非诊断自身是否匹配当前职位"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "最近工作压力大，感觉很累，怎么缓解？",
+      "expected_behavior": "不应调用 de-wei-pipei",
+      "notes": "诱饵场景：纯情绪/压力问题，没有出现团队不服、决策失灵、贤人远离等结构性问题"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我能力很强但公司不给我升职，是公司问题还是我德位不匹配？",
+      "expected_behavior": "视情况判断",
+      "notes": "边界场景：用户处于'想升职但未升'状态，未体现'位高德薄'实际信号；更接近德位匹配论的预防性讨论而非已发生的诊断"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "团队技术能力不足导致项目失败了，这是德位问题吗？",
+      "expected_behavior": "不应调用 de-wei-pipei（边界：纯技术执行问题）",
+      "notes": "边界场景：失败原因是团队技术能力不足，而非领导力/品德与职位不匹配，属于人才问题非德位问题"
+    },
+    {
+      "id": "edge-03",
+      "type": "edge_case",
+      "prompt": "我当领导多年一直很顺利，最近突然发现下属开始不听话了，这是德位变化信号吗？",
+      "expected_behavior": "可考虑调用 de-wei-pipei，但需区分是组织生变还是自然权力衰减",
+      "notes": "边界场景：'突然不听话'可能有多种原因（市场变化、组织调整、自身德行变化），需进一步诊断信号"
+    }
+  ]
+}

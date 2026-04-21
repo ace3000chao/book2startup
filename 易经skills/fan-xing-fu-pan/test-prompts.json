@@ -1,0 +1,76 @@
+{
+  "skill": "fan-xing-fu-pan",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "项目搞砸了，怎么做复盘才能不犯同样的错误？",
+      "expected_behavior": "应该调用 fan-xing-fu-pan（反省复盘法）",
+      "notes": "用户明确说'搞砸了'+'复盘'，直接触发复盘方法论"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这次决策失误了，领导让我反省，我该从哪里开始反省？",
+      "expected_behavior": "应该调用 fan-xing-fu-pan（反省复盘法）",
+      "notes": "用户处于决策失误后需要反省的情境，触发'不远复'原则"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "活动效果很差，我们应该怎么复盘总结经验？",
+      "expected_behavior": "应该调用 fan-xing-fu-pan（反省复盘法）",
+      "notes": "项目失败后需要系统复盘，触发复盘三问（做对了什么/做错了什么/下一步怎么改）"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "失败了之后我一直在想哪里出了问题，这算复盘吗？",
+      "expected_behavior": "应该调用 fan-xing-fu-pan（反省复盘法）",
+      "notes": "用户想确认自己的反省是否有效，触发'不远复'+'七日来复'的复盘方法论"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "历史朝代为什么更替，有什么规律？",
+      "expected_behavior": "不应调用 fan-xing-fu-pan",
+      "notes": "诱饵场景：问历史事件分析，属于知识性问题而非行动复盘"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想反思一下人生的意义，应该从哪里开始思考？",
+      "expected_behavior": "不应调用 fan-xing-fu-pan",
+      "notes": "诱饵场景：哲学层面的人生反思，属于存在性思考而非具体行动复盘"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "心情不好怎么调整？做什么能让自己开心起来？",
+      "expected_behavior": "不应调用 fan-xing-fu-pan",
+      "notes": "诱饵场景：纯情绪调整需求，没有具体行动或决策失误的背景，不触发行动复盘"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我一直在想上次哪里做错了，但越想越焦虑，这算复盘吗？",
+      "expected_behavior": "不应调用 fan-xing-fu-pan（边界：纯情绪反省而非行动复盘）",
+      "notes": "边界场景：反复纠结情绪是'反省'而非'复盘'，复盘需要结构化框架，纯情绪内耗不符合复盘法要求"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我复盘了很多次但还是犯同样的错误，是不是复盘方法有问题？",
+      "expected_behavior": "可考虑调用 fan-xing-fu-pan，但重点转向'复盘有效性'判断",
+      "notes": "边界场景：用户已经在复盘但效果不佳，需要诊断是'不远复'（越早发现越容易纠正）还是其他问题"
+    },
+    {
+      "id": "edge-03",
+      "type": "edge_case",
+      "prompt": "成功项目需不需要复盘？",
+      "expected_behavior": "可考虑调用 fan-xing-fu-pan，但成功复盘与失败复盘侧重点不同",
+      "notes": "边界场景：复盘法主要针对错误修正（无妄卦），但成功复盘也适用，只是侧重点是'做对了什么'的提炼而非错误改正"
+    }
+  ]
+}

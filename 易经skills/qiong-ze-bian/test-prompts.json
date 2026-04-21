@@ -1,0 +1,34 @@
+{
+  "skill": "qiong-ze-bian",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "业务遇到瓶颈，必须变革了，但不知道怎么变？",
+      "expected_behavior": "应调用穷则变",
+      "notes": "穷=路走到尽头，需要变"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "上次变革推了一年了，大家都不听，怎么办？",
+      "expected_behavior": "应调用穷则变",
+      "notes": "检验变革的鼎=巩固机制是否到位"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "今天想换个发型，换个心情",
+      "expected_behavior": "不应调用",
+      "notes": "日常小改变，非战略层面的穷则变"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "感觉遇到了困难，但还能撑，要变吗？",
+      "expected_behavior": "视情况判断",
+      "notes": "判断是否真正的'穷'（无路可走）vs只是'难'（有路但艰难）"
+    }
+  ]
+}

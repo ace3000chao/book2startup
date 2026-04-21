@@ -1,0 +1,76 @@
+{
+  "skill": "shun-shi-er-wei",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "行业趋势变了，我是要跟着变还是先观望？怎么判断该不该顺势？",
+      "expected_behavior": "应该调用 shun-shi-er-wei（顺势而为法）",
+      "notes": "用户明确在问'要不要跟趋势'的问题，触发辨势三层框架"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "看到别人都在做某个项目，我要不要也跟进去？",
+      "expected_behavior": "应该调用 shun-shi-er-wei（顺势而为法）",
+      "notes": "用户问'要不要跟风'，顺势法核心就是辨析'顺势'vs'跟风'的区别"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "市场大环境不好，竞争对手都在收缩，我们该怎么办？",
+      "expected_behavior": "应该调用 shun-shi-er-wei（顺势而为法）",
+      "notes": "用户关注市场大势（顺逆问题），触发'不逆势'原则"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "有个新机会出现，但我不确定这是真趋势还是短期热点，怎么判断该不该借势？",
+      "expected_behavior": "应该调用 shun-shi-er-wei（顺势而为法）",
+      "notes": "用户问'该不该借势'，触发辨势（看清规律后主动配合）vs借势的区分"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "明天天气预报说要下雨，我出门要不要带伞？",
+      "expected_behavior": "不应调用 shun-shi-er-wei",
+      "notes": "诱饵场景：具体天气判断，不涉及战略层面的'顺势'决策"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "大家都说某个股票会涨，我要不要跟着买？",
+      "expected_behavior": "不应调用 shun-shi-er-wei",
+      "notes": "诱饵场景：股市跟风是纯财务决策，顺势法强调'辨势后顺势'而非盲目跟从，且属于个人投资而非组织战略"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "朋友都在用某个APP，我也要下载试试",
+      "expected_behavior": "不应调用 shun-shi-er-wei",
+      "notes": "诱饵场景：日常消费跟风，不涉及战略层面的顺势决策"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "趋势看清楚了，但大势对我不利，我是该强行改变还是等待？",
+      "expected_behavior": "视情况判断：若辨势后确认'不逆势'，则不强行改变；若趋势本身有误则需另论",
+      "notes": "边界场景：'顺势而为'不意味着盲目顺从，当辨清趋势后还要判断趋势本身是否符合正道"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "大家都说应该这样做，我内心觉得不对，但又说不出为什么",
+      "expected_behavior": "可考虑调用 shun-shi-er-wei，但需区分是'直觉判断'还是'理性辨势'",
+      "notes": "边界场景：内心抗拒vs理性判断需要澄清，顺势法强调'辨势'（看清规律）而非情绪反应"
+    },
+    {
+      "id": "edge-03",
+      "type": "edge_case",
+      "prompt": "我看到一个趋势，但我判断是短期热点，不是真的顺势，要不要跟？",
+      "expected_behavior": "直接触发 shun-shi-er-wei 的辨势判断子环节",
+      "notes": "边界场景：用户已在做辨势分析，只是需要验证判断是否正确，属于顺势法范畴"
+    }
+  ]
+}

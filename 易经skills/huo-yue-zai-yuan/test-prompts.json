@@ -1,0 +1,34 @@
+{
+  "skill": "huo-yue-zai-yuan",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "有个晋升机会，要不要跳？",
+      "expected_behavior": "应调用或跃在渊",
+      "notes": "判断时机是否成熟"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "现在转行是不是太冒险了？",
+      "expected_behavior": "应调用或跃在渊",
+      "notes": "在渊=蓄势，判断是否到跃的时机"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "今天晚饭吃什么？",
+      "expected_behavior": "不应调用",
+      "notes": "日常琐事选择"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "所有人都说我准备好了，但我自己没把握，要跳吗？",
+      "expected_behavior": "视情况判断",
+      "notes": "谋划充分性=主观+客观的综合判断"
+    }
+  ]
+}

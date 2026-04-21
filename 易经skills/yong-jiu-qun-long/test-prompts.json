@@ -1,0 +1,34 @@
+{
+  "skill": "yong-jiu-qun-long",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "团队讨论时大家都听我的，决策很快，但要避免什么？",
+      "expected_behavior": "应调用用九原则",
+      "notes": "集体决策中的一言堂风险"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "作为领导，我怎么做到集思广益又不失去控制？",
+      "expected_behavior": "应调用用九原则",
+      "notes": "无首=不做绝对权威"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "个人决策时，要不要听听家人意见？",
+      "expected_behavior": "不应调用",
+      "notes": "个人生活决策，非集体决策场景"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "紧急情况需要快速决策，还要求集思广益吗？",
+      "expected_behavior": "视情况判断",
+      "notes": "紧急情况可暂时有首，但事后需补复盘"
+    }
+  ]
+}

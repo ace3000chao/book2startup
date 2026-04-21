@@ -1,0 +1,34 @@
+{
+  "skill": "ying-kui-jing-shi",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "公司现在业务最好的时候，要警惕什么？",
+      "expected_behavior": "应调用盈亏警示法",
+      "notes": "丰顶即衰的预警意识"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "项目进展太顺利了，决策速度越来越快，有问题吗？",
+      "expected_behavior": "应调用盈亏警示法",
+      "notes": "拐点信号识别"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "股票涨了很多，要不要卖？",
+      "expected_behavior": "不应调用",
+      "notes": "短期投资决策，非组织层面的盈亏预警"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "行业普遍衰退，但我们公司还在增长，要警惕吗？",
+      "expected_behavior": "视情况判断",
+      "notes": "泰否循环：个体与整体的关系"
+    }
+  ]
+}
