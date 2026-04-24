@@ -1,0 +1,76 @@
+{
+  "skill": "f05-filth-to-purity",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我创业失败了，欠了不少钱，我觉得这辈子就这样了，看不到希望。",
+      "expected_behavior": "激活f05净从秽生框架，确认当前处境的污秽度（评估1-10），寻找转化微生物，设定转化时间表。",
+      "notes": "典型人生低谷场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我现在的工作环境很糟糕，同事都在混日子，领导也不管，我想离开但暂时走不了。",
+      "expected_behavior": "激活f05，识别这是环境无法改变的困境，确认污秽度，寻找转化条件（能否在污秽中学习技能/利用资源），设定时间表。",
+      "notes": "环境无法改变的困境"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我觉得现在太绝望了，这个环境这么脏还能有什么好？这些经历会不会毁了我？",
+      "expected_behavior": "激活f05，处理污秽中的绝望感，寻找'转化微生物'，强调不是立即变干净而是在污秽中积累转化条件。",
+      "notes": "污秽环境中的绝望感"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我想离开但走不了，也不知道该怎么办，只能继续待在这里熬着。",
+      "expected_behavior": "激活f05，确认这是想逃离但无处可去的困境，寻找污秽中的可转化因素，设定3-6个月转化里程碑。",
+      "notes": "想逃离但无路可走的困境"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "今天食堂的菜有点脏，这是客观描述，不是情绪困扰。",
+      "expected_behavior": "不触发，用户只是在陈述客观事实而非情绪困扰，不需要心态调整",
+      "notes": "诱饵：客观描述，无情绪困扰"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我查一下这家餐厅的卫生评级，我想知道干净不干净。",
+      "expected_behavior": "不触发，纯信息查询，不涉及情绪困扰或心态调整需求",
+      "notes": "诱饵：信息查询场景"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我今天心情不好，跟朋友吵了一架，现在想找点事做调整一下。",
+      "expected_behavior": "不触发，用户需要的是立即的行动方案而非心态调整，且不是处于逆境/低谷期的绝望感",
+      "notes": "诱饵：日常情绪需要行动方案"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我现在处于严重抑郁状态，有自杀念头，听说'净从秽生'，是不是我应该在这里找到转化？",
+      "expected_behavior": "不触发f05，B边界明确：用户处于严重心理/身体危险中（如严重抑郁、有自杀倾向），最优先的是安全脱离危险，不是'在污秽中找转化'，应转介专业支持",
+      "notes": "边界：严重心理危机需要专业急救"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我现在极度贫困，饭都吃不起，'净从秽生'在这种情况下有用吗？",
+      "expected_behavior": "不触发f05，B边界明确：污秽是结构性问题且无法改变（如极度贫困）时，'净从秽生'可能是对现实的逃避，应先帮助认识真实处境",
+      "notes": "边界：结构性生存困境"
+    },
+    {
+      "id": "edge-case-03",
+      "type": "edge_case",
+      "prompt": "我的老板经常羞辱我，我在一个有毒的工作环境中，这种情况下怎么用'净从秽生'？",
+      "expected_behavior": "慎用f05，B边界提示：被虐待、严重抑郁时不宜在污秽中找转化——应先判断是否属于'严重心理/身体危险'，有毒环境可能是需要脱离的结构性问题，而非转化材料",
+      "notes": "边界：有毒环境vs可转化困境的区分"
+    }
+  ]
+}

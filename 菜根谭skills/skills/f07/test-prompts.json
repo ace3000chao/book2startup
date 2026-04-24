@@ -1,0 +1,76 @@
+{
+  "skill": "f07-timing-patience",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我都努力了这么久怎么还没结果？是不是我不够好？为什么别人都成功了而我还没有？",
+      "expected_behavior": "激活f07见微知著守正待时框架，区分'伏久'还是'原地踏步'，用'最终势能'代替'当下快慢'评估，制定等待期的具体行动计划。",
+      "notes": "长期努力无果的焦虑场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "看别人这么年轻就成功了，我很焦虑，觉得自己落后太多了，想换个方向追热点。",
+      "expected_behavior": "激活f07，分析这是'伏久'还是'原地踏步'，用'伏久者飞必高、开先者谢独早'的逻辑评估当前方向是否值得继续等待。",
+      "notes": "与同龄人比较后焦虑的场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我已经创业三年了，还没有拿到融资，团队都快撑不下去了，还要继续等吗？",
+      "expected_behavior": "激活f07，判断用户是处于积累期还是重复期，评估3年后势能对比，制定继续等待期间的具体行动。",
+      "notes": "创业者漫长投入期的场景"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "他这么年轻就这么厉害，是不是我哪里做错了？我已经等了一年多了，还要继续等多久？",
+      "expected_behavior": "激活f07，帮助用户区分'伏久'和'原地踏步'，用最终势能评估是否值得继续等待。",
+      "notes": "评估等待时机的场景"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "明天我想吃火锅，你有什么推荐吗？",
+      "expected_behavior": "不触发，日常琐事选择，与'是否应该继续等待'无关",
+      "notes": "诱饵：日常琐事选择"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我现在只是在抱怨一下，发泄一下情绪，不是需要做决策。",
+      "expected_behavior": "不触发，用户只是在抱怨而非做决策，不需要等待时机的判断框架",
+      "notes": "诱饵：纯情绪发泄场景"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我需要立刻做决定，因为对方只给我24小时回复，现在就要给答案。",
+      "expected_behavior": "不触发，需要立即行动的紧急情况，不适合'慢慢等待'的框架",
+      "notes": "诱饵：需要立即行动的紧急情况"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我方向本身就是错的，已经走了三年都是在原地踏步，但我想用'伏久者飞必高'继续坚持。",
+      "expected_behavior": "触发f07但需警示：B边界明确指出'如果用户在走一条没有发展潜力的路，伏久者飞必高可能被滥用为自我欺骗的理由'，需要先重新评估方向是否正确",
+      "notes": "边界：错误方向下的坚持"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我已经连续用'时机未到'来回避面对现实问题超过5年了，这种情况下还能用这个框架吗？",
+      "expected_behavior": "不触发或慎用f07，B边界明确：用户已经用这个框架自我欺骗超过5年时，说明框架已被滥用，需要引入更直接的干预",
+      "notes": "边界：长期自我欺骗场景"
+    },
+    {
+      "id": "edge-case-03",
+      "type": "edge_case",
+      "prompt": "我现在经济状况已经不允许继续等待，下个月房租都交不上了，但我想继续坚持等待时机。",
+      "expected_behavior": "不触发f07，B边界明确：用户处于生存危机时不应鼓励继续等待，需要帮助重新评估方向",
+      "notes": "边界：生存危机不允许等待"
+    }
+  ]
+}

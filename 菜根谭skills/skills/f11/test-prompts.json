@@ -1,0 +1,76 @@
+{
+  "skill": "f11-selflessness-check",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我该不该为他牺牲？我付出了这么多值得吗？舍了会不会后悔？",
+      "expected_behavior": "激活f11舍己勿疑施恩勿报框架，确认'舍'的具体内容和量化，检验舍时的动机纯度（是否犹豫、是否计算回报），执行'事后测试'——会不会后悔。",
+      "notes": "面临是否该为他人牺牲的抉择"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我对别人好但没有得到回报，我帮了他，他却没有谢我，我在计算值不值。",
+      "expected_behavior": "激活f11，评估利他行为的动机纯度（是否在期待回报），执行'施恩勿报'测试——如果对方永远不还，我还帮吗？区分真帮vs计算性帮助。",
+      "notes": "付出后计较回报的场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我在想要不要放弃现在稳定的收入去追求一个不确定的机会，这是牺牲，值得吗？",
+      "expected_behavior": "激活f11，确认舍的具体内容（放弃多少收入、多长时间），检验舍时的动机纯度（犹豫吗？计算回报吗？），执行'事后测试'判断是否真正准备好了。",
+      "notes": "放弃稳定收入追求不确定机会的场景"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我觉得我付出比对方多，合作关系失衡了，我在计算谁吃亏谁占便宜，这是计较还是对方真的不公平？",
+      "expected_behavior": "激活f11，区分合作关系中的'真不公平'vs'计较'，用动机纯度测试（舍时是否犹豫、是否计算回报）来判断。",
+      "notes": "合作关系中付出失衡的评估场景"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我们分工一下，我负责A部分，你负责B部分，这是日常合作分工。",
+      "expected_behavior": "不触发，日常合作分工的逻辑讨论，不涉及道德困境或牺牲/利他行为的动机检验",
+      "notes": "诱饵：日常合作分工"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我计算一下这个投资项目的回报率，这是纯财务分析。",
+      "expected_behavior": "不触发，纯逻辑计算和财务分析，不涉及道德困境或舍己/施恩的动机问题",
+      "notes": "诱饵：财务分析场景"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想了解一下'舍己为人'这个成语在古代文学中的使用情况。",
+      "expected_behavior": "不触发，纯学术/文化信息查询，不涉及需要检验牺牲动机纯度的决策困境",
+      "notes": "诱饵：文化知识查询"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "对方是'以怨报德'的人，我已经帮他好几次了，他每次都反过来伤害我，我还在想该不该继续舍。",
+      "expected_behavior": "触发f11但应用B边界：对方不值得你舍时（以怨报德），舍己可能变成助纣为虐，需要先判断对方是否值得",
+      "notes": "边界：对方不值得时的舍己"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我舍了之后会陷入生存危机，房贷还不上，孩子学费交不起，但我想坚持这个'舍'。",
+      "expected_behavior": "不触发f11，B边界明确：舍了之后会陷入生存危机时，这不是'舍己'而是'自残'，舍己的边界是舍了之后还能好好活",
+      "notes": "边界：牺牲后陷入生存危机"
+    },
+    {
+      "id": "edge-case-03",
+      "type": "edge_case",
+      "prompt": "我帮了某人会让我陷入被对方长期操控的关系，这算不算'施恩'？我还能继续帮吗？",
+      "expected_behavior": "不触发f11或慎用，B边界明确：施恩变成被操控的'好人'时，这不是施恩而是自我牺牲的强迫症，需要重新评估帮的边界",
+      "notes": "边界：被操控关系中的施恩"
+    }
+  ]
+}

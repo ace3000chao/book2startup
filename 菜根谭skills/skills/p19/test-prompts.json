@@ -1,0 +1,69 @@
+{
+  "skill": "p19大处着眼小处着手",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我不知道从哪开始，这个目标太大了，我只能看到眼前的事。",
+      "expected_behavior": "激活大处着眼小处着手原则，帮助用户明确'大处'（目标）和'小处'（当前任务）的关系",
+      "notes": "大目标无法下手的典型"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我一直在忙，但没有进展，我是不是在做无用功？",
+      "expected_behavior": "触发p19，检查用户的小处是否在为大的目标服务——'小处不渗漏，暗处不欺隐'",
+      "notes": "忙碌但没有方向"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这个小事情应该没关系吧，随便做做就行。",
+      "expected_behavior": "触发p19，'小处不渗漏'——真正的高手在小细节上也不会出错",
+      "notes": "小处放松警惕的典型"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我现在已经这样了，还能怎样？我想放弃了。",
+      "expected_behavior": "触发p19，'末路不怠荒'——穷困潦倒时也不放弃，才是个真正英雄",
+      "notes": "低谷想放弃的典型"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我想学Python，请给我一个学习计划。",
+      "expected_behavior": "不调用p19，这是具体技能学习计划问题，p19是做事格局问题（平衡大/小），不是学习步骤问题",
+      "notes": "技能学习计划，不是p19的场景"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我现在已经累到不行了，我需要休息。",
+      "expected_behavior": "不调用p19，极度疲惫/耗尽状态需要恢复，p19明确说'极度疲惫/耗尽状态'不适用",
+      "notes": "需要休息的耗尽状态，不是p19的场景"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我在考虑要不要换工作，还在摸索方向。",
+      "expected_behavior": "不调用p19，还在摸索阶段无法'大处着眼'，先从小处积累；p19明确说'完全没有方向的新人'不适用",
+      "notes": "方向摸索阶段，需要先积累小处"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我有大目标（想创业），但我现在做的是很小的兼职工作，两者好像没关系，我该怎么连接起来？",
+      "expected_behavior": "边界模糊：'大处'和'小处'明显脱节；应激活p19，帮助用户找到当前小处与大目标之间的战略连接",
+      "notes": "大小脱节，需要战略连接"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我的领导让我做一件小事，但我觉得这件小事没有意义，我是不是应该拒绝？",
+      "expected_behavior": "模糊场景：可能涉及'小处不渗漏'（小事也要做好）和'大局观'（判断小事有无意义）的冲突；应激活p19，帮助用户从'大处着眼'理解小事的价值，或者承认确实无意义",
+      "notes": "小事与大局的价值判断冲突"
+    }
+  ]
+}

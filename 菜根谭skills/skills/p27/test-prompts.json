@@ -1,0 +1,69 @@
+{
+  "skill": "p27骄泰失之谦虚受益",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我很厉害，他们都得听我的，我应该得到更多。",
+      "expected_behavior": "激活骄泰失之谦虚受益原则，识别用户的'富贵而贫贱其行'——成功后对别人刻薄，行为和地位不匹配",
+      "notes": "成功后傲慢的典型"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我取得了很大的成绩，我想让所有人都知道我做到了。",
+      "expected_behavior": "触发p27，'聪明宜敛藏却反炫耀'——炫耀成就是'聪明而愚懵其病'，真正愚蠢的行为",
+      "notes": "成功后想要炫耀"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "他算什么？他不如我，凭什么和我平起平坐？",
+      "expected_behavior": "触发p27，富贵后对不如自己的人态度变差，是'富贵而贫贱其行'的典型表现",
+      "notes": "成功后对他人刻薄/轻蔑"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我现在有钱了/成功了，别人都应该尊重我。",
+      "expected_behavior": "触发p27，富贵/成功后认为别人应该尊重自己，是骄傲的典型；'富贵宜宽厚'的反面",
+      "notes": "成功带来理所当然的优越感"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我想建立一个自信的形象，作为领导需要展示能力，我该怎么做？",
+      "expected_behavior": "不调用p27，建立权威是正常的领导需求；p27说'建立权威需要的场合'不适用",
+      "notes": "正当的领导力建立，不是骄傲"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我们团队取得了好成绩，我想开个庆功会表扬大家，这样可以吗？",
+      "expected_behavior": "不调用p27，适度展示成就可以激励团队；p27明确说'激励团队需要的场合'不适用",
+      "notes": "团队激励场景，不是骄傲"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想建立个人品牌，让更多人知道我擅长什么，这有问题吗？",
+      "expected_behavior": "不调用p27，适度展示是现代职场的必要；p27的盲点也承认'完全收敛可能影响发展'",
+      "notes": "个人品牌建设，是职业发展需要"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我成功之后变得低调了，但我担心这样会不会显得没有自信？我该怎么拿捏？",
+      "expected_behavior": "模糊场景：成功后低调但担心被误解；p27的'敛藏'不是沉默，而是'不炫耀'；应激活p27，区分'炫耀'和'正常展示'——做实事不需要炫耀，但也不需要刻意隐藏",
+      "notes": "低调与自信的拿捏困惑"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我有点钱后，我以前的同学开始疏远我，他们觉得我变了，我该怎么处理？",
+      "expected_behavior": "边界模糊：可能是'富贵而贫贱其行'（确实变了）也可能是别人的嫉妒；应激活p27+f21组合，p27检查自己是否骄傲，f21检查是否是'嫉能'（别人的嫉妒）",
+      "notes": "成功后人际关系变化，需要双向检查"
+    }
+  ]
+}

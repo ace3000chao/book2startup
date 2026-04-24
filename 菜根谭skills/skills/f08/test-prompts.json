@@ -1,0 +1,76 @@
+{
+  "skill": "f08-perspective-taking",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "为什么他这样对我？我觉得很委屈，他完全不理解我，我觉得他太过分了。",
+      "expected_behavior": "激活f08推己及人框架，确认当前情绪和不满对象，执行'推己及人'两个问题（若我处于他的际遇是否也能做得更好；我是否也有情绪不顺时），从抱怨转向建设性行动。",
+      "notes": "典型对他人行为感到愤怒或受伤的场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "换作是我，我绝对不会这样做，他怎么能这样？让我很受伤。",
+      "expected_behavior": "激活f08，执行两个推己及人问题，让用户理解对方行为动机而不被愤怒劫持，然后转向建设性行动。",
+      "notes": "被他人行为伤害后的情绪场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我和合伙人发生了冲突，冷静下来后我想理解为什么他会这样做，我想修复关系。",
+      "expected_behavior": "激活f08，在冲突后理解对方，执行推演，识别对方的处境和动机，给出建设性的修复行动建议。",
+      "notes": "冲突后想修复关系的场景"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我知道应该理解他，但就是做不到，我被他气到了，现在冷静不下来。",
+      "expected_behavior": "激活f08，先引导情绪平复（若无法理性思考则先共情），再执行推己及人推演，帮助用户从愤怒转向理解。",
+      "notes": "情绪激动但想寻求理解的场景"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我分析一下这个商业案例中各方利益相关者的立场，这是纯逻辑讨论。",
+      "expected_behavior": "不触发，纯粹逻辑讨论，不涉及自身情绪困扰，用户只是在分析他人而非自身有情绪反应",
+      "notes": "诱饵：纯逻辑分析场景"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想了解一下换位思考在管理学中的应用，有哪些理论框架？",
+      "expected_behavior": "不触发，纯学术讨论，用户没有表达自身的情绪困扰或需要心态调整",
+      "notes": "诱饵：学术理论查询场景"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我有个朋友被老板欺负了，他想辞职，你觉得他该怎么办？",
+      "expected_behavior": "不触发，用户只是在描述他人情况而非自身困扰，f08是针对自身情绪困扰的框架",
+      "notes": "诱饵：为他人寻求建议"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "对方的行为是系统性的虐待或操控，我已经忍了很久了，现在想用'推己及人'来理解他。",
+      "expected_behavior": "不触发f08或慎用，B边界明确：系统性虐待/操控时，'推己及人'可能被滥用为合理化受害，真正的虐待不应被'理解'而应被识别和终止",
+      "notes": "边界：系统性虐待不应合理化"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我现在正在急性愤怒中，完全无法进行理性思考，但我想知道怎么用推己及人。",
+      "expected_behavior": "不触发f08或先共情再使用，B边界明确：用户处于急性愤怒状态无法进行理性思考时，推演会变成'合理化愤怒'而不是'化解愤怒'，应先共情平复情绪",
+      "notes": "边界：急性愤怒时的处理"
+    },
+    {
+      "id": "edge-case-03",
+      "type": "edge_case",
+      "prompt": "对方欺诈了我很多钱，涉及法律问题了，这种情况下推己及人还有用吗？",
+      "expected_behavior": "不触发f08或慎用，B边界明确：对方行为涉及法律/道德红线（如欺诈）时，需要的是行动（报警、法律帮助），不是推演理解",
+      "notes": "边界：法律红线需要行动而非推演"
+    }
+  ]
+}

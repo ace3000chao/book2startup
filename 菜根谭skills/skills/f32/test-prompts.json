@@ -1,0 +1,69 @@
+{
+  "skill": "f32-sincerity-power",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我觉得太真诚会吃亏，说真话总是被人利用，我要不要虚伪一点？",
+      "expected_behavior": "激活一诚感通框架，阐明真诚不是软弱而是力量，伪妄之人的代价",
+      "notes": "真诚被质疑时的困惑"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我的真诚为什么没有回报？对方总是不相信我，我是不是太实在了？",
+      "expected_behavior": "触发f32，帮助用户区分'表演性真诚'和'真正的一诚'，理解真诚的长期效果",
+      "notes": "真诚没有回报的痛苦"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我想赢回他的信任，但不知道怎么做。",
+      "expected_behavior": "触发f32，在信任建立场景中应用'人心一真便霜可飞'的原则",
+      "notes": "关系修复场景"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "现在这个社会，真诚还有用吗？大家都说老实人会吃亏。",
+      "expected_behavior": "触发f32，回应'真诚是否有用'的质疑，阐述真诚作为核心能力而非策略的价值",
+      "notes": "社会现实与真诚价值的冲突"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我明天要谈判，有什么策略能让我显得更有诚意？",
+      "expected_behavior": "不调用f32，用户需要的是策略技巧，不是真诚本质的探讨；'显得有诚意'本身就是表演，不是f32的真",
+      "notes": "策略性谈判准备，与f32的'一真'矛盾"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我刚认识一个重要客户，想给他留下好印象，我该怎么表现？",
+      "expected_behavior": "不调用f32，新客户关系建立需要时间，真诚不等于立即表现；f32不适用于刚认识的陌生人",
+      "notes": "初次建立信任，需要时间积累，不是f32场景"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想让我下属更信任我，有什么管理方法吗？",
+      "expected_behavior": "不调用f32，这是管理问题，不是'真诚作为力量'的探讨；领导力建立有更多技巧",
+      "notes": "团队管理问题，不是f32的核心场景"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我对一个人很真诚，但他一直在骗我，我还要继续真诚吗？",
+      "expected_behavior": "边界模糊：面对恶意对象时f32有边界（不能对没有善意的人真诚），但用户可能在反思自己的真诚方式；应先确认对方是否完全没有善意，再决定是否调用f32",
+      "notes": "真诚遭遇恶意，需要边界判断"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我对他说了实话，结果伤害了他，现在我该继续真诚还是保护他？",
+      "expected_behavior": "模糊场景：真诚（说实话）和保护（不伤害）之间有张力；f32强调'真心'但不等于'直率'（边界中已说明），应激活f32区分真诚与直率",
+      "notes": "真诚与情商之间的边界"
+    }
+  ]
+}

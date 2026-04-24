@@ -1,0 +1,76 @@
+{
+  "skill": "f06-equanimity-decision",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我刚谈下了一个大客户，特别兴奋，想马上加大投入、扩大团队，这个决定靠谱吗？",
+      "expected_behavior": "激活f06宠辱不惊框架，确认用户处于得意状态（评估情绪强度），用'花开花落'做心理距离化，进行'十年测试'，得出此刻不该做的事。",
+      "notes": "得意时即将做重大决定的场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "项目黄了，我觉得一切完了，脑子里全是'我不行'，不知道接下来该怎么办。",
+      "expected_behavior": "激活f06，识别用户处于失意状态（评估情绪强度），用'花开花落'做心理距离化，问'十年后这件事还重要吗'，得出此刻不该做的事。",
+      "notes": "失意时陷入负面思维的场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "别人夸我一句我能高兴好几天，批评我一句我能难受一星期，情绪完全被外部牵引，我是不是有问题？",
+      "expected_behavior": "激活f06，识别这是因外界评价而情绪剧烈波动，用'花开花落'做心理距离化，引导把评价权收回自己手里。",
+      "notes": "外界评价绑架情绪的场景"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我刚尝到甜头，现在有点飘，而且刚失去了一个重要机会，我觉得天都塌了，该怎么办？",
+      "expected_behavior": "激活f06，分别处理得意和失意状态，先评估情绪强度（>8则先让用户冷静24小时），再用'花开花落'和'十年测试'做心理距离化。",
+      "notes": "得意失意交织的复杂场景"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "今天下雨了，心情有点低落，想找朋友聊聊天。",
+      "expected_behavior": "不触发，用户的情绪不是得意/失意的大起大落，只是日常情绪倾诉，不需要宠辱不惊的框架",
+      "notes": "诱饵：日常情绪倾诉"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想了解一下'宠辱不惊'这个词的出处和典故。",
+      "expected_behavior": "不触发，用户只是在收集信息/研究典故，不涉及情绪困扰或决策需求",
+      "notes": "诱饵：信息查询场景"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "公司着火了，我现在需要立即撤离，请问有什么紧急处理流程吗？",
+      "expected_behavior": "不触发，用户需要立即处理紧急事务，不是讨论情绪管理的时机",
+      "notes": "诱饵：紧急危机处理场景"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我刚收到噩耗，家里人出事了，我现在完全无法冷静，可以'宠辱不惊'吗？",
+      "expected_behavior": "不触发f06或慎用，B边界明确：用户正处于急性情绪崩溃/重大创伤时，'宠辱不惊'是冷漠不是智慧，应先共情，再谈框架",
+      "notes": "边界：急性创伤的情绪处理"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我现在面临一个重要决策，但信息不完整，谈判中对方的底牌不清楚，这种情况下应该'不惊'吗？",
+      "expected_behavior": "慎用f06，B边界提示：用户在决策链中处于信息劣势时，'不惊'可能让用户错过关键时机，需要更多信息才能判断",
+      "notes": "边界：信息不完整时的决策"
+    },
+    {
+      "id": "edge-case-03",
+      "type": "edge_case",
+      "prompt": "我现在要决定是否逃离一个危险环境，这是生死攸关的选择，还能谈'宠辱不惊'吗？",
+      "expected_behavior": "不触发f06，B边界明确：涉及重大人生安全决定时（如是否逃离危险），不是讨论'不惊'的时候",
+      "notes": "边界：生死安全决策场景"
+    }
+  ]
+}

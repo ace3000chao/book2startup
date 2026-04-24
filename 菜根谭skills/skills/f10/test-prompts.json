@@ -1,0 +1,76 @@
+{
+  "skill": "f10-fortune-misfortune",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "最近太顺了，我感觉要出事，我现在处于巅峰但有点担心，这种状态能持续吗？",
+      "expected_behavior": "激活f10福祸相依框架，确认用户处于顺境（得意），逆向推演'得意中埋着什么悲的隐患'，制定'防止乐极生悲的三个具体措施'。",
+      "notes": "顺境中担心风险的场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "坏事发生了我觉得一切都完了，我现在很苦，但不知道能不能熬过去，还有希望吗？",
+      "expected_behavior": "激活f10，确认用户处于逆境（苦），逆向推演'苦中藏着什么乐的种子'，制定'在苦中寻找乐的三个具体方向'。",
+      "notes": "逆境中找不到希望的场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "为什么他这么成功却突然倒了？这里面有什么规律吗？",
+      "expected_behavior": "激活f10，用福祸相依框架分析'得意生悲'的转换逻辑，帮助用户理解成功中隐藏的风险点。",
+      "notes": "看到他人成功/失败想理解原因的场景"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我拥有的太多了，是不是该小心点？我现在处于顺境，想知道该怎么防范风险。",
+      "expected_behavior": "激活f10，确认用户处于得意状态，识别'得意生悲'的风险点，制定防悲的具体行动。",
+      "notes": "顺境中主动识别风险的场景"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "今天心情不好，想找你聊聊天发泄一下。",
+      "expected_behavior": "不触发，日常情绪倾诉，没有得意/失意的大起大落或福祸转换的预判需求",
+      "notes": "诱饵：日常情绪发泄场景"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想了解一下什么是'塞翁失马'的故事。",
+      "expected_behavior": "不触发，用户只是在查询典故信息，不涉及需要做决策或预判的困境",
+      "notes": "诱饵：典故查询场景"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "公司着火了，我现在需要立即撤离处理危机，有什么紧急流程吗？",
+      "expected_behavior": "不触发，紧急危机处理，用户需要立即行动方案而非福祸预判",
+      "notes": "诱饵：紧急危机处理"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我现在处于严重抑郁发作中，刚得知一个重大打击，我觉得一切都完了，'苦中有乐'有用吗？",
+      "expected_behavior": "不触发f10或慎用，B边界明确：用户正在经历急性危机/严重抑郁发作时，'苦中有乐'可能被滥用为'你应该感谢苦难'的精神控制，对用户有害无益",
+      "notes": "边界：急性心理危机的处理"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我现在处于极端顺境，有点像躁狂症状，总觉得自己无所不能，这种情况还能谈'得意生悲'吗？",
+      "expected_behavior": "慎用f10，B边界明确：用户处于极端顺境的躁狂状态时，'得意生悲'可能触发防御性否认，无法接受风险提示",
+      "notes": "边界：躁狂状态下的风险提示"
+    },
+    {
+      "id": "edge-case-03",
+      "type": "edge_case",
+      "prompt": "我一直在后悔当初如果没那么得意就好了，这能用'得意生悲'来分析吗？",
+      "expected_behavior": "不触发f10，B边界明确：f10是预判未来的工具，不是评估过去的工具，不应用来反复咀嚼'当初如果我没那么得意就好了'",
+      "notes": "边界：对过去的后悔不适合用f10"
+    }
+  ]
+}

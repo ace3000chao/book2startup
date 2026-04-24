@@ -1,0 +1,69 @@
+{
+  "skill": "p13中和为福偏激为灾",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我就是咽不下这口气，我一定要让他付出代价。",
+      "expected_behavior": "激活中和为福偏激为灾原则，识别用户的躁性（急躁愤怒），用'火炽遇物则焚'检测这个情绪会烧毁什么",
+      "notes": "极端愤怒的典型触发"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我控制不住自己了，我现在就要做，我不管后果了。",
+      "expected_behavior": "触发p13，识别偏激类型（躁性/寡恩/凝滞固执），引导用户找中和点",
+      "notes": "情绪失控前的触发"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我就是这样性格的人，我没办法改，脾气急是天生的。",
+      "expected_behavior": "触发p13，面对'我就是这种人'的自我认同，帮助用户看到偏激性格的代价",
+      "notes": "性格自合理由下的偏激"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我要么全赢要么全输，没有中间路线，这个交易我必须拿下。",
+      "expected_behavior": "触发p13，非黑即白的思维模式是凝滞固执的表现，用'死水腐木生机已绝'警醒",
+      "notes": "非黑即白的极端决策"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这个项目很紧急，我需要快速决策，不能犹豫太久。",
+      "expected_behavior": "不调用p13，紧急情况需要快速决策，p13明确说'不适用于需要果断决策的紧急情况'",
+      "notes": "紧急决策场景，不适用"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "有人要伤害我的家人，我必须反击，这是正当防卫。",
+      "expected_behavior": "不调用p13，正当防卫情况需要适当反击，p13明确说'涉及核心价值不可妥协时'不适用",
+      "notes": "正当防卫场景，核心价值不可中和"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我觉得应该坚持原则，哪怕代价很大，这是我的底线。",
+      "expected_behavior": "不调用p13，用户在表达需要坚持的立场，可能涉及核心价值；p13不适用于'核心价值不可妥协时'",
+      "notes": "核心价值坚持，不是p13的偏激范畴"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我对他很愤怒，因为他背叛了我；但我同时理解他为什么会这样做，我该怎么处理这个矛盾？",
+      "expected_behavior": "模糊场景：愤怒与理解并存，可能导致'凝滞固执'（无法整合矛盾）；应激活p13，帮助用户找到'不过激但依然有效'的应对方式",
+      "notes": "愤怒与理解矛盾，需要中和处理"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我对团队很严格，业绩确实提升了，但团队氛围很差，我是不是太极端了？",
+      "expected_behavior": "边界模糊：可能是'操履严明'（合理）也可能是'躁性/寡恩'（偏激）；应激活p13+f34组合，先用p13判断偏激类型，再引入f34的管理框架",
+      "notes": "严格管理 vs 偏激管控，需要组合判断"
+    }
+  ]
+}

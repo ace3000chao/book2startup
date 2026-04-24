@@ -1,0 +1,76 @@
+{
+  "skill": "f03-stillness-in-motion",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我只有在安静的时候才能平静下来，办公室里有人说话我就完全静不下心，这正常吗？",
+      "expected_behavior": "激活f03动静皆静框架，识别用户平静依赖外部条件（环境静），引导进入动中静测试，区分环境静vs心静。",
+      "notes": "典型依赖特定环境才能平静的场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "地铁上或者咖啡馆里，我根本没办法专注工作，效率骤降，这是为什么？",
+      "expected_behavior": "激活f03，识别这是内心未能真正安定，执行动中静测试，设计在嘈杂环境保持专注的任务。",
+      "notes": "嘈杂环境中效率骤降的场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我平时看起来挺冷静的，但上周在会议上和人发生冲突时突然就爆发了，事后很后悔，这是怎么回事？",
+      "expected_behavior": "激活f03，识别这是'假平静'——平时平静是环境帮的，压力下才暴露真实状态，需要动中静训练。",
+      "notes": "压力下情绪失控暴露假平静"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我想知道自己内心是否真的安定，有什么方法可以检验吗？",
+      "expected_behavior": "激活f03，提供主动进入嘈杂环境观察内心反应的检验方法，设计动中静测试任务。",
+      "notes": "想检验自己心性修养的场景"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "今天地铁真吵，人太多了，这是客观事实。",
+      "expected_behavior": "不触发，用户只是在陈述客观事实（地铁很吵）而非内心困扰，无情绪反应",
+      "notes": "诱饵：纯客观陈述，无内心困扰"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我现在需要专注写一份报告，还有两小时截止，有什么提高效率的方法吗？",
+      "expected_behavior": "不触发，用户需要的是专注完成任务的具体方法，而非检验心性，不涉及静不静的问题",
+      "notes": "诱饵：需要行动方案而非心态调整"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我不喜欢去菜市场，因为人太挤了，这是我的个人偏好。",
+      "expected_behavior": "不触发，用户只是在表达环境偏好，未表达内心困扰或需要检验心性",
+      "notes": "诱饵：单纯环境偏好"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我有个朋友说他能在任何环境下都保持专注，包括在噪音很大的工厂里，这算是'动中静'吗？",
+      "expected_behavior": "激活f03进行鉴别，需要区分'真正接纳噪音但内心安定'vs'对噪音麻木但内心实际在躲避'，检验是否'接纳但不跟随'",
+      "notes": "边界：对噪音麻木vs真正动中静的鉴别"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我是ADHD患者，注意力本来就很难集中，在嘈杂环境中无法专注是'修行不够'吗？",
+      "expected_behavior": "不触发f03或慎重触发，B边界明确：注意力缺陷/神经多样性特质是大脑结构差异，不是'修行不够'，此框架不适合用来自我批判",
+      "notes": "边界：神经多样性与修行批判的区分"
+    },
+    {
+      "id": "edge-case-03",
+      "type": "edge_case",
+      "prompt": "我现在正在开车，旁边有人按喇叭，我心烦意乱想发火，能用这个框架吗？",
+      "expected_behavior": "不触发f03，B边界明确：正在做需要高度专注的技术性工作（驾驶）时不适合修行动中静，应先确保安全",
+      "notes": "边界：高专注任务中不适合动中静训练"
+    }
+  ]
+}

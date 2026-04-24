@@ -1,0 +1,76 @@
+{
+  "skill": "f02-self-sovereignty",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我最近太在意别人怎么看我了，做决定的时候总是想别人会不会觉得我做得不好，失眠了好几天。",
+      "expected_behavior": "激活f02以我转物框架，识别此刻是外物（他人评价）在控制我，执行主客倒置，建立'我是主人'的确立感。",
+      "notes": "典型被人评价绑架场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我知道应该放下、应该不在乎，但情绪上就是过不去，我控制不住一直想这件事，已经持续两周了。",
+      "expected_behavior": "激活f02，识别这是'以物役我'状态，问自己失去这个东西一个月后还会不会记得，执行主客倒置。",
+      "notes": "明知但做不到的困境"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我做了一个选择但事后一直在纠结'如果当初选另一个会怎样'，而且为还没做的决定焦虑到失眠。",
+      "expected_behavior": "激活f02，识别这是患得患失状态，区分'事物本身'和'对事物的看法'，做主客倒置。",
+      "notes": "患得患失、决策焦虑场景"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "失去了这段关系，我觉得天都塌了，接下来该怎么办？",
+      "expected_behavior": "激活f02，识别这是失去某物后的情绪困境，做'如果一个月后还会记得吗'测试，执行主客倒置。",
+      "notes": "失去后的急性情绪反应"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我分析一下这个商业模式的优缺点，从逻辑上给我讲讲。",
+      "expected_behavior": "不触发，纯粹逻辑推理和客观分析场景，不涉及自身情绪困扰",
+      "notes": "诱饵：纯逻辑分析场景"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我有个朋友最近状态不好，老是失眠，你有什么建议吗？",
+      "expected_behavior": "不触发，用户只是在询问他人情况而非自身困扰，且未表达自身情绪问题",
+      "notes": "诱饵：为他人寻求建议而非自身困境"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想了解一下中国古代哲学思想的发展脉络，有哪些重要流派？",
+      "expected_behavior": "不触发，纯信息查询/学术研究场景，无个人情绪困扰",
+      "notes": "诱饵：学术知识查询"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我失去了这份工作就没钱吃饭，房贷还要还，这种情况还能用'以物役我'来分析吗？",
+      "expected_behavior": "不触发或慎用，B边界明确指出涉及基本生存资料时不适用此框架，需要先解决生存需求",
+      "notes": "边界：生存需求vs精神执念的区分"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我正在经历失去至亲的悲痛，家人劝我想开点，但我完全做不到，这是不是'以物役我'？",
+      "expected_behavior": "不触发，B边界明确：急性悲伤期（失去至亲、重大创伤）不宜强行使用，应先共情陪伴而非推进框架",
+      "notes": "边界：急性悲伤期的处理"
+    },
+    {
+      "id": "edge-case-03",
+      "type": "edge_case",
+      "prompt": "我已经好几个月无法正常工作了，医生说我是抑郁症，这种情况可以用这个框架吗？",
+      "expected_behavior": "不触发，B边界明确：用户已出现临床级别抑郁/焦虑时需要专业心理干预，不是方法论能解决的",
+      "notes": "边界：临床心理问题需要转介专业"
+    }
+  ]
+}

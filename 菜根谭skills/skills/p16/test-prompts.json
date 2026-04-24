@@ -1,0 +1,69 @@
+{
+  "skill": "p16动中真静",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "太乱了静不下心，我需要找个安静的地方才能想事情。",
+      "expected_behavior": "激活动中真静原则，引导用户理解'动处静得来'才是真静，'静中静非真静'",
+      "notes": "想要逃离混乱环境的典型"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "事情太多了，我脑子里全是事，我无法思考，只有安静时我才能想清楚。",
+      "expected_behavior": "触发p16，挑战'需要安静才能思考'的观念，引导用户探索在混乱中找静的可能性",
+      "notes": "需要安静才能思考的依赖"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "外面太吵了/太乱了，我需要一个安静的环境才能工作。",
+      "expected_behavior": "触发p16，检测用户是否在'逃避混乱'而非'在混乱中找静'；'动处静得来'是检验真正修养的标准",
+      "notes": "外部环境依赖"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我每次都要去图书馆才能看书，在办公室根本看不进去。",
+      "expected_behavior": "触发p16，典型'静中静非真静'——需要特定环境才能静，说明内心定力不够",
+      "notes": "静需要外部条件，说明定力不足"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我住在机场旁边，飞机噪音太大，严重影响我的睡眠，我该怎么办？",
+      "expected_behavior": "不调用p16，物理噪音污染严重影响了基本生活，p16说'物理条件不允许时改变环境比适应更合理'",
+      "notes": "严重噪音污染需要改变环境，不是内心修炼能解决的"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我有焦虑症，医生让我不要太紧张，我该怎么放松？",
+      "expected_behavior": "不调用p16，严重心理健康问题需要专业帮助，p16明确说'焦虑症患者可能无法通过内心修炼解决'",
+      "notes": "焦虑症需要专业治疗，不是p16的场景"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "现在有个紧急危机，我需要在混乱中快速决策，我该怎么静下来？",
+      "expected_behavior": "不调用p16，快速行动的场景需要的是果断不是静心，p16明确说'需要快速行动的场景'不适用",
+      "notes": "危机决策需要行动，不是静心"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我是一个外卖员，每天在喧闹的城市中跑来跑去，我该怎么修心？",
+      "expected_behavior": "模糊场景：工作环境喧闹但用户想修心；应激活p16，'动处静得来'正是这个场景的应用——不是在安静中静，是在动中静",
+      "notes": "需要在动态环境中修炼内心"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我理解内心可以平静，但有时候外部确实太吵了，我需要降噪耳机，这不是'逃避'吧？",
+      "expected_behavior": "边界模糊：工具辅助（降噪耳机）vs 逃避（换环境）；p16强调的是内心修炼，合理的工具辅助不是逃避；应激活p16，区分'环境改变'和'内心逃避'",
+      "notes": "工具辅助 vs 逃避的边界判断"
+    }
+  ]
+}

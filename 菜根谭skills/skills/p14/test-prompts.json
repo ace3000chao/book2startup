@@ -1,0 +1,69 @@
+{
+  "skill": "p14谨言慎行",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我是不是说多了？我刚才在会议上说了很多，会后总觉得哪里不对。",
+      "expected_behavior": "激活谨言慎行原则，用'十语九中一语不中则愆尤骈集'帮用户检测说错话的风险",
+      "notes": "说完后担心说多了"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我不知道该说什么，万一我说错了怎么办？我还没想好该怎么说。",
+      "expected_behavior": "触发p14，'宁默毋躁'——说话前先想清楚，不要急躁开口",
+      "notes": "说话前的犹豫焦虑"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "言多必失啊，我觉得我最近说错话太多了，我该怎么控制自己？",
+      "expected_behavior": "触发p14，帮助用户识别说话的风险，'宁默毋躁，宁拙无巧'",
+      "notes": "已经意识到说错话的问题"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我是不是太冲动了？我刚才没想好就答应了，现在后悔了。",
+      "expected_behavior": "触发p14，谋事前的谨慎，'宁拙无巧'——不要为了邀功而多谋",
+      "notes": "做决定前没有充分考虑"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我要做演讲了，有什么技巧能让我讲得更好？",
+      "expected_behavior": "不调用p14，演讲场景需要清晰表达观点，p14明确说'不适用于需要快速表达观点的演讲场景'",
+      "notes": "演讲场景需要表达，不是沉默"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我们在做头脑风暴，我有很多想法想说出来，需要抑制自己吗？",
+      "expected_behavior": "不调用p14，创意发散阶段需要大量试错和讨论，p14明确说'不适用于创意发散阶段'",
+      "notes": "头脑风暴场景，需要发散不是收敛"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我和女朋友吵架了，我应该说出我的真实感受吗？",
+      "expected_behavior": "不调用p14，关系中的真诚沟通有时需要'说错话'来表达真实感受，p14说'关系中的真诚沟通'不适用",
+      "notes": "亲密关系真诚沟通，不是谨言慎行的场景"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我是一个销售，要向客户介绍产品，既要说得好又不能说错话，我该怎么拿捏？",
+      "expected_behavior": "模糊场景：销售场景需要表达能力，但也有说错话的风险；应激活p14，但需要平衡——p14的'宁默毋躁'不是绝对沉默，而是'不要为了表现而多言'",
+      "notes": "销售沟通场景，需要平衡表达与谨慎"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我觉得我说话太谨慎了，导致别人觉得我没什么想法，我是不是太过了？",
+      "expected_behavior": "边界模糊：过度谨言慎行可能失去存在感；应激活p14+f18组合，先用p14检测是否'说了不该说的'，再用f18兼听框架检查是否过于封闭",
+      "notes": "过度谨慎的自我反思"
+    }
+  ]
+}

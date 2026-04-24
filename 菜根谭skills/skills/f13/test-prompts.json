@@ -1,0 +1,76 @@
+{
+  "skill": "f13-counter-intuitive-growth",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "为什么我这么倒霉？这件事对我有什么意义？逆境真的能带来成长吗？",
+      "expected_behavior": "激活f13逆增上缘修行框架，确认用户处于逆境，识别'逆境中的针砭药石'（磨练机会），制定逆境中磨练的具体行动。",
+      "notes": "逆境中寻求意义的场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "为什么好事都让我遇到了？我现在很顺利，需要担心什么吗？成功背后有什么风险？",
+      "expected_behavior": "激活f13，确认用户处于顺境，识别'顺境中的兵刃戈矛'（腐蚀剂），制定防止顺境变陷阱的具体措施。",
+      "notes": "顺境中需要警惕的场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "他这么成功，为什么突然就倒了？顺境中有哪些危险我可能没意识到？",
+      "expected_behavior": "激活f13，用'顺境是兵刃戈矛'的框架分析为什么成功会变成堕落，帮助用户理解顺境中的风险积累。",
+      "notes": "分析他人成功与失败的逆顺逻辑"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我现在处于顺境还是逆境？我怎么判断自己当前的状态？",
+      "expected_behavior": "激活f13，帮助用户用多维度评估判断当前状态（顺境/逆境/中性），识别当前状态中的风险或机会。",
+      "notes": "想评估自身当前状态的场景"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "今天心情不错，想聊聊。",
+      "expected_behavior": "不触发，日常情绪表达，没有明确的顺境/逆境判断需求，不涉及'成功时警惕什么'或'失败时接受什么'的决策",
+      "notes": "诱饵：日常心情表达"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想了解一下曾国藩的生平，这是历史人物研究。",
+      "expected_behavior": "不触发，纯历史人物信息查询，用户没有在评估自身顺境/逆境或想理解福祸转换",
+      "notes": "诱饵：历史人物研究"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我现在有一个紧急的客户投诉要处理，需要立即行动方案。",
+      "expected_behavior": "不触发，紧急情况需要立即行动方案，不是思考顺境/逆境意义的时机",
+      "notes": "诱饵：紧急情况处理"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我现在正在经历严重创伤，有人说'逆境是修行机会'，我是不是应该感谢逆境？",
+      "expected_behavior": "不触发f13或慎用，B边界明确：用户正在经历严重创伤时，'逆境是修行机会'可能是对创伤的否认，会让用户陷入'我应该感谢逆境'的自我批判而非真正处理创伤",
+      "notes": "边界：严重创伤不应感谢逆境"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我的逆境是结构性压迫，比如严重的歧视、极度贫困、系统不公，这种情况下还能用'逆增上缘'吗？",
+      "expected_behavior": "不触发f13，B边界明确：用户的逆境是结构性压迫（严重歧视、极度贫困、系统性不公）时，这不是修行机会，而是需要改变的结构性问题",
+      "notes": "边界：结构性压迫不是修行机会"
+    },
+    {
+      "id": "edge-case-03",
+      "type": "edge_case",
+      "prompt": "我现在处于极端顺境，有点像躁狂状态，信心爆棚，觉得无所不能，这时还跟我说'顺境危险'吗？",
+      "expected_behavior": "慎用f13，B边界明确：用户已经处于极端顺境的躁狂状态时，不宜再强化'顺境危险'的概念，可能导致用户做出不必要的'破坏顺境'的行为",
+      "notes": "边界：躁狂状态下的顺境警示"
+    }
+  ]
+}

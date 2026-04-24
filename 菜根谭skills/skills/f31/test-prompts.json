@@ -1,0 +1,76 @@
+{
+  "skill": "f31-progressive-self-cultivation",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我想提高自己的修养，但不知道从哪下手，觉得自己气量太小。",
+      "expected_behavior": "激活循序三修框架，引导用户从'识'开始诊断，找到当前阶段",
+      "notes": "典型的自我反省入口"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "怎么才能有更大的格局？我读了那么多书，为什么还是过不好？",
+      "expected_behavior": "触发f31，区分'识多'但'量不够'的情况，引导用户理解识→量→德的递进路径",
+      "notes": "识有了但量不够的典型表现"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我知道我应该大度，但我做不到，怎么修炼？",
+      "expected_behavior": "触发f31，帮助用户理解'大度'不能直接修，需要先增见识再阔气量",
+      "notes": "直接'修德'失败后的困惑"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我的问题到底在哪里？是格局不够还是气量不够？",
+      "expected_behavior": "触发f31，提供诊断框架，帮助用户识别自己处于识/量/德的哪个阶段",
+      "notes": "需要诊断框架的场景"
+    },
+    {
+      "id": "should-trigger-05",
+      "type": "should_trigger",
+      "prompt": "要怎样才能厚德？我觉得我现在品德还不够。",
+      "expected_behavior": "触发f31，纠正用户'直接修德'的错误路径，引入识→量→德的迂回路径",
+      "notes": "想直接修德的典型误区"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我想学习谈判技巧，有什么书推荐吗？",
+      "expected_behavior": "不调用f31，这是纯技能提升需求，f31不适用于纯技能问题",
+      "notes": "专业技术学习，不触发"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我知道我睡眠不好，但我就是改不了，有什么办法？",
+      "expected_behavior": "不调用f31，用户知道问题在哪，只是缺乏行动力，f31需要的是自我认知而非行动力",
+      "notes": "行动力问题，不是认知问题"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想让团队成员提升能力，作为管理者我该怎么辅导他们？",
+      "expected_behavior": "不调用f31，这是团队管理问题，虽然涉及他人成长但不是'自我修养递进'",
+      "notes": "管理辅导场景，不是f31的核心触发"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我读了很多书（识够了），但我还是很焦虑，无法平静（量不够），这是怎么回事？",
+      "expected_behavior": "边界模糊：识→量的转化出了问题，可能同时需要f31路径+f16动中真静；先激活f31诊断，再决定是否组合",
+      "notes": "识量脱节，需要组合f31+f16"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我觉得自己品德不够（德不足），但我见识已经很广了（识够了），我直接修德可以吗？",
+      "expected_behavior": "边界模糊：识够了但量可能不够，直接修德可能有效也可能脆弱；应激活f31，用'量由识长'原则引导用户检查气量是否真的够了",
+      "notes": "识够但量可能不够，直接修德的危险"
+    }
+  ]
+}

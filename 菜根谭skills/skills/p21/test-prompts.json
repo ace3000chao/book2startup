@@ -1,0 +1,69 @@
+{
+  "skill": "p21毋偏信自任毋自满嫉人",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我相信他，不会有错的，你们不要说了，他就是靠谱。",
+      "expected_behavior": "激活毋偏信自任毋自满嫉人原则，识别用户的'偏信'陷阱，用'如果你错了，你愿意承认吗'检测",
+      "notes": "偏信某人的典型"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我比他们都强，我的经验比你们丰富，你们都不懂。",
+      "expected_behavior": "触发p21，识别用户的'自任'（过度自信）和'傲短'（以己之长形人之短），两个陷阱同时存在",
+      "notes": "傲慢自任的典型"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "他有什么了不起的？不就是运气好吗？我就是做不到他那样，我嫉妒他。",
+      "expected_behavior": "触发p21，识别用户的'嫉能'（因己之拙忌人之能），引导用户将嫉妒转化为学习",
+      "notes": "嫉妒他人才能的典型"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "没有人能骗我，我的判断很准，我相信自己的直觉。",
+      "expected_behavior": "触发p21，'自任而为气所使'——过度自信会被意气驱使，失去清醒判断",
+      "notes": "过度自信不听劝告"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我觉得这个决策是对的，虽然有人反对，但我坚持我的判断。",
+      "expected_behavior": "不调用p21，基于经验的自信判断在某些领域是必要的，p21明确说'基于经验的自信判断'不适用",
+      "notes": "合理自信的决策，不是陷阱"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这次比赛我比他强，我赢了，这是公平竞争。",
+      "expected_behavior": "不调用p21，健康竞争场景不是嫉妒，正当的自我评估不是自满；p21明确说'健康竞争场景'不适用",
+      "notes": "正当竞争，不是嫉妒或自满"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想听听大家意见，然后再做决定。",
+      "expected_behavior": "不调用p21，用户在主动兼听，没有表现出偏信或自任的问题",
+      "notes": "正在兼听，不是p21的触发"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我信任我的团队，相信他们能做决定，但最近他们连续失败了，我是不是太偏信了？",
+      "expected_behavior": "模糊场景：信任团队是正常的，但连续失败可能说明有问题；应激活p21，检查是否陷入'偏信'——信任不等于不问结果",
+      "notes": "信任与偏信的边界"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我觉得自己还不错，但也有人说我傲慢，我怎么判断我是不是真的傲慢？",
+      "expected_behavior": "边界模糊：用户自己不确定是否傲慢；应激活p21，用'以己之长形人之短'来自测——是否经常拿自己长处比别人的短处？",
+      "notes": "不确定自己是否傲慢，需要自我检测"
+    }
+  ]
+}

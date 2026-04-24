@@ -1,0 +1,76 @@
+{
+  "skill": "f01-retreat-step",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我在跟一个投资人谈判，他态度很强硬，条款已经僵持了两周，我觉得再争下去就要撕破脸了，要不要让一步？",
+      "expected_behavior": "激活f01退让一步决策框架，分析僵局类型（资源型/关系型/立场型），评估不让的代价，寻找最小有效退让方案。",
+      "notes": "典型谈判僵局触发场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "合伙人最近一直跟我对着干，董事会快吵起来了，继续这样下去团队会分裂，我在想要不要退一步缓和关系。",
+      "expected_behavior": "激活f01，分析这是关系型僵局还是立场型僵局，评估不让的代价，给出局部退让保留核心的方案。",
+      "notes": "职场派系僵持场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "客户要求我降价30%，我觉得这个价格根本不可行，但他态度非常强硬，说不降就不合作了，我该硬刚还是服软？",
+      "expected_behavior": "激活f01，判断这是否是利益型僵局，分析不让的代价（失去客户vs利润归零），寻找最小有效退让空间。",
+      "notes": "商业合作利益博弈场景"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "对方已经很过分了，但我不想把关系搞僵，也不想太吃亏，有没有第三条路可以走？",
+      "expected_behavior": "激活f01，引导用户识别僵局类型，评估不让的代价，找到局部退让换取关系健康的方案。",
+      "notes": "模糊表达但明确需要策略建议"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我想查一下下周北京天气怎么样，有雾霾吗？",
+      "expected_behavior": "不触发，纯粹信息查询，与谈判/博弈/僵局无关",
+      "notes": "诱饵：日常信息查询场景"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我跟客户签了合同，对方已经完全服软接受了所有条款，现在我想知道接下来怎么执行。",
+      "expected_behavior": "不触发，对方已服软，不是僵局场景，且不涉及退让决策",
+      "notes": "诱饵：无僵局、无需退让"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "这个季度业绩数据怎么样，帮我分析一下增长趋势。",
+      "expected_behavior": "不触发，纯数据查询和分析，无人际博弈场景",
+      "notes": "诱饵：业务数据分析场景"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "对方在谈判中态度强硬，但我判断他可能只是在试探我的底线，而不是真的有诚意——这种情况我该不该让？",
+      "expected_behavior": "触发f01但给出边界警示：对方无诚意时退让等于示弱，不应退让；需要先判断对方是真僵局还是试探。",
+      "notes": "边界模糊场景：诚意判断与退让策略的交叉点"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "这件事涉及我的原则底线，如果退一步就等于完全放弃我的核心价值观，但不让的话关系会破裂，该怎么办？",
+      "expected_behavior": "触发f01，识别这是核心利益vs关系维护的冲突，判停条件应提示：涉及人格/尊严/原则的核心问题不应退让，需要另寻方案或止损。",
+      "notes": "边界：核心利益不可退让的判断"
+    },
+    {
+      "id": "edge-case-03",
+      "type": "edge_case",
+      "prompt": "对方是故意在找茬、人身攻击我，这不是正常博弈，我该退让吗？",
+      "expected_behavior": "触发f01但应用B边界：恶意打压不是正常博弈，不应退让，应反击或止损。",
+      "notes": "边界：正常博弈vs恶意打压的区分"
+    }
+  ]
+}

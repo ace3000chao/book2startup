@@ -1,0 +1,76 @@
+{
+  "skill": "f12-moment-shift",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我太生气了想发火，我知道不该但就是忍不住，刚才差点摔东西。",
+      "expected_behavior": "激活f12一念转魔成佛框架，确认情绪即将失控的'当下'，识别'知'的出场（观察者存在），执行转念——从外面（什么激怒我）转到里面（此刻感受的情绪），让观察者出场。",
+      "notes": "典型情绪即将失控场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我当时没控制住，事后后悔了，我总是这样，冷静下来后知道自己不对但下次还是一样。",
+      "expected_behavior": "激活f12，识别这是事后反复后悔的'转念失败'模式，确认情绪失控的早期信号（身体反应），训练在'当下'识别观察者。",
+      "notes": "事后后悔但重复失控的场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我知道不该发脾气，但当时脑子一片空白，完全被情绪劫持了，冷静下来才后悔。",
+      "expected_behavior": "激活f12，识别这是'知'存在但'转念'失败的情况，引导识别情绪失控的早期信号（身体症状），训练'猛然转念'的能力。",
+      "notes": "被情绪劫持后冷静后悔的场景"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我控制不住自己，一和他吵架就想说最伤人的话，我知道这会毁掉一切，但就是忍不住。",
+      "expected_behavior": "激活f12，帮助用户在情绪即将爆发时识别'知'的存在（理智在场），执行转念——从外面的刺激源转向里面的情绪本身，让观察者出场。",
+      "notes": "冲动言行即将发生的危机场景"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我想了解一下情绪管理的一般技巧，这是理论学习。",
+      "expected_behavior": "不触发，用户只是在学习理论知识，不是自身面临情绪失控问题",
+      "notes": "诱饵：理论学习场景"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我有个朋友总是发脾气，事后后悔，有什么方法可以帮助他？",
+      "expected_behavior": "不触发，用户在为他人寻求建议，而非自身面临情绪失控问题",
+      "notes": "诱饵：为他人寻求建议"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想规划一下下周的工作安排，有什么时间管理工具推荐吗？",
+      "expected_behavior": "不触发，日常规划和时间管理，与情绪失控/转念无关",
+      "notes": "诱饵：工作规划场景"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我现在有强烈的自我伤害冲动，情绪已经完全失控了，这种情况下还能用'转念'吗？",
+      "expected_behavior": "不触发f12，B边界明确：用户处于急性精神危机（如严重惊恐发作、自我伤害冲动）时，需要的是专业心理急救，不是转念技术",
+      "notes": "边界：急性精神危机需要专业急救"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "对方虐待我、伤害我，我的愤怒是正常的反应，'转念'是不是在让我压抑真实情绪？",
+      "expected_behavior": "不触发f12或慎用，B边界明确：情绪失控的原因是结构性伤害（被虐待、被侵犯）时，情绪反应是正常的，不需要转念而需要安全和支持",
+      "notes": "边界：结构性伤害的情绪反应"
+    },
+    {
+      "id": "edge-case-03",
+      "type": "edge_case",
+      "prompt": "我有PTSD，某些触发让我直接进入僵住状态，完全无法'转念'，这是怎么回事？",
+      "expected_behavior": "不触发f12，B边界明确：PTSD患者在某些触发下会直接进入'战斗/逃跑/僵住'模式，而不是转念模式，需要专业治疗",
+      "notes": "边界：PTSD的应激反应模式"
+    }
+  ]
+}

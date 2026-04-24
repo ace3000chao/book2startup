@@ -1,0 +1,69 @@
+{
+  "skill": "p22德主才奴",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "他能力很强，但品德一般，我能用他吗？",
+      "expected_behavior": "激活德主才奴原则，'德者才之主，才者德之奴'——没有品德约束的能力会失控，引导用户用'以德御才'判断",
+      "notes": "德才取舍的典型问题"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "有才无德会怎样？我见过很多有能力的人做了坏事。",
+      "expected_behavior": "触发p22，'有才无德如家无主而奴用事'——没有主人的家，奴隶会胡作非为；能力越大破坏力越大",
+      "notes": "对有才无德的担忧"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "德重要还是才重要？我一直在提升能力，但品德好像没什么进步。",
+      "expected_behavior": "触发p22，直接回应'德才优先级'问题，用'德主才奴'的原则引导用户思考能力为谁所用",
+      "notes": "德才优先级的困惑"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "这个人很有才华但做了这样的事，有才无德最后都会出问题吗？",
+      "expected_behavior": "触发p22，历史上才子变恶棍的案例——能力和品德的关系",
+      "notes": "德不配位的担忧"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我是程序员，要评价一个技术候选人的代码能力，该怎么评估？",
+      "expected_behavior": "不调用p22，纯粹技术性岗位的评估与品德无关；p22明确说不适用于纯粹技术性岗位的招聘/评估场景",
+      "notes": "纯技术评估，不是德才问题"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想提升自己的沟通能力，有什么书推荐吗？",
+      "expected_behavior": "不调用p22，沟通技能提升不是德才取舍问题；p22专门针对'品德重要还是能力重要'的抉择",
+      "notes": "技能提升问题，与德才优先级无关"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我看到一个CEO很有魅力，把公司做起来了，我该怎么学习他？",
+      "expected_behavior": "不调用p22，用户在问如何学习成功人士，不是'德才取舍'的困惑",
+      "notes": "学习榜样，不是德才问题"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我是一个创业公司创始人，公司快死了，我需要一个能救公司的人，但这个人品德有问题，我该怎么办？",
+      "expected_behavior": "模糊场景：生存危机 vs 品德底线的冲突；p22说组织在生存边缘可能需要绩效优先，但要设立底线；应激活p22+f28组合，判断这个人的品德问题是否触碰底线",
+      "notes": "生存危机中的德才困境，需要底线判断"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "有些人很有才华但也很自私，他们利用自己的才能获取利益，但同时也为社会创造了价值，这怎么判断？",
+      "expected_behavior": "边界模糊：'才能为谁所用'是德才关系的核心；应激活p22，用'德者才之主'来检测——才能是被品德引导，还是被私利引导",
+      "notes": "才能创造价值但自私的复杂判断"
+    }
+  ]
+}

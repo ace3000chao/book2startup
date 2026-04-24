@@ -1,0 +1,69 @@
+{
+  "skill": "p20放下屠刀",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我要让他付出代价，我现在就要做，不管后果了。",
+      "expected_behavior": "激活放下屠刀原则，确认用户处于'怒火欲水正腾沸'的极端情绪中，用'知的是谁，犯的又是谁'引导猛然转念",
+      "notes": "极度愤怒想报复的典型"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我恨死他了，他必须受到惩罚，我控制不住自己了。",
+      "expected_behavior": "触发p20，'一念转魔成佛'——从'我要报复'切换到另一个视角（后果是什么/一年后还在意吗）",
+      "notes": "仇恨占据头脑的典型"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我知道不该，但我停不下来，我忍不住了，我现在就要做。",
+      "expected_behavior": "触发p20，'明明知得，又明明犯着'——理智和情绪是不同主体，一念之间可以转换",
+      "notes": "理智知道但情绪控制不住的典型"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我情绪失控了，做了事后后悔的事，现在该怎么办？",
+      "expected_behavior": "触发p20（如果是正在腾沸）或引导事后反思（'猛然转念'后的修复）；用户可能正在情绪中，也可能已经过了",
+      "notes": "情绪失控后的情况"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "有人正在打我，我需要自卫，我可以还手吗？",
+      "expected_behavior": "不调用p20，正在进行的身体攻击需要自卫，p20明确说'用户处于真正的危险中需要自卫'不适用",
+      "notes": "正当防卫的紧急情况，不是'放下屠刀'的场景"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我有重度抑郁，经常想伤害自己，我该怎么办？",
+      "expected_behavior": "不调用p20，严重心理健康危机需要专业医疗介入，p20明确说'重度抑郁/躁怒发作可能需要专业医疗介入'",
+      "notes": "重度抑郁需要专业治疗，不是p20能处理的"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想规划一下下周的工作，怎么安排效率更高？",
+      "expected_behavior": "不调用p20，工作规划不是情绪控制场景；p20专门针对极端情绪（愤怒/仇恨/欲望）",
+      "notes": "工作规划问题，与情绪控制无关"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我的愤怒是正当的——他真的伤害了我——我应该放下愤怒吗？",
+      "expected_behavior": "模糊场景：愤怒是否'正当'与是否应该'放下'是两回事；p20的边界说明'某些情绪（如被侵犯后的愤怒）是正当的，需要被认可而不是简单放下'；应激活p20但先认可情绪的正当性，再引导转念",
+      "notes": "正当愤怒是否应该放下的困惑"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我一直在压抑自己的愤怒，不敢发出来，这样对吗？",
+      "expected_behavior": "模糊场景：长期压抑可能导致情绪积压；p20是'猛然转念'（即时），不是压抑；应激活p20+f18组合，p20处理转念，f18处理长期的情绪平衡",
+      "notes": "长期压抑 vs 猛然转念的区别"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "skill": "f30-saint-commoner-integrated",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我不知道该坚持原则还是随大流，大家都在做，我一个人较真好像很傻。",
+      "expected_behavior": "激活圣凡一体观，帮助用户识别标签执念，区分'不做坏事'和'不立善名'的中道",
+      "notes": "典型的道德拉扯场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我怕自己太清高了，别人都不喜欢我，总觉得我端着。",
+      "expected_behavior": "触发f30，引导用户理解'浑然和气'不是表演清高，也不是迎合世俗",
+      "notes": "形象焦虑场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "做好人会吃亏吗？我总是吃亏的那个，是不是我太较真了？",
+      "expected_behavior": "触发f30，探讨'不立善名'和'做好人'的关系，避免道德洁癖",
+      "notes": "好人标签执念"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我总觉得要保持形象，不能放松，一旦放松别人就觉得我变坏了。",
+      "expected_behavior": "触发f30，帮助用户看到'保持形象'本身就是标签执念",
+      "notes": "标签执念的典型表现"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我朋友骗了我钱，我可以追回来吗？还是算了？",
+      "expected_behavior": "不调用f30，这是具体的法律/策略问题，不是道德形象拉扯",
+      "notes": "应该用f33处理，而不是f30"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想提升自己的修养，应该从哪方面入手？",
+      "expected_behavior": "不调用f30，用户在问方法论路径，这是f31循序三修的范畴",
+      "notes": "修身路径问题，不是道德拉扯"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我觉得自己说话太直了，如何变得更圆滑一点？",
+      "expected_behavior": "不调用f30，这是沟通技巧问题，不是'立善名vs随波逐流'的拉扯",
+      "notes": "说话方式问题，与f30无关"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我想做个好领导，但又怕被下属觉得我在装好，我该怎么平衡？",
+      "expected_behavior": "边界模糊场景：既是领导力问题，也可能涉及'不立善名'的拉扯；应激活f30，融合f34框架来处理",
+      "notes": "领导形象 + 道德形象双重焦虑，可能需要f30+f34组合"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我对一个同事很好，大家都说我是个好人，但他还是背叛了我，我是不是不该做好人？",
+      "expected_behavior": "模糊场景：既是'做好人吃亏'的拉扯，又涉及被背叛的情绪；应先用f33稳住情绪，再引入f30的中道观",
+      "notes": "情绪激动 + 道德疑惑，需要先处理情绪再处理框架"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "skill": "p15厚德载物雅量容人",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "他太过分了，我受不了这种人，我不想和他合作了。",
+      "expected_behavior": "激活厚德载物雅量容人原则，引导用户用'地之秽者多生物'检测排斥的代价",
+      "notes": "想要排斥/断绝关系的典型"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "他们都不理解我，我觉得自己站得太高了，和别人格格不入。",
+      "expected_behavior": "触发p15，'好洁独行'的问题——越追求纯洁的环境和人，越孤独；'含垢纳污'才能成大业",
+      "notes": "'太清高'的困惑"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这个圈子太乱了，我想找一个更纯粹的环境，远离这些人。",
+      "expected_behavior": "触发p15，用'水之清者常无鱼'说明环境太纯粹反而没有收获，引导用户思考是否在逃避",
+      "notes": "追求纯粹环境的困惑"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "为什么我总是一个人？别人都说我清高，但我只是不想和那些人同流合污。",
+      "expected_behavior": "触发p15，区分'不依附'和'好洁独行'——'出淤泥而不染'和'处淤泥而不弃'的区别",
+      "notes": "清高导致孤立的困惑"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我的同事在贪污，我该怎么办？我要举报吗？",
+      "expected_behavior": "不调用p15，贪污是法律和道德底线，p15明确说'涉及法律和道德底线时不要使用此skill，此时容纳可能是纵容'",
+      "notes": "犯罪行为需要处理，不是'容纳'的范畴"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我男朋友在打我，我应该继续容忍他吗？",
+      "expected_behavior": "不调用p15，家庭暴力需要保护自己，p15明确说'个人安全和健康受威胁时'不适用",
+      "notes": "家暴是红线，不是'容纳'的问题"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "有个新来的同事能力很强，但有点傲，我该怎么和他相处？",
+      "expected_behavior": "不调用p15，用户在问如何与能力强的同事相处，不是'排斥/容纳'的挣扎",
+      "notes": "普通的人际相处问题，不是p15的触发场景"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我团队里有人能力很强但品德一般，我应该容纳他的缺点还是应该请他离开？",
+      "expected_behavior": "边界模糊：涉及德才取舍，可能需要p22德主才奴来判断；应激活p15+f22组合，p15看'容量'，p22看'德才优先级'",
+      "notes": "能力强品德一般的团队成员，需要组合判断"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我想容纳这些人，但他们确实在伤害我的利益，我该怎么办？",
+      "expected_behavior": "模糊场景：'容纳'和'被伤害'之间的张力；应激活p15，区分'容纳污垢'和'被污垢侵蚀'——p15的'容纳'是为了转化，不是被同化",
+      "notes": "容纳与自我保护的边界"
+    }
+  ]
+}

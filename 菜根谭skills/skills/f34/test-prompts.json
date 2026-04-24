@@ -1,0 +1,69 @@
+{
+  "skill": "f34-upward строго-downward-仁",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我对下属太严厉了吗？他们好像很不开心，但我也是为他们好。",
+      "expected_behavior": "激活事上敬谨待下宽仁框架，帮助用户从'操履严明'和'心气和易'两个维度诊断",
+      "notes": "管理者困惑的典型场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "老板对我有看法我不知道怎么办，我又不敢太谄媚，但完全不说也不好。",
+      "expected_behavior": "触发f34，'对上是敬谨但不谄媚'，帮助用户找到平衡点",
+      "notes": "对上关系的拿捏困惑"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我该严还是松？我对下属好了他们不听话，严了他们又离职。",
+      "expected_behavior": "触发f34，从四维框架（操履严明、心气和易、不近腥膻、不激蜂虿）全面诊断",
+      "notes": "管理两难困境"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "团队里有个人是'小人'，工作能力很强，我不知道怎么和他相处。",
+      "expected_behavior": "触发f34，'不近腥膻之党'和'不激蜂虿之毒'的平衡——保持距离但不主动激化",
+      "notes": "面对'小人'的管理策略"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我和同事吵架了，我不知道该怎么和他相处。",
+      "expected_behavior": "不调用f34，这是平级关系，f34明确说'不适用于平级关系'",
+      "notes": "平级关系冲突，不是f34的管理场景"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我是个普通员工，不知道怎么和领导相处，有建议吗？",
+      "expected_behavior": "不调用f34，f34是针对管理者/当权者的框架，普通员工不需要'敬谨'（那是谄媚）",
+      "notes": "普通员工对领导，不需要f34的管理维度"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想提高自己的沟通能力，有什么建议吗？",
+      "expected_behavior": "不调用f34，这是通用的沟通能力问题，不是管理者特有的上下级平衡问题",
+      "notes": "通用沟通问题，不是f34的框架范围"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我是一个小团队的负责人，团队里有个刺头，我应该严厉对付他还是宽容他？",
+      "expected_behavior": "模糊场景：'严 vs 松'的拿捏在f34框架内，但刺头可能涉及'不近腥膻之党'的判断；应激活f34，判断这个刺头是否属于'蜂虿之人'",
+      "notes": "团队刺头处理，需要四维框架综合判断"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "上面压我任务，下面团队抱怨，我两边不是人，我该怎么办？",
+      "expected_behavior": "边界模糊：典型的'对上敬谨，对下宽仁'的拿捏困境；应激活f34，两维同时诊断，找到具体失衡点",
+      "notes": "上下压力夹击，需要f34全面框架"
+    }
+  ]
+}

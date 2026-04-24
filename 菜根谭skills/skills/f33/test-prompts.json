@@ -1,0 +1,69 @@
+{
+  "skill": "f33-composure-strategy",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我发现他一直在骗我，我想说出来但知道不能说，我该怎么忍？",
+      "expected_behavior": "激活不动声色应变框架，引导用户执行'延迟反应协议'，保护自己的筹码和余地",
+      "notes": "发现被骗后的典型反应"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "他当众羞辱我，我忍不下这口气，但我知道不能当场发作，我该怎么办？",
+      "expected_behavior": "触发f33，帮助用户识别'已知道'但不'已反应'，执行延迟反应",
+      "notes": "当众被羞辱场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "他以为我傻，故意占我便宜，我想让他知道我不好欺负，但我不想撕破脸。",
+      "expected_behavior": "触发f33，提供'不动声色'的策略——不是当场发作，而是后手策略",
+      "notes": "被利用但不想撕破脸"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我知道他在算计我，但我不想当众反驳他，有什么办法让他知道我知道了？",
+      "expected_behavior": "触发f33，'觉人之诈不形于言'，不说破但让对方知道你不是不知道",
+      "notes": "算计场景的策略应用"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我和朋友吵架了，我想跟他道歉，该怎么开口？",
+      "expected_behavior": "不调用f33，这是亲密关系的正常情绪表达，f33的'不动声色'不适用于私下里的真诚沟通",
+      "notes": "亲密关系中的真诚沟通，不是f33场景"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我现在很生气，想摔东西发泄一下，这样做对吗？",
+      "expected_behavior": "不调用f33，用户在问情绪发泄的方式，f33是策略性的延迟反应，不是情绪管理",
+      "notes": "情绪发泄问题，不是f33的策略延迟"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想报复他，有什么办法让他后悔？",
+      "expected_behavior": "不调用f33，用户在找报复方法，f33的'不动声色'是保护自己，不是报复",
+      "notes": "报复心理，与f33的保护性目的不符"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我在街上被人打了，我应该不动声色吗？",
+      "expected_behavior": "边界模糊：物理安全威胁需要立即保护自己，f33明确说'不要在需要立即保护自己免受身体伤害的紧急情况'使用；不应调用f33",
+      "notes": "身体安全威胁，边界明确不适用"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我发现领导在背后说我坏话，我想当面问清楚，但又不想破坏关系。",
+      "expected_behavior": "模糊场景：涉及对上关系，既有'被算计'的成分，又有领导关系的复杂性；应激活f33+f34组合，先用f33稳住局面，再考虑f34'事上敬谨'的处理",
+      "notes": "领导关系中的被动局面，需要f33+f34组合"
+    }
+  ]
+}

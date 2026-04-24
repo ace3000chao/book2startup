@@ -1,0 +1,76 @@
+{
+  "skill": "f09-tianli-renyu",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我不知道这样做对不对，有人给我一个'机会'，看起来很好但总觉得哪里不对，这条路能不能走？",
+      "expected_behavior": "激活f09天理人欲分判框架，明确选择选项，用'路宽路窄'检验每个选项（走这条路选择空间变大还是变小，对多数人有益还是只对我有益），做出方向性决定。",
+      "notes": "面临利益选择时不确定对不对的场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "有一个快速获利的机会，诱惑很大，但我不确定是不是应该接受，这对我来说是道德考验。",
+      "expected_behavior": "激活f09，评估这是一个'天理路'还是'人欲路'，用'路宽路窄'检验，短期对我有利但长期让选择空间变小则是人欲路。",
+      "notes": "诱惑面前的犹豫场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我想确认我的方向是否正确，我现在走的这条路是大方向上是对的吗？",
+      "expected_behavior": "激活f09，帮助用户用天理/人欲框架检验当前方向的性质，识别是'天理路'还是'人欲路'。",
+      "notes": "想确认方向是否正确的场景"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我该为了利益放弃原则吗？这个决定短期有利，但长期会怎样呢？",
+      "expected_behavior": "激活f09，明确这是天理vs人欲的抉择，用'路宽路窄'判断短期利益vs长期选择空间，给出方向性结论。",
+      "notes": "利益vs原则的抉择场景"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "中午吃什么？黄焖鸡还是兰州拉面？",
+      "expected_behavior": "不触发，日常琐事选择，不涉及道德方向/利益抉择，不需要用天理人欲分析",
+      "notes": "诱饵：日常琐事选择"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我分析一下这个投资组合的收益率和数据，我需要逻辑分析。",
+      "expected_behavior": "不触发，纯逻辑分析/数据计算，需要的是专业分析方法而非道德判断框架",
+      "notes": "诱饵：需要数据和逻辑分析的决策"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想了解一下'天理'和'人欲'在儒学中的概念定义，这是学术研究。",
+      "expected_behavior": "不触发，用户只是在收集信息/研究概念，不涉及需要做道德判断的决策困境",
+      "notes": "诱饵：学术概念查询"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我现在面临一个选择，看起来不是非黑即白的灰色地带，两个选项都有道德灰色区域，该怎么用这个框架？",
+      "expected_behavior": "激活f09，对两个选项都用'路宽路窄'检验，问'走这条路选择空间变大还是变小'，用选择空间而非利益多少来判断",
+      "notes": "灰色地带的决策场景"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我现在信息不完整，还不知道所有选项的全部后果，这种情况下能判断是天理还是人欲吗？",
+      "expected_behavior": "慎用f09，B边界明确：信息不完整时不应强行套用框架，应先收集信息才能判断选择的性质",
+      "notes": "边界：信息不完整时的判断"
+    },
+    {
+      "id": "edge-case-03",
+      "type": "edge_case",
+      "prompt": "我现在'不这样做就没饭吃'，生存压力很大，这种情况下还能谈天理吗？",
+      "expected_behavior": "不触发f09，B边界明确：面临'不这样做就没饭吃'的生存压力时，天理路可能是奢侈品，需要生存优先",
+      "notes": "边界：生存困境中的天理判断"
+    }
+  ]
+}

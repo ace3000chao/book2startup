@@ -1,0 +1,69 @@
+{
+  "skill": "p18持身勿轻用心毋重",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我太紧张了，一直在想这件事，睡也睡不好，我该怎么放松？",
+      "expected_behavior": "激活持身勿轻用心毋重原则，识别用户属于'用意重'（思虑过重），用'我为物泥'检测被困住的原因",
+      "notes": "思虑过重的典型"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我太松懈了，总是不够认真，导致很多低级错误，我该怎么紧起来？",
+      "expected_behavior": "触发p18，识别用户属于'持身轻'（轻浮松懈），用'物能挠我'检测什么外物在干扰",
+      "notes": "轻浮松懈的典型"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我不敢放松，一放松就出错，我被困住了，没有一点空间。",
+      "expected_behavior": "触发p18，典型的'用意重'——被事情绑住了，失去潇洒活泼之机",
+      "notes": "被紧绷困住的典型"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我找不到平衡，不知道什么时候该认真什么时候该放松。",
+      "expected_behavior": "触发p18，'不轻不重'的平衡点——悠闲镇定之趣和潇洒活泼之机并存",
+      "notes": "平衡困惑的典型"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我在写代码，需要高度专注，这是深度工作，我该怎么保持状态？",
+      "expected_behavior": "不调用p18，深度工作时需要较重的专注，p18明确说'需要完全专注的深度工作场景'不适用",
+      "notes": "深度工作场景，需要专注不是放松"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "公司遇到危机了，所有人都在加班，我也应该紧张起来吗？",
+      "expected_behavior": "不调用p18，危机/紧急情况需要紧张起来，p18明确说'危机/紧急情况'不适用",
+      "notes": "危机情况需要紧张，不是p18的场景"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想培养一个技能，从哪开始？",
+      "expected_behavior": "不调用p18，这是具体技能学习问题，p18是心态平衡问题，不是学习路径问题",
+      "notes": "技能学习问题，不是p18的触发"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我做销售时需要大胆自信，但p18说要不轻不重，我到底该放松还是紧绷？",
+      "expected_behavior": "边界模糊：销售场景需要自信（可能显得'重'），但过度紧绷会失去灵活；应激活p18+f18组合，p18检测'轻/重'，f18检测'偏见'",
+      "notes": "需要自信展现的场景与p18的平衡冲突"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我觉得自己有时候很轻浮（不够认真），有时候又太重（想太多），这是怎么回事？",
+      "expected_behavior": "模糊场景：用户同时有轻和重的问题，说明他可能在两者之间摇摆；应激活p18，识别'在轻和重之间找不到稳定状态'的核心问题",
+      "notes": "轻和重同时出现，状态不稳定"
+    }
+  ]
+}

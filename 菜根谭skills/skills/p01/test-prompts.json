@@ -1,0 +1,76 @@
+{
+  "skill": "p01栖守道德",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "有个机会可以让我接近一个重要人物，送点礼走个后门就能拿到项目，要不要做？",
+      "expected_behavior": "激活p01栖守道德原则，评估这是'依阿权势'还是'栖守道德'的选择，用'身后之身'测试（如果所有人都会知道这个决定，我还会做吗），评估权势依附的代价。",
+      "notes": "典型权力诱惑场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "大家都这样做，我不做会不会吃亏？大家都攀关系、走后门，我坚持原则会不会很傻？",
+      "expected_behavior": "激活p01，回应'坚持原则是否值得'的担忧，用'身后之身'和'万古凄凉vs一时寂寞'的逻辑，指出依附权势的代价和道德坚守的长远价值。",
+      "notes": "坚持原则但担心吃亏的场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这样做会得罪人，但符合我的原则；那样做能让我得到好处，但违背良心，我该怎么选？",
+      "expected_behavior": "激活p01，评估这是一个道德抉择，用'身后之身'测试判断选择方向，明确'宁受一时之寂寞，毋取万古之凄凉'的原则。",
+      "notes": "原则vs利益的抉择场景"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "这个机会如果做了，5年后我会后悔吗？这会影响我的声誉吗？",
+      "expected_behavior": "激活p01，用长期视角评估当前选择，识别这是'短期利益vs身后评价'的判断，触发原则坚守流程。",
+      "notes": "评估选择的长远影响场景"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我想了解一下秦桧的历史，这是历史研究。",
+      "expected_behavior": "不触发，纯历史信息查询，不涉及用户自身的道德抉择困境",
+      "notes": "诱饵：历史知识查询"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "明天天气怎么样？需要带伞吗？",
+      "expected_behavior": "不触发，日常信息查询，与道德抉择、权力诱惑无关",
+      "notes": "诱饵：日常信息查询"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我想学一下怎么处理人际关系，有哪些沟通技巧？",
+      "expected_behavior": "不触发，通用沟通技巧学习，没有具体的权力诱惑或道德抉择场景",
+      "notes": "诱饵：通用技能学习"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "我面临一个选择：帮朋友的忙需要走后门，但不走后门帮不了他，这是一个道德困境吗？",
+      "expected_behavior": "激活p01，分析这是否涉及权力依附（走权贵的后门vs帮朋友的忙），但需要区分'良性关系网络'与'依附权贵'，不应一刀切",
+      "notes": "边界：人情vs权势依附的区分"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "紧急情况下，比如救人，我需要找关系才能快速安排手术，这时还能谈'不攀权贵'吗？",
+      "expected_behavior": "激活p01但应识别B边界中的时代局限：紧急救援、善意谎言情境下，'灵活变通'可能是合理的，不宜用p01做绝对化判断",
+      "notes": "边界：紧急情况下的变通合理性"
+    },
+    {
+      "id": "edge-case-03",
+      "type": "edge_case",
+      "prompt": "我现在自己就是一个有权势的人，有人想依附我，我该接受吗？",
+      "expected_behavior": "激活p01，从'依阿权势者凄凉万古'的角度分析，不仅是'要不要攀附权贵'，还包括'要不要让人依附'，但需要更完整的权力关系分析",
+      "notes": "边界：权力关系中的双向分析"
+    }
+  ]
+}

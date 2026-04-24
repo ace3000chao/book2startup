@@ -1,0 +1,69 @@
+{
+  "skill": "p28守正安分远祸原则",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "有个权贵想拉拢我，给我很大的好处，但我觉得不太对，我要不要跟？",
+      "expected_behavior": "激活守正安分远祸原则，'趋炎附势之祸甚惨亦甚速'——依附权贵是高风险交易，权势倒了，你也倒",
+      "notes": "面临权贵依附的诱惑"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我最近太高调了，担心'出头椽子先烂'，我是不是该低调点？",
+      "expected_behavior": "触发p28，'栖恬守逸之味最淡亦最长'——守正安分是把命运放在自己手里",
+      "notes": "担心太高调的忧虑"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "他靠关系上去的，我不跟会不会落后？靠关系真的好吗？",
+      "expected_behavior": "触发p28，'趋炎附势之祸甚惨亦甚速'——快速成功vs安全长久，哪个更重要？",
+      "notes": "攀附关系 vs 不跟的纠结"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我想快速成功，但这条路有没有风险？跟对人是不是很重要？",
+      "expected_behavior": "触发p28，用风险管理原则评估——不是看谁赚得多，是看谁活得久",
+      "notes": "快速成功欲望下的风险评估"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我想建立正当的行业关系网络，这算攀附权贵吗？",
+      "expected_behavior": "不调用p28，正常的合作关系网络不是'趋炎附势'；p28明确说'需要建立正当关系网络的场景'不适用",
+      "notes": "正当行业关系，不是p28的依附"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我现在是创业期，需要借力资源才能活下去，我该怎么办？",
+      "expected_behavior": "不调用p28，战略进攻期需要借力，p28说'创业期可能需要借助资源，但不能迷失方向'；不应过度使用p28让用户失去机会",
+      "notes": "创业借力期，需要资源不是守正"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "有个贵人在我困难时帮助了我，我该怎么感谢他？",
+      "expected_behavior": "不调用p28，贵人帮助和权贵依附不同；p28边界说'区分帮助你的人和利用你的权贵'；这是正当的感谢关系",
+      "notes": "贵人帮助 vs 权贵依附，性质不同"
+    },
+    {
+      "id": "edge-case-01",
+      "type": "edge_case",
+      "prompt": "有一个大公司想投资我们，接受他们的钱意味着要听他们的，不接受又缺钱，我该怎么办？",
+      "expected_behavior": "模糊场景：接受投资意味着一定程度的依附，但也是正常商业行为；应激活p28+f22组合，p28评估依附风险，f22评估'以德御才'——是否能保持主动权",
+      "notes": "商业投资中的依附与自主平衡"
+    },
+    {
+      "id": "edge-case-02",
+      "type": "edge_case",
+      "prompt": "我想选择一条安全但缓慢的路，但我又担心错过机会，怎么判断？",
+      "expected_behavior": "边界模糊：'安全缓慢'和'快速风险'的选择；p28的核心是风险管理——不是看谁赚得多，是看谁活得久；应激活p28，帮助用户明确自己的优先级",
+      "notes": "速度 vs 安全的价值判断"
+    }
+  ]
+}
