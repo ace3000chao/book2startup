@@ -4,7 +4,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Built with book2skill](https://img.shields.io/badge/Built%20with-book2skill-green.svg)](https://github.com/kangarooking/cangjie-skill)
-[![English](https://img.shields.io/badge/English-README-)](./README.en.md)
 
 ---
 
