@@ -7,6 +7,8 @@
 
 ---
 
+![易经Skills](../post/postYJ.jpg)
+
 ## 🎯 这套 Skills 能解决什么问题？
 
 你是不是遇到过这些问题：
