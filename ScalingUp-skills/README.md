@@ -7,6 +7,9 @@
 
 ---
 
+![Scaling Up Skills](../post/postSU.jpg)
+
+
 ## 🎯 这套Skills能解决什么问题？
 
  Scaling Up（Verne Harnish，2014）是全球最畅销的创业规模化指南，其核心理论——**四象限框架（People / Strategy / Execution / Cash）** + **4 Decisions** + **Rockefeller Habits Checklist**——帮助无数创业公司从"活下来"到"规模化"。
