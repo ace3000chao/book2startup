@@ -66,6 +66,8 @@
 └── verified.md
 ```
 
+![庄子Skills](post/postZZ.jpg)
+
 ---
 
 ### 孙子兵法Skills（18个可执行框架）
@@ -90,6 +92,8 @@
 ├── rejected/
 └── verified.md
 ```
+
+![孙子兵法Skills](post/postSZBF.jpg)
 
 ---
 
@@ -116,6 +120,17 @@
 ├── rejected/
 └── verified.md
 ```
+
+![精益创业Skills](post/postJYCY.jpg)
+
+
+### 易经Skills
+
+![易经Skills](post/postYJT.jpg)
+
+### 菜根谭Skills
+
+![菜根谭Skills](post/postCGT.jpg)
 
 ---
 
