@@ -1,0 +1,69 @@
+{
+  "skill": "leadership-triple",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "lt-st-01",
+      "type": "should_trigger",
+      "prompt": "怎么判断自己是不是一个好领导？总觉得团队好像对我不太满意",
+      "expected_behavior": "触发leadership-triple，用三要素框架（做什么/用什么方法/用什么人）评估领导力",
+      "notes": "领导力自评场景"
+    },
+    {
+      "id": "lt-st-02",
+      "type": "should_trigger",
+      "prompt": "团队大小事都依赖我决策，我成了瓶颈，怎么授权都推不下去",
+      "expected_behavior": "触发leadership-triple，分析授权障碍和领导力提升路径",
+      "notes": "授权困境"
+    },
+    {
+      "id": "lt-st-03",
+      "type": "should_trigger",
+      "prompt": "我从技术岗位晋升为管理者，不知道怎么带团队，有什么系统的方法吗？",
+      "expected_behavior": "触发leadership-triple，提供从技术到管理的领导力转型框架",
+      "notes": "技术转管理场景"
+    },
+    {
+      "id": "lt-st-04",
+      "type": "should_trigger",
+      "prompt": "团队里有人不服管，总是挑战我的决定，怎么处理？",
+      "expected_behavior": "触发leadership-triple，分析领导力中的关系和方法问题",
+      "notes": "团队冲突领导场景"
+    },
+    {
+      "id": "lt-sn-01",
+      "type": "should_not_trigger",
+      "prompt": "什么是领导力？给我讲讲管理课程",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "纯概念性问题"
+    },
+    {
+      "id": "lt-sn-02",
+      "type": "should_not_trigger",
+      "prompt": "给我推荐几本领导力方面的书",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "书籍推荐请求"
+    },
+    {
+      "id": "lt-sn-03",
+      "type": "should_not_trigger",
+      "prompt": "我想学管理，应该先考什么证书？",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "证书咨询请求"
+    },
+    {
+      "id": "lt-ec-01",
+      "type": "edge_case",
+      "prompt": "我是技术出身，不擅长管理，团队里的人觉得我太冷漠怎么办？",
+      "expected_behavior": "模糊边界：可能触发leadership-triple，强调领导力的'做什么'维度（技术领导）；也可能不触发",
+      "notes": "技术型领导的管理挑战"
+    },
+    {
+      "id": "lt-ec-02",
+      "type": "edge_case",
+      "prompt": "我的领导风格是亲力亲为，效率很高但团队成长很慢，是什么问题？",
+      "expected_behavior": "可能触发leadership-triple，分析领导风格与团队发展的关系",
+      "notes": "领导风格诊断"
+    }
+  ]
+}

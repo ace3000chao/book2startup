@@ -1,0 +1,76 @@
+{
+  "skill": "dont-copy-compensation",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "comp-001",
+      "type": "should_trigger",
+      "prompt": "看到优秀公司直接复制他们的薪酬体系，可行吗？",
+      "expected_behavior": "应触发dont-copy-compensation skill，指出薪酬体系不可简单复制的原因",
+      "notes": "直接询问薪酬复制可行性"
+    },
+    {
+      "id": "comp-002",
+      "type": "should_trigger",
+      "prompt": "薪酬设计能照搬吗？为什么我们抄了大公司发现不管用？",
+      "expected_behavior": "应触发dont-copy-compensation skill，解释薪酬体系背后的逻辑差异",
+      "notes": "复制失败的困惑"
+    },
+    {
+      "id": "comp-003",
+      "type": "should_trigger",
+      "prompt": "我们参考行业龙头设计了薪酬方案，但员工还是不满意，问题出在哪？",
+      "expected_behavior": "应触发dont-copy-compensation skill，指出薪酬设计需要匹配自身发展阶段和文化",
+      "notes": "对标设计失效场景"
+    },
+    {
+      "id": "comp-004",
+      "type": "should_trigger",
+      "prompt": "同一套薪酬方案在不同公司效果完全不同，为什么？",
+      "expected_behavior": "应触发dont-copy-compensation skill，强调薪酬体系的情境依赖性",
+      "notes": "薪酬方案情境差异"
+    },
+    {
+      "id": "comp-005",
+      "type": "should_not_trigger",
+      "prompt": "什么是薪酬体系？",
+      "expected_behavior": "不应触发，概念性询问",
+      "notes": "基本定义问题"
+    },
+    {
+      "id": "comp-006",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲薪酬设计",
+      "expected_behavior": "不应触发，薪酬设计方法论泛谈而非复制陷阱",
+      "notes": "薪酬设计通用话题"
+    },
+    {
+      "id": "comp-007",
+      "type": "should_not_trigger",
+      "prompt": "宽带薪酬和窄带薪酬有什么区别？",
+      "expected_behavior": "不应触发，薪酬结构类型对比",
+      "notes": "薪酬类型讨论"
+    },
+    {
+      "id": "comp-008",
+      "type": "edge_case",
+      "prompt": "竞争对手薪酬比我们高很多，挖人完全没竞争力，怎么办？只能照搬他们吗？",
+      "expected_behavior": "可触发，指出不是复制薪酬结构而是理解其背后的价值分配逻辑，并建立差异化吸引力",
+      "notes": "竞争对手薪酬压力场景"
+    },
+    {
+      "id": "comp-009",
+      "type": "edge_case",
+      "prompt": "我们 startup 早期直接用了大公司的薪酬框架，结果人效很低，为什么？",
+      "expected_behavior": "可触发，指出大公司薪酬框架适合稳定期，不适合高速发展的 startup",
+      "notes": "发展阶段不匹配场景"
+    },
+    {
+      "id": "comp-010",
+      "type": "edge_case",
+      "prompt": "从大公司挖来的人水土不服，是不是薪酬设计出了问题？",
+      "expected_behavior": "可触发，指出薪酬期望与实际激励效果之间的错配，不仅是数字问题",
+      "notes": "人才水土不服场景"
+    }
+  ]
+}

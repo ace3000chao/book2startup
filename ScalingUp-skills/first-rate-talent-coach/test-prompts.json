@@ -1,0 +1,76 @@
+{
+  "skill": "first-rate-talent-coach",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "coach-001",
+      "type": "should_trigger",
+      "prompt": "优秀员工成长遇到瓶颈，怎么帮助他们突破？",
+      "expected_behavior": "应触发first-rate-talent-coach skill，强调A级人才需要一流教练",
+      "notes": "高潜力人才发展问题"
+    },
+    {
+      "id": "coach-002",
+      "type": "should_trigger",
+      "prompt": "怎么培养A级人才？",
+      "expected_behavior": "应触发first-rate-talent-coach skill，指出需要配备一流教练资源",
+      "notes": "A级人才培养路径"
+    },
+    {
+      "id": "coach-003",
+      "type": "should_trigger",
+      "prompt": "公司最厉害的那个人要离职了，怎么留住并让他继续成长？",
+      "expected_behavior": "应触发first-rate-talent-coach skill，强调顶级人才需要顶级教练投入",
+      "notes": "高潜人才保留场景"
+    },
+    {
+      "id": "coach-004",
+      "type": "should_trigger",
+      "prompt": "高管教练是什么？适合什么样的人？",
+      "expected_behavior": "应触发first-rate-talent-coach skill，介绍一流教练理念及其对A级人才的价值",
+      "notes": "高管教练概念引出顶级人才培养"
+    },
+    {
+      "id": "coach-005",
+      "type": "should_not_trigger",
+      "prompt": "什么是人才发展？",
+      "expected_behavior": "不应触发，概念性询问而非一对一教练主题",
+      "notes": "人才发展广义概念"
+    },
+    {
+      "id": "coach-006",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲培训发展",
+      "expected_behavior": "不应触发，培训体系话题而非一对一教练",
+      "notes": "培训发展泛谈"
+    },
+    {
+      "id": "coach-007",
+      "type": "should_not_trigger",
+      "prompt": "新员工培训计划怎么做？",
+      "expected_behavior": "不应触发，培训流程设计而非A级人才教练",
+      "notes": "入职培训话题"
+    },
+    {
+      "id": "coach-008",
+      "type": "edge_case",
+      "prompt": "普通员工需要一流教练吗？还是只有高管才需要？",
+      "expected_behavior": "可触发，指出教练资源的优先级，建议先集中在A级人才上，但其他人也需适度辅导",
+      "notes": "教练资源分配问题"
+    },
+    {
+      "id": "coach-009",
+      "type": "edge_case",
+      "prompt": "我自己就是公司最强的，要不要给团队其他成员当教练？",
+      "expected_behavior": "可触发，指出创始人/CEO担任教练的利弊，建议建立教练文化但不一定亲自操刀",
+      "notes": "创始人当教练的边界"
+    },
+    {
+      "id": "coach-010",
+      "type": "edge_case",
+      "prompt": "教练费用很贵，小公司请不起外部教练怎么办？",
+      "expected_behavior": "可触发，建议内部教练体系或利用peer coaching、导师制等低成本方式",
+      "notes": "资源限制场景"
+    }
+  ]
+}

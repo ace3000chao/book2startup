@@ -1,0 +1,69 @@
+{
+  "skill": "cash-conversion-cycle",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "ccc-st-01",
+      "type": "should_trigger",
+      "prompt": "怎么加快现金回流？客户付款周期越来越长，账期拖到半年受不了",
+      "expected_behavior": "触发cash-conversion-cycle，分析现金转换周期各环节，提供缩短周期的具体方法",
+      "notes": "现金回流困境"
+    },
+    {
+      "id": "ccc-st-02",
+      "type": "should_trigger",
+      "prompt": "客户总是要求账期，但我们资金压力很大，怎么平衡？",
+      "expected_behavior": "触发cash-conversion-cycle，讨论信用政策与资金效率的平衡",
+      "notes": "账期谈判场景"
+    },
+    {
+      "id": "ccc-st-03",
+      "type": "should_trigger",
+      "prompt": "公司增长很快但总觉得钱不够用，是不是收款出了问题？",
+      "expected_behavior": "触发cash-conversion-cycle，诊断现金转换效率问题",
+      "notes": "增长中的资金紧张"
+    },
+    {
+      "id": "ccc-st-04",
+      "type": "should_trigger",
+      "prompt": "我们给代理商的账期是90天，但代理商又给下游账期120天，资金占用太严重了",
+      "expected_behavior": "触发cash-conversion-cycle，分析渠道资金占用问题",
+      "notes": "渠道账期链条"
+    },
+    {
+      "id": "ccc-sn-01",
+      "type": "should_not_trigger",
+      "prompt": "什么是资金周转？给我讲讲资金周转率",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "纯概念性问题"
+    },
+    {
+      "id": "ccc-sn-02",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲现金流管理的基本原则",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "通用财务概念请求"
+    },
+    {
+      "id": "ccc-sn-03",
+      "type": "should_not_trigger",
+      "prompt": "我们公司账上有多少钱？怎么查？",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "数据查询请求"
+    },
+    {
+      "id": "ccc-ec-01",
+      "type": "edge_case",
+      "prompt": "我们应该提前付款给供应商换取折扣吗？这样好像能省钱",
+      "expected_behavior": "模糊边界：可能触发cash-conversion-cycle（早付=缩短现金周期），也可能是纯折扣决策",
+      "notes": "提前付款换折扣的决策"
+    },
+    {
+      "id": "ccc-ec-02",
+      "type": "edge_case",
+      "prompt": "我们是项目制公司，一个项目周期一年，怎么管理这个期间的现金流？",
+      "expected_behavior": "可能触发cash-conversion-cycle或growth-sucks-cash，取决于强调的是'周期管理'还是'项目增长资金'",
+      "notes": "长周期项目的现金管理"
+    }
+  ]
+}

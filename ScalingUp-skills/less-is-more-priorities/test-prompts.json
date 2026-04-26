@@ -1,0 +1,55 @@
+{
+  "skill": "less-is-more-priorities",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "limp-001",
+      "type": "should_trigger",
+      "prompt": "团队同时推进十几个项目，进度都很慢",
+      "expected_behavior": "触发less-is-more-priorities skill，建议聚焦少数关键项目",
+      "notes": "典型症状：资源分散"
+    },
+    {
+      "id": "limp-002",
+      "type": "should_trigger",
+      "prompt": "什么都要做，但资源不够怎么办",
+      "expected_behavior": "触发less-is-more-priorities skill，帮助识别真正重要的",
+      "notes": "优先级不清晰"
+    },
+    {
+      "id": "limp-003",
+      "type": "should_trigger",
+      "prompt": "每次定完优先级不久就被打乱，团队很困惑",
+      "expected_behavior": "触发less-is-more-priorities skill，分析优先级不稳定原因",
+      "notes": "优先级反复变更"
+    },
+    {
+      "id": "limp-004",
+      "type": "should_not_trigger",
+      "prompt": "什么是优先级",
+      "expected_behavior": "不触发less-is-more-priorities skill，应提供基础概念",
+      "notes": "诱饵：纯概念性问题"
+    },
+    {
+      "id": "limp-005",
+      "type": "should_not_trigger",
+      "prompt": "怎么排任务顺序？给我讲讲方法",
+      "expected_behavior": "不触发less-is-more-priorities skill，应提供任务排序方法",
+      "notes": "诱饵：问方法而非聚焦问题"
+    },
+    {
+      "id": "limp-006",
+      "type": "edge_case",
+      "prompt": "有两个同样重要的事项怎么办",
+      "expected_behavior": "可触发less-is-more-priorities skill，探讨如何做最终取舍",
+      "notes": "边界模糊：表面同等重要需要深挖"
+    },
+    {
+      "id": "limp-007",
+      "type": "edge_case",
+      "prompt": "客户说重要、员工说重要、投资人也说重要，到底哪个真正重要",
+      "expected_behavior": "可触发less-is-more-priorities skill，帮助建立判断标准",
+      "notes": "边界模糊：多方利益相关者的优先级冲突"
+    }
+  ]
+}

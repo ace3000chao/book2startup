@@ -1,0 +1,76 @@
+{
+  "skill": "customer-complaint-signal",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "complaint-001",
+      "type": "should_trigger",
+      "prompt": "客户投诉越来越多，是产品问题还是服务问题？",
+      "expected_behavior": "应触发customer-complaint-signal skill，强调投诉是创新信号而非麻烦",
+      "notes": "典型投诉处理与分析场景"
+    },
+    {
+      "id": "complaint-002",
+      "type": "should_trigger",
+      "prompt": "怎么从投诉中发现创新机会？",
+      "expected_behavior": "应触发customer-complaint-signal skill，提供将投诉转化为创新方向的框架",
+      "notes": "明确要求从投诉中发现机会"
+    },
+    {
+      "id": "complaint-003",
+      "type": "should_trigger",
+      "prompt": "客户反馈说我们的产品难用，但具体哪里难用又说不清楚，怎么挖掘？",
+      "expected_behavior": "应触发customer-complaint-signal skill，建议深度访谈和投诉分析来发现真实痛点",
+      "notes": "模糊投诉的深度挖掘"
+    },
+    {
+      "id": "complaint-004",
+      "type": "should_trigger",
+      "prompt": "竞争对手的投诉比我们少很多，是不是说明他们产品更好？",
+      "expected_behavior": "应触发customer-complaint-signal skill，分析投诉少可能是用户沉默而非满意",
+      "notes": "竞争对标中的投诉分析"
+    },
+    {
+      "id": "complaint-005",
+      "type": "should_not_trigger",
+      "prompt": "什么是客户反馈？",
+      "expected_behavior": "不应触发，概念性询问",
+      "notes": "基本定义问题"
+    },
+    {
+      "id": "complaint-006",
+      "type": "should_not_trigger",
+      "prompt": "帮我处理一下这个客户投诉",
+      "expected_behavior": "不应触发，具体的投诉处理而非系统性利用投诉信号",
+      "notes": "操作执行请求"
+    },
+    {
+      "id": "complaint-007",
+      "type": "should_not_trigger",
+      "prompt": "客户满意度怎么计算？NPS是什么？",
+      "expected_behavior": "不应触发，指标定义而非投诉信号利用",
+      "notes": "指标概念话题"
+    },
+    {
+      "id": "complaint-008",
+      "type": "edge_case",
+      "prompt": "客户不投诉但也不续约了，这是什么信号？",
+      "expected_behavior": "可触发，指出沉默型流失的风险，建议建立早期预警系统，投诉少≠满意",
+      "notes": "最危险的信号：沉默流失"
+    },
+    {
+      "id": "complaint-009",
+      "type": "edge_case",
+      "prompt": "投诉太多处理不过来，是增加客服还是从源头解决？",
+      "expected_behavior": "可触发，建议建立投诉分类系统，从高频投诉中找到产品/服务改进点",
+      "notes": "投诉量管理场景"
+    },
+    {
+      "id": "complaint-010",
+      "type": "edge_case",
+      "prompt": "有些客户专门提负面评价要赔偿，怎么区分真投诉和恶意投诉？",
+      "expected_behavior": "可触发，提供投诉甄别框架和恶意投诉处理策略",
+      "notes": "投诉真实性判断"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "skill": "3x-industry-profitability",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "3x-001",
+      "type": "should_trigger",
+      "prompt": "怎么判断我们的盈利能力是否健康",
+      "expected_behavior": "触发3x-industry-profitability skill，介绍3倍行业利润率标准",
+      "notes": "盈利能力评估"
+    },
+    {
+      "id": "3x-002",
+      "type": "should_trigger",
+      "prompt": "利润率低于同行怎么办",
+      "expected_behavior": "触发3x-industry-profitability skill，分析差距原因",
+      "notes": "竞争力不足"
+    },
+    {
+      "id": "3x-003",
+      "type": "should_trigger",
+      "prompt": "我们的利润率只有2%，行业平均是8%，差距在哪里",
+      "expected_behavior": "触发3x-industry-profitability skill，对标行业标准",
+      "notes": "明确的差距数据"
+    },
+    {
+      "id": "3x-004",
+      "type": "should_not_trigger",
+      "prompt": "什么是行业平均利润率",
+      "expected_behavior": "不触发3x-industry-profitability skill，应提供基础概念",
+      "notes": "诱饵：纯概念性问题"
+    },
+    {
+      "id": "3x-005",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲利润分析的方法",
+      "expected_behavior": "不触发3x-industry-profitability skill，应提供利润分析方法",
+      "notes": "诱饵：问方法而非对标问题"
+    },
+    {
+      "id": "3x-006",
+      "type": "edge_case",
+      "prompt": "我们处于早期阶段，需要关注利润率吗",
+      "expected_behavior": "可触发3x-industry-profitability skill，但需要考虑企业发展阶段",
+      "notes": "边界模糊：早期阶段 vs 成熟阶段"
+    },
+    {
+      "id": "3x-007",
+      "type": "edge_case",
+      "prompt": "我们利润率是行业3倍了，还需要继续提升吗",
+      "expected_behavior": "可能不触发3x-industry-profitability skill，已达到优秀标准",
+      "notes": "边界模糊：达标后的持续改进"
+    }
+  ]
+}

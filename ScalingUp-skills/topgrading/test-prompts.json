@@ -1,0 +1,62 @@
+{
+  "skill": "topgrading",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "topgrading-trigger-1",
+      "type": "should_trigger",
+      "prompt": "怎么招到真正优秀的人才，感觉面试时看不出真实能力",
+      "expected_behavior": "应调用topgrading skill，建立A类人才识别和招聘体系",
+      "notes": "招聘质量提升场景"
+    },
+    {
+      "id": "topgrading-trigger-2",
+      "type": "should_trigger",
+      "prompt": "招聘时怎么判断候选人是不是A类，有什么标准吗",
+      "expected_behavior": "应调用topgrading skill，提供A类人才的识别标准和方法",
+      "notes": "人才评判标准"
+    },
+    {
+      "id": "topgrading-trigger-3",
+      "type": "should_trigger",
+      "prompt": "公司里有些人是B类甚至是C类，但不知道该怎么处理",
+      "expected_behavior": "应调用topgrading skill，建立人才分类和提升/淘汰机制",
+      "notes": "人才优化场景"
+    },
+    {
+      "id": "topgrading-trigger-4",
+      "type": "should_trigger",
+      "prompt": "培养了很久的员工还是达不到要求，是该继续培养还是放弃",
+      "expected_behavior": "应调用topgrading skill，用Topgrading方法评估培养潜力",
+      "notes": "人才决策困境"
+    },
+    {
+      "id": "topgrading-not-trigger-1",
+      "type": "should_not_trigger",
+      "prompt": "什么是招聘漏斗？能给我讲讲这个概念",
+      "expected_behavior": "不应调用topgrading skill，这是招聘流程概念",
+      "notes": "概念查询"
+    },
+    {
+      "id": "topgrading-not-trigger-2",
+      "type": "should_not_trigger",
+      "prompt": "帮我筛一下这20份简历，看看哪些值得面试",
+      "expected_behavior": "不应调用topgrading skill，这是执行性工作而非方法论咨询",
+      "notes": "执行性工作"
+    },
+    {
+      "id": "topgrading-edge-1",
+      "type": "edge_case",
+      "prompt": "现有团队里谁是A类谁是B类，怎么客观评估",
+      "expected_behavior": "可以调用topgrading skill，建立现有团队的人才盘点方法",
+      "notes": "人才盘点场景，边界模糊"
+    },
+    {
+      "id": "topgrading-edge-2",
+      "type": "edge_case",
+      "prompt": "我有一个跟随我5年的老下属，忠诚但能力一般，该怎么办",
+      "expected_behavior": "可以调用topgrading skill，平衡忠诚度与能力进行人才决策",
+      "notes": "忠诚vs能力的权衡"
+    }
+  ]
+}

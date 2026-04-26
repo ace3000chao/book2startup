@@ -1,0 +1,76 @@
+{
+  "skill": "a-player-definition",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "aplayer-001",
+      "type": "should_trigger",
+      "prompt": "怎么定义谁是A类人才？",
+      "expected_behavior": "应触发a-player-definition skill，提供A/B/C类人才定义标准",
+      "notes": "A类人才定义问题"
+    },
+    {
+      "id": "aplayer-002",
+      "type": "should_trigger",
+      "prompt": "B类和C类人才怎么区分？",
+      "expected_behavior": "应触发a-player-definition skill，清晰区分三类人才的特征",
+      "notes": "人才分类标准"
+    },
+    {
+      "id": "aplayer-003",
+      "type": "should_trigger",
+      "prompt": "我们公司没有A类人才，问题出在哪？",
+      "expected_behavior": "应触发a-player-definition skill，分析A类人才识别和吸引的障碍",
+      "notes": "A类人才缺失问题"
+    },
+    {
+      "id": "aplayer-004",
+      "type": "should_trigger",
+      "prompt": "招聘时怎么判断候选人是不是A类人才？",
+      "expected_behavior": "应触发a-player-definition skill，提供A类人才的面试识别方法",
+      "notes": "招聘识别场景"
+    },
+    {
+      "id": "aplayer-005",
+      "type": "should_not_trigger",
+      "prompt": "什么是人才分类？",
+      "expected_behavior": "不应触发，概念性询问",
+      "notes": "广义概念问题"
+    },
+    {
+      "id": "aplayer-006",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲人才管理",
+      "expected_behavior": "不应触发，整体话题而非A类人才精确定义",
+      "notes": "泛人才管理话题"
+    },
+    {
+      "id": "aplayer-007",
+      "type": "should_not_trigger",
+      "prompt": "如何做人才盘点？",
+      "expected_behavior": "不应触发，盘点方法而非A/B/C定义标准",
+      "notes": "盘点流程话题"
+    },
+    {
+      "id": "aplayer-008",
+      "type": "edge_case",
+      "prompt": "一个曾经是A类的人现在表现不好了怎么办？",
+      "expected_behavior": "可触发，分析A类人才退化的原因，提供重新评估和应对策略",
+      "notes": "人才退化场景"
+    },
+    {
+      "id": "aplayer-009",
+      "type": "edge_case",
+      "prompt": "A级人才是否永远都是A级？还是会降级？",
+      "expected_behavior": "可触发，指出A类人才需要持续校准，不存在永久A级",
+      "notes": "人才动态性"
+    },
+    {
+      "id": "aplayer-010",
+      "type": "edge_case",
+      "prompt": "技术型A类人才和销售型A类人才定义一样吗？",
+      "expected_behavior": "可触发，指出不同职能的A级标准应有差异化定义，但底层素质相通",
+      "notes": "职能差异化场景"
+    }
+  ]
+}

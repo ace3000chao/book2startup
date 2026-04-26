@@ -1,0 +1,76 @@
+{
+  "skill": "fairness-not-sameness",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "fair-001",
+      "type": "should_trigger",
+      "prompt": "两个同等职级员工薪酬差异大，团队不满，怎么处理？",
+      "expected_behavior": "应触发fairness-not-sameness skill，解释公平不等于相同，强调差异化薪酬的合理性",
+      "notes": "薪酬公平性矛盾场景"
+    },
+    {
+      "id": "fair-002",
+      "type": "should_trigger",
+      "prompt": "怎么平衡公平和个性化薪酬？",
+      "expected_behavior": "应触发fairness-not-sameness skill，提供公平观与差异化薪酬的平衡框架",
+      "notes": "公平vs个性化张力"
+    },
+    {
+      "id": "fair-003",
+      "type": "should_trigger",
+      "prompt": "团队成员觉得薪酬不公平，但我觉得他们贡献确实不同，怎么解释？",
+      "expected_behavior": "应触发fairness-not-sameness skill，帮助建立贡献差异化的沟通框架",
+      "notes": "薪酬公平认知差异"
+    },
+    {
+      "id": "fair-004",
+      "type": "should_trigger",
+      "prompt": "同样的岗位为什么有人工资高有人低，员工天天比较，怎么破？",
+      "expected_behavior": "应触发fairness-not-sameness skill，强调公平感来自过程透明而非结果相同",
+      "notes": "岗位薪酬透明度问题"
+    },
+    {
+      "id": "fair-005",
+      "type": "should_not_trigger",
+      "prompt": "什么是薪酬公平？",
+      "expected_behavior": "不应触发，概念性询问",
+      "notes": "基本定义问题"
+    },
+    {
+      "id": "fair-006",
+      "type": "should_not_trigger",
+      "prompt": "怎么设计薪酬体系？",
+      "expected_behavior": "不应触发，整体薪酬设计话题",
+      "notes": "薪酬体系设计泛谈"
+    },
+    {
+      "id": "fair-007",
+      "type": "should_not_trigger",
+      "prompt": "帮我算一下这个岗位应该发多少工资",
+      "expected_behavior": "不应触发，薪酬计算而非公平理念",
+      "notes": "薪酬数字问题"
+    },
+    {
+      "id": "fair-008",
+      "type": "edge_case",
+      "prompt": "A类人才要求比市场水平更高的薪酬，但现有团队平衡会被打破，怎么办？",
+      "expected_behavior": "可触发，分析市场定价、A类人才溢价和团队内部平衡的处理方式",
+      "notes": "顶尖人才薪酬突破场景"
+    },
+    {
+      "id": "fair-009",
+      "type": "edge_case",
+      "prompt": "老员工工资低但忠诚度高，新员工工资高但不稳定，怎么平衡？",
+      "expected_behavior": "可触发，提供资历vs能力/绩效的公平观冲突处理",
+      "notes": "新老员工公平张力"
+    },
+    {
+      "id": "fair-010",
+      "type": "edge_case",
+      "prompt": "薪酬透明化后，大家互相比较，团队氛围反而变差了",
+      "expected_behavior": "可触发，指出透明需要配合公平理念教育，让大家理解决定因素而非仅看结果",
+      "notes": "透明化副作用场景"
+    }
+  ]
+}

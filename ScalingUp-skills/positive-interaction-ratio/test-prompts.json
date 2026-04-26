@@ -1,0 +1,55 @@
+{
+  "skill": "positive-interaction-ratio",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "pir-001",
+      "type": "should_trigger",
+      "prompt": "团队氛围越来越紧张，负能量多",
+      "expected_behavior": "触发positive-interaction-ratio skill，分析互动质量",
+      "notes": "典型症状：负能量氛围"
+    },
+    {
+      "id": "pir-002",
+      "type": "should_trigger",
+      "prompt": "怎么改善团队的日常互动",
+      "expected_behavior": "触发positive-interaction-ratio skill，提供互动改善建议",
+      "notes": "关注日常互动质量"
+    },
+    {
+      "id": "pir-003",
+      "type": "should_trigger",
+      "prompt": "开会总是吵架，气氛很差",
+      "expected_behavior": "触发positive-interaction-ratio skill，分析会议互动模式",
+      "notes": "负面互动模式的具体表现"
+    },
+    {
+      "id": "pir-004",
+      "type": "should_not_trigger",
+      "prompt": "什么是积极心态",
+      "expected_behavior": "不触发positive-interaction-ratio skill，应提供基础概念",
+      "notes": "诱饵：纯概念性问题"
+    },
+    {
+      "id": "pir-005",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲团队建设的方法",
+      "expected_behavior": "不触发positive-interaction-ratio skill，应提供团队建设通用方法",
+      "notes": "诱饵：问通用方法而非具体互动问题"
+    },
+    {
+      "id": "pir-006",
+      "type": "edge_case",
+      "prompt": "团队业绩很好但互动很平淡，没什么庆祝也没什么冲突",
+      "expected_behavior": "可触发positive-interaction-ratio skill，识别为互动不足",
+      "notes": "边界模糊：没有负面但也缺乏正面互动"
+    },
+    {
+      "id": "pir-007",
+      "type": "edge_case",
+      "prompt": "正向互动多了会不会让人变得虚伪",
+      "expected_behavior": "不触发positive-interaction-ratio skill，应讨论真诚与正向的平衡",
+      "notes": "边界模糊：质疑正向互动的真实性"
+    }
+  ]
+}

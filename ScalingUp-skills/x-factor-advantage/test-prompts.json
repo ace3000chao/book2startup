@@ -1,0 +1,69 @@
+{
+  "skill": "x-factor-advantage",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "xf-st-01",
+      "type": "should_trigger",
+      "prompt": "怎么建立真正的竞争优势？我们的产品对手半年就能复制",
+      "expected_behavior": "触发x-factor-advantage，引导找到对手无法复制的X因素",
+      "notes": "竞争优势构建场景"
+    },
+    {
+      "id": "xf-st-02",
+      "type": "should_trigger",
+      "prompt": "竞争对手模仿我们的一切，产品、价格、营销方式都被复制了，怎么办？",
+      "expected_behavior": "触发x-factor-advantage，讨论需要找到不可模仿的X因素",
+      "notes": "被模仿的困境"
+    },
+    {
+      "id": "xf-st-03",
+      "type": "should_trigger",
+      "prompt": "我们的护城河是什么？怎么才能让对手很难超越？",
+      "expected_behavior": "触发x-factor-advantage，识别和构建护城河",
+      "notes": "护城河识别场景"
+    },
+    {
+      "id": "xf-st-04",
+      "type": "should_trigger",
+      "prompt": "小企业怎么建立竞争优势？资源比不过大公司",
+      "expected_behavior": "触发x-factor-advantage，引导小企业找到独特X因素",
+      "notes": "小企业竞争场景"
+    },
+    {
+      "id": "xf-sn-01",
+      "type": "should_not_trigger",
+      "prompt": "什么是核心竞争力？给我讲讲这个概念",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "纯概念性问题"
+    },
+    {
+      "id": "xf-sn-02",
+      "type": "should_not_trigger",
+      "prompt": "给我推荐几本关于竞争优势的书",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "书籍推荐请求"
+    },
+    {
+      "id": "xf-sn-03",
+      "type": "should_not_trigger",
+      "prompt": "竞争优势和核心竞争力有什么区别？",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "概念辨析请求"
+    },
+    {
+      "id": "xf-ec-01",
+      "type": "edge_case",
+      "prompt": "我们的优势好像不够明显，各方面都差不多，怎么找X因素？",
+      "expected_behavior": "模糊边界：可能触发x-factor-advantage，也可能不触发（太模糊），取决于后续是否有具体情境",
+      "notes": "优势不明显时的X因素寻找"
+    },
+    {
+      "id": "xf-ec-02",
+      "type": "edge_case",
+      "prompt": "我们觉得找到了X因素，但不知道对手多久能复制，这个怎么评估？",
+      "expected_behavior": "可能触发x-factor-advantage，讨论X因素的可复制性评估",
+      "notes": "X因素可复制性评估"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "skill": "complexity-equation",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "complex-001",
+      "type": "should_trigger",
+      "prompt": "公司变复杂了，怎么衡量复杂度？",
+      "expected_behavior": "应触发complexity-equation skill，提供复杂度衡量维度和指标建议",
+      "notes": "直接询问复杂度衡量方法"
+    },
+    {
+      "id": "complex-002",
+      "type": "should_trigger",
+      "prompt": "公司规模扩大后，复杂度增长和什么有关？",
+      "expected_behavior": "应触发complexity-equation skill，分析复杂度的驱动因素",
+      "notes": "明确询问复杂度增长的相关因素"
+    },
+    {
+      "id": "complex-003",
+      "type": "should_trigger",
+      "prompt": "部门越来越多，沟通成本指数级上升，怎么评估这种情况？",
+      "expected_behavior": "应触发complexity-equation skill，引入复杂度概念并给出评估框架",
+      "notes": "典型的组织复杂度问题"
+    },
+    {
+      "id": "complex-004",
+      "type": "should_trigger",
+      "prompt": "业务多元化后，管理难度增加很多，有没有办法量化这种难度？",
+      "expected_behavior": "应触发complexity-equation skill，提供复杂度量化思路",
+      "notes": "业务复杂度的量化评估需求"
+    },
+    {
+      "id": "complex-005",
+      "type": "should_not_trigger",
+      "prompt": "什么是复杂系统？",
+      "expected_behavior": "不应触发，纯理论概念询问",
+      "notes": "学术性定义查询，不涉及企业实际复杂度"
+    },
+    {
+      "id": "complex-006",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲复杂性科学",
+      "expected_behavior": "不应触发，属于学科介绍而非企业应用",
+      "notes": "学术理论范畴"
+    },
+    {
+      "id": "complex-007",
+      "type": "should_not_trigger",
+      "prompt": "复杂网络理论在管理学中的应用有哪些？",
+      "expected_behavior": "不应触发，学术研究方向，不涉及企业运营复杂度",
+      "notes": "学术性问题"
+    },
+    {
+      "id": "complex-008",
+      "type": "edge_case",
+      "prompt": "复杂度能不能量化？有没有具体的计算公式？",
+      "expected_behavior": "可触发，提供可量化的复杂度维度框架，而非精确公式",
+      "notes": "边界场景：追求量化但需强调多维性"
+    },
+    {
+      "id": "complex-009",
+      "type": "edge_case",
+      "prompt": "小公司是否也存在复杂度问题？还是只有大公司才需要关注？",
+      "expected_behavior": "可触发，指出复杂度与规模不完全正相关，早期复杂度陷阱同样危险",
+      "notes": "规模认知误区"
+    },
+    {
+      "id": "complex-010",
+      "type": "edge_case",
+      "prompt": "如何向董事会解释复杂度增加带来的成本？",
+      "expected_behavior": "可触发，建议用业务复杂度指标来量化呈现给董事会",
+      "notes": "沟通场景"
+    }
+  ]
+}

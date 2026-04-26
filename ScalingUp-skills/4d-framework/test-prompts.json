@@ -1,0 +1,69 @@
+{
+  "skill": "4d-framework",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "4d-st-01",
+      "type": "should_trigger",
+      "prompt": "做重大决策时怎么系统性地考虑所有因素？总是担心漏掉重要的东西",
+      "expected_behavior": "触发4d-framework，介绍4D决策框架（Define/Determine/Decide/Do），引导系统性决策",
+      "notes": "系统性决策需求"
+    },
+    {
+      "id": "4d-st-02",
+      "type": "should_trigger",
+      "prompt": "重大决策总是漏掉重要考量，拍脑袋决定后又后悔，有没有方法论？",
+      "expected_behavior": "触发4d-framework，提供结构化决策框架",
+      "notes": "决策漏项问题"
+    },
+    {
+      "id": "4d-st-03",
+      "type": "should_trigger",
+      "prompt": "团队开会讨论战略方向，大家各执己见，怎么用一个框架来统一决策思路？",
+      "expected_behavior": "触发4d-framework，作为团队决策的共同语言",
+      "notes": "团队决策共识场景"
+    },
+    {
+      "id": "4d-st-04",
+      "type": "should_trigger",
+      "prompt": "要不要收购一家公司？需要考虑哪些维度？",
+      "expected_behavior": "触发4d-framework，用4D框架分析并购决策",
+      "notes": "重大商业决策场景"
+    },
+    {
+      "id": "4d-sn-01",
+      "type": "should_not_trigger",
+      "prompt": "什么是4D框架？给我讲讲4D决策法",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "纯概念性问题"
+    },
+    {
+      "id": "4d-sn-02",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲决策方法有哪些流派",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "方法论介绍请求"
+    },
+    {
+      "id": "4d-sn-03",
+      "type": "should_not_trigger",
+      "prompt": "我和同事对某个决策有分歧，怎么说服他？",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "说服技巧请求"
+    },
+    {
+      "id": "4d-ec-01",
+      "type": "edge_case",
+      "prompt": "日常小决策需要用4D吗？感觉有点杀鸡用牛刀",
+      "expected_behavior": "模糊边界：可能触发讨论决策分层（小决策用直觉/经验，大决策用4D），也可能不触发",
+      "notes": "决策框架的适用边界"
+    },
+    {
+      "id": "4d-ec-02",
+      "type": "edge_case",
+      "prompt": "用4D框架做完决策后市场变了，要重新做一遍吗？",
+      "expected_behavior": "可能触发4d-framework或swt-analysis，讨论决策的动态调整",
+      "notes": "快速变化环境下的决策更新"
+    }
+  ]
+}

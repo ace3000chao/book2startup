@@ -1,0 +1,69 @@
+{
+  "skill": "recruiting-is-marketing",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "rim-st-01",
+      "type": "should_trigger",
+      "prompt": "怎么吸引更多优秀候选人？招聘渠道效果越来越差，好的简历越来越少",
+      "expected_behavior": "触发recruiting-is-marketing，用营销思维重新设计雇主品牌和人才吸引力",
+      "notes": "招聘效果下降场景"
+    },
+    {
+      "id": "rim-st-02",
+      "type": "should_trigger",
+      "prompt": "我们是创业公司，给不起高工资，怎么吸引人才？",
+      "expected_behavior": "触发recruiting-is-marketing，用雇主品牌和价值主张吸引人才",
+      "notes": "创业公司人才吸引力"
+    },
+    {
+      "id": "rim-st-03",
+      "type": "should_trigger",
+      "prompt": "怎么让候选人主动想来我们公司，而不是我们追着候选人跑？",
+      "expected_behavior": "触发recruiting-is-marketing，把人才当作客户来营销",
+      "notes": "主动 vs 被动招聘"
+    },
+    {
+      "id": "rim-st-04",
+      "type": "should_trigger",
+      "prompt": "好的候选人都在竞争对手那里，怎么让我们的职位更有吸引力？",
+      "expected_behavior": "触发recruiting-is-marketing，对标竞争对手的人才价值主张",
+      "notes": "人才竞争场景"
+    },
+    {
+      "id": "rim-sn-01",
+      "type": "should_not_trigger",
+      "prompt": "招聘渠道有哪些？帮我列举一下",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "渠道列举请求"
+    },
+    {
+      "id": "rim-sn-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一份招聘广告，要突出我们公司的福利待遇",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "招聘文案撰写请求"
+    },
+    {
+      "id": "rim-sn-03",
+      "type": "should_not_trigger",
+      "prompt": "招聘需求很多，一个人忙不过来，有什么工具可以提高效率？",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "招聘效率工具请求"
+    },
+    {
+      "id": "rim-ec-01",
+      "type": "edge_case",
+      "prompt": "我们公司品牌不够大，怎么吸引人才？好像怎么做都没人投简历",
+      "expected_behavior": "模糊边界：可能触发recruiting-is-marketing，强调用营销思维弥补品牌不足",
+      "notes": "品牌弱势的招聘挑战"
+    },
+    {
+      "id": "rim-ec-02",
+      "type": "edge_case",
+      "prompt": "候选人问我们和竞争对手比有什么优势，不知道怎么回答",
+      "expected_behavior": "可能触发recruiting-is-marketing，帮助构建雇主价值主张",
+      "notes": "面试中的雇主品牌定位"
+    }
+  ]
+}

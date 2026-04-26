@@ -1,0 +1,62 @@
+{
+  "skill": "complexity-enemy",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "complexity-trigger-1",
+      "type": "should_trigger",
+      "prompt": "公司变大了为什么反而更累了，流程制度越来越多",
+      "expected_behavior": "应调用complexity-enemy skill，诊断复杂度陷阱并提出简化方案",
+      "notes": "大公司病典型场景"
+    },
+    {
+      "id": "complexity-trigger-2",
+      "type": "should_trigger",
+      "prompt": "流程制度越来越多但效率越来越低，怎么破",
+      "expected_behavior": "应调用complexity-enemy skill，识别和消除过度复杂化",
+      "notes": "效率衰减场景"
+    },
+    {
+      "id": "complexity-trigger-3",
+      "type": "should_trigger",
+      "prompt": "我们公司每个部门都有一堆表格和审批，感觉已经失控了",
+      "expected_behavior": "应调用complexity-enemy skill，简化审批和流程复杂度",
+      "notes": "审批迷宫场景"
+    },
+    {
+      "id": "complexity-trigger-4",
+      "type": "should_trigger",
+      "prompt": "公司小的时候很灵活，现在人多了反而慢了，问题在哪",
+      "expected_behavior": "应调用complexity-enemy skill，对比创业期与成熟期的复杂度差异",
+      "notes": "规模与敏捷的平衡"
+    },
+    {
+      "id": "complexity-not-trigger-1",
+      "type": "should_not_trigger",
+      "prompt": "什么是复杂？复杂和简单有什么区别",
+      "expected_behavior": "不应调用complexity-enemy skill，这是哲学概念讨论",
+      "notes": "概念定义"
+    },
+    {
+      "id": "complexity-not-trigger-2",
+      "type": "should_not_trigger",
+      "prompt": "为什么大公司效率低？能给我讲讲原因",
+      "expected_behavior": "不应调用complexity-enemy skill，这是通用商业知识而非诊断咨询",
+      "notes": "通用知识查询"
+    },
+    {
+      "id": "complexity-edge-1",
+      "type": "edge_case",
+      "prompt": "我们要不要上一个管理系统，比如ERP或者OA，来规范流程",
+      "expected_behavior": "可以调用complexity-enemy skill，评估系统引入是否会增加或减少复杂度",
+      "notes": "系统引入决策，边界模糊"
+    },
+    {
+      "id": "complexity-edge-2",
+      "type": "edge_case",
+      "prompt": "我简化了一些流程，但员工反而更困惑了，不知道该怎么做",
+      "expected_behavior": "可以调用complexity-enemy skill，简化需要配套的变革管理",
+      "notes": "简化过度场景"
+    }
+  ]
+}

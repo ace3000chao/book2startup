@@ -1,0 +1,76 @@
+{
+  "skill": "routine-sets-you-free",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "routine-001",
+      "type": "should_trigger",
+      "prompt": "团队成员总是需要我盯着，怎么办？",
+      "expected_behavior": "应触发routine-sets-you-free skill，建议通过建立routine减少对人的依赖",
+      "notes": "典型的事务性依赖问题"
+    },
+    {
+      "id": "routine-002",
+      "type": "should_trigger",
+      "prompt": "怎么让工作自动化运行，减少对创始人的依赖？",
+      "expected_behavior": "应触发routine-sets-you-free skill，强调routine是自动化的基础",
+      "notes": "创始人工作自动化场景"
+    },
+    {
+      "id": "routine-003",
+      "type": "should_trigger",
+      "prompt": "每天被同样的事情占据时间，怎么解脱出来做更重要的事？",
+      "expected_behavior": "应触发routine-sets-you-free skill，建议建立routine把重复事项自动化",
+      "notes": "时间管理困境的routine解决方案"
+    },
+    {
+      "id": "routine-004",
+      "type": "should_trigger",
+      "prompt": "公司不能因为我休假而停摆，怎么建立不依赖我的机制？",
+      "expected_behavior": "应触发routine-sets-you-free skill，routine是去中心化的关键",
+      "notes": "创始人依赖问题的routine解法"
+    },
+    {
+      "id": "routine-005",
+      "type": "should_not_trigger",
+      "prompt": "什么是好习惯？",
+      "expected_behavior": "不应触发，概念性询问，不涉及组织routine建设",
+      "notes": "纯定义问题"
+    },
+    {
+      "id": "routine-006",
+      "type": "should_not_trigger",
+      "prompt": "怎么培养习惯？",
+      "expected_behavior": "不应触发，个人习惯养成而非组织routine",
+      "notes": "个人成长话题"
+    },
+    {
+      "id": "routine-007",
+      "type": "should_not_trigger",
+      "prompt": "有什么工具可以自动化办公流程？",
+      "expected_behavior": "不应触发，工具推荐而非routine理念",
+      "notes": "工具类问题"
+    },
+    {
+      "id": "routine-008",
+      "type": "edge_case",
+      "prompt": "创意工作需要Routine吗？会不会限制创造力？",
+      "expected_behavior": "可触发，指出routine管的是支撑性工作，核心创意仍需自由空间，两者共存",
+      "notes": "常见误解：routine与创意对立"
+    },
+    {
+      "id": "routine-009",
+      "type": "edge_case",
+      "prompt": "我们团队很抗拒routine，觉得太死板，怎么推行？",
+      "expected_behavior": "可触发，建议从小范围、低侵入性的routine开始，逐步建立文化",
+      "notes": "推行阻力场景"
+    },
+    {
+      "id": "routine-010",
+      "type": "edge_case",
+      "prompt": "routine建立后需要多久才能自动化运行？",
+      "expected_behavior": "可触发，指出通常需要30-90天养成期，并提供跟踪调整方法",
+      "notes": "实施周期问题"
+    }
+  ]
+}

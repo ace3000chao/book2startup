@@ -1,0 +1,62 @@
+{
+  "skill": "power-of-one",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "powerofone-trigger-1",
+      "type": "should_trigger",
+      "prompt": "怎么判断公司的财务是否健康，除了看利润还需要关注什么",
+      "expected_behavior": "应调用power-of-one skill，引入单位经济分析框架",
+      "notes": "财务健康判断"
+    },
+    {
+      "id": "powerofone-trigger-2",
+      "type": "should_trigger",
+      "prompt": "收入增长了但现金流越来越紧，这是怎么回事",
+      "expected_behavior": "应调用power-of-one skill，分析单位经济模型中的现金转化问题",
+      "notes": "增长与现金的悖论"
+    },
+    {
+      "id": "powerofone-trigger-3",
+      "type": "should_trigger",
+      "prompt": "我们想扩产品线，但不知道该不该扩，怎么判断",
+      "expected_behavior": "应调用power-of-one skill，用单位经济分析新业务的可行性",
+      "notes": "业务扩张决策"
+    },
+    {
+      "id": "powerofone-trigger-4",
+      "type": "should_trigger",
+      "prompt": "公司好像在赚钱但老板说现金紧张，问题出在哪",
+      "expected_behavior": "应调用power-of-one skill，诊断权责发生制与现金流的差异",
+      "notes": "账面利润vs现金"
+    },
+    {
+      "id": "powerofone-not-trigger-1",
+      "type": "should_not_trigger",
+      "prompt": "什么是财务杠杆？能给我讲讲这个概念",
+      "expected_behavior": "不应调用power-of-one skill，这是纯财务概念解释",
+      "notes": "术语查询"
+    },
+    {
+      "id": "powerofone-not-trigger-2",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲财务三张表之间的关系",
+      "expected_behavior": "不应调用power-of-one skill，这是财务知识普及",
+      "notes": "财务基础教学"
+    },
+    {
+      "id": "powerofone-edge-1",
+      "type": "edge_case",
+      "prompt": "我们应该怎么定价产品才能保证盈利",
+      "expected_behavior": "可以调用power-of-one skill，用单位经济指导定价决策",
+      "notes": "定价决策场景，边界模糊"
+    },
+    {
+      "id": "powerofone-edge-2",
+      "type": "edge_case",
+      "prompt": "我们和竞争对手打价格战，但不知道谁的单位经济更健康",
+      "expected_behavior": "可以调用power-of-one skill，对比分析竞争双方的单位经济",
+      "notes": "竞争分析场景"
+    }
+  ]
+}

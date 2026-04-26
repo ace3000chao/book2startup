@@ -1,0 +1,55 @@
+{
+  "skill": "weekly-stop-item",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "wsi-001",
+      "type": "should_trigger",
+      "prompt": "团队一直在忙但没什么突破",
+      "expected_behavior": "触发weekly-stop-item skill，建议引入停止项机制",
+      "notes": "典型症状：忙碌但无进展"
+    },
+    {
+      "id": "wsi-002",
+      "type": "should_trigger",
+      "prompt": "怎么让团队定期反思改进",
+      "expected_behavior": "触发weekly-stop-item skill，介绍Stop Item机制",
+      "notes": "关注定期反思"
+    },
+    {
+      "id": "wsi-003",
+      "type": "should_trigger",
+      "prompt": "同样的问题每周都在发生，怎么打破循环",
+      "expected_behavior": "触发weekly-stop-item skill，建议通过停止项打破惯性",
+      "notes": "问题重复发生"
+    },
+    {
+      "id": "wsi-004",
+      "type": "should_not_trigger",
+      "prompt": "什么是复盘",
+      "expected_behavior": "不触发weekly-stop-item skill，应提供复盘的基础概念",
+      "notes": "诱饵：问概念而非具体机制"
+    },
+    {
+      "id": "wsi-005",
+      "type": "should_not_trigger",
+      "prompt": "帮我做周报",
+      "expected_behavior": "不触发weekly-stop-item skill，应帮助生成周报内容",
+      "notes": "诱饵：周报生成而非反思机制"
+    },
+    {
+      "id": "wsi-006",
+      "type": "edge_case",
+      "prompt": "每周会议已经很多了，再加一个Stop项合适吗",
+      "expected_behavior": "可触发weekly-stop-item skill，建议整合现有会议而非新增",
+      "notes": "边界模糊：会议负担与Stop Item的平衡"
+    },
+    {
+      "id": "wsi-007",
+      "type": "edge_case",
+      "prompt": "我们团队很小，每天都在快速迭代，还需要Stop Item吗",
+      "expected_behavior": "可能不触发weekly-stop-item skill，小团队可能有更敏捷的方式",
+      "notes": "边界模糊：敏捷团队可能不需要固定仪式"
+    }
+  ]
+}

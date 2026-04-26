@@ -1,0 +1,62 @@
+{
+  "skill": "growth-paradox",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "growthparadox-trigger-1",
+      "type": "should_trigger",
+      "prompt": "公司规模扩大但利润反而下降，这是怎么回事",
+      "expected_behavior": "应调用growth-paradox skill，诊断增长悖论的根本原因",
+      "notes": "增长中的利润侵蚀"
+    },
+    {
+      "id": "growthparadox-trigger-2",
+      "type": "should_trigger",
+      "prompt": "增长为什么没有带来轻松，反而更累了",
+      "expected_behavior": "应调用growth-paradox skill，解释增长与痛苦的悖论关系",
+      "notes": "增长悖论核心场景"
+    },
+    {
+      "id": "growthparadox-trigger-3",
+      "type": "should_trigger",
+      "prompt": "收入年年增长，但创始团队越来越疲惫，感觉撑不下去了",
+      "expected_behavior": "应调用growth-paradox skill，分析增长与创始人精力的关系",
+      "notes": "创始人疲惫场景"
+    },
+    {
+      "id": "growthparadox-trigger-4",
+      "type": "should_trigger",
+      "prompt": "我们扩招了很多人，但人均产出反而降低了",
+      "expected_behavior": "应调用growth-paradox skill，诊断增长期的人效陷阱",
+      "notes": "人效稀释场景"
+    },
+    {
+      "id": "growthparadox-not-trigger-1",
+      "type": "should_not_trigger",
+      "prompt": "什么是规模经济？为什么大公司能降低成本",
+      "expected_behavior": "不应调用growth-paradox skill，这是经济学概念",
+      "notes": "经济学概念查询"
+    },
+    {
+      "id": "growthparadox-not-trigger-2",
+      "type": "should_not_trigger",
+      "prompt": "为什么大公司赚钱？给我讲讲原因",
+      "expected_behavior": "不应调用growth-paradox skill，这是通用商业分析而非个人诊断",
+      "notes": "通用商业知识"
+    },
+    {
+      "id": "growthparadox-edge-1",
+      "type": "edge_case",
+      "prompt": "我们应该放缓增长速度吗？还是咬咬牙继续扩张",
+      "expected_behavior": "可以调用growth-paradox skill，分析增长节奏的优化策略",
+      "notes": "增长决策场景，边界模糊"
+    },
+    {
+      "id": "growthparadox-edge-2",
+      "type": "edge_case",
+      "prompt": "我知道应该享受利润不要盲目扩张，但股东不答应怎么办",
+      "expected_behavior": "可以调用growth-paradox skill，在增长期望与健康经营间找平衡",
+      "notes": "股东期望管理"
+    }
+  ]
+}

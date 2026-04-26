@@ -1,0 +1,69 @@
+{
+  "skill": "swt-analysis",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "swa-st-01",
+      "type": "should_trigger",
+      "prompt": "怎么看清行业未来3-5年的趋势？我们要做战略规划但不知道外部环境会怎么变",
+      "expected_behavior": "触发swt-analysis，用 SWT (Strength/Weakness/Trend) 框架分析外部趋势",
+      "notes": "战略规划前的外部环境分析"
+    },
+    {
+      "id": "swa-st-02",
+      "type": "should_trigger",
+      "prompt": "我们需要进入一个新行业，怎么判断这个行业的机会和威胁？",
+      "expected_behavior": "触发swt-analysis，分析行业进入的外部因素",
+      "notes": "新行业进入决策"
+    },
+    {
+      "id": "swa-st-03",
+      "type": "should_trigger",
+      "prompt": "竞争对手最近动作很大，我们怎么判断这些变化对我们是好事还是坏事？",
+      "expected_behavior": "触发swt-analysis，从竞争对手动向分析对自身的影响",
+      "notes": "竞争态势分析"
+    },
+    {
+      "id": "swa-st-04",
+      "type": "should_trigger",
+      "prompt": "国家出了新政策，对我们行业影响大吗？我们该怎么应对？",
+      "expected_behavior": "触发swt-analysis，分析政策变化的外部影响",
+      "notes": "政策环境变化分析"
+    },
+    {
+      "id": "swa-sn-01",
+      "type": "should_not_trigger",
+      "prompt": "什么是SWOT？SWT和SWOT有什么区别？",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "概念辨析请求"
+    },
+    {
+      "id": "swa-sn-02",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲趋势分析的方法论",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "通用方法论介绍"
+    },
+    {
+      "id": "swa-sn-03",
+      "type": "should_not_trigger",
+      "prompt": "帮我查一下最近有哪些行业政策出台",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "政策信息查询"
+    },
+    {
+      "id": "swa-ec-01",
+      "type": "edge_case",
+      "prompt": "趋势变化太快，上个月做的分析这个月就不适用了，跟不上怎么办？",
+      "expected_behavior": "模糊边界：可能触发swt-analysis（需要更动态的分析方式），也可能不触发",
+      "notes": "快速变化环境的分析挑战"
+    },
+    {
+      "id": "swa-ec-02",
+      "type": "edge_case",
+      "prompt": "我们分析了很多趋势，但不知道哪个趋势对我们的业务影响最大，怎么判断优先级？",
+      "expected_behavior": "可能触发swt-analysis，补充影响优先级评估",
+      "notes": "趋势影响优先级判断"
+    }
+  ]
+}

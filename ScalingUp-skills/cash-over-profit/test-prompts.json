@@ -1,0 +1,55 @@
+{
+  "skill": "cash-over-profit",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "cop-001",
+      "type": "should_trigger",
+      "prompt": "报表盈利但账户里没钱",
+      "expected_behavior": "触发cash-over-profit skill，强调现金流重要性",
+      "notes": "典型症状：盈利但现金不足"
+    },
+    {
+      "id": "cop-002",
+      "type": "should_trigger",
+      "prompt": "利润很好但现金流是负的，正常吗",
+      "expected_behavior": "触发cash-over-profit skill，解释利润与现金流的关系",
+      "notes": "利润现金流背离"
+    },
+    {
+      "id": "cop-003",
+      "type": "should_trigger",
+      "prompt": "公司账上有利润但发不出工资，为什么",
+      "expected_behavior": "触发cash-over-profit skill，分析现金周转问题",
+      "notes": "极端症状：盈利但无现金支付日常开销"
+    },
+    {
+      "id": "cop-004",
+      "type": "should_not_trigger",
+      "prompt": "什么是利润和现金流",
+      "expected_behavior": "不触发cash-over-profit skill，应提供基础财务概念",
+      "notes": "诱饵：纯概念性问题"
+    },
+    {
+      "id": "cop-005",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲财务基础知识",
+      "expected_behavior": "不触发cash-over-profit skill，应提供财务基础知识",
+      "notes": "诱饵：问基础知识而非诊断具体问题"
+    },
+    {
+      "id": "cop-006",
+      "type": "edge_case",
+      "prompt": "我应该更关注利润还是现金流",
+      "expected_behavior": "可触发cash-over-profit skill，但需要结合企业阶段回答",
+      "notes": "边界模糊：不同发展阶段关注点不同"
+    },
+    {
+      "id": "cop-007",
+      "type": "edge_case",
+      "prompt": "我们融资了很多钱，现金流一直为正，这说明什么",
+      "expected_behavior": "可能不触发cash-over-profit skill，融资现金≠经营现金流健康",
+      "notes": "边界模糊：融资输血 vs 自身造血"
+    }
+  ]
+}

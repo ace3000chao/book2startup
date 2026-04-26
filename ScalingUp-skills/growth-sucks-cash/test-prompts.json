@@ -1,0 +1,69 @@
+{
+  "skill": "growth-sucks-cash",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "gsc-st-01",
+      "type": "should_trigger",
+      "prompt": "公司增长很快但资金总是紧张，每年都在为现金流发愁，增长和赚钱好像不可兼得",
+      "expected_behavior": "触发growth-sucks-cash，解释增长吞噬现金的原因，提供平衡策略",
+      "notes": "增长-现金矛盾"
+    },
+    {
+      "id": "gsc-st-02",
+      "type": "should_trigger",
+      "prompt": "要不要放缓增长速度？账上的钱撑不了多久了，但市场机会很好",
+      "expected_behavior": "触发growth-sucks-cash，分析增长节奏与资金可持续性",
+      "notes": "增长决策资金考量"
+    },
+    {
+      "id": "gsc-st-03",
+      "type": "should_trigger",
+      "prompt": "我们融了一笔钱，是用来扩张还是先稳住现金流？",
+      "expected_behavior": "触发growth-sucks-cash，分析融资资金的最优配置",
+      "notes": "融资资金分配决策"
+    },
+    {
+      "id": "gsc-st-04",
+      "type": "should_trigger",
+      "prompt": "业务增长需要扩充团队和人手，但人越多成本越高，资金压力越大，怎么平衡？",
+      "expected_behavior": "触发growth-sucks-cash，分析人员扩张与资金效率的关系",
+      "notes": "人员扩张资金场景"
+    },
+    {
+      "id": "gsc-sn-01",
+      "type": "should_not_trigger",
+      "prompt": "什么是增长？给我讲讲企业增长的概念",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "纯概念性问题"
+    },
+    {
+      "id": "gsc-sn-02",
+      "type": "should_not_trigger",
+      "prompt": "为什么增长需要钱？增长不是应该赚钱吗？",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "基础概念误解"
+    },
+    {
+      "id": "gsc-sn-03",
+      "type": "should_not_trigger",
+      "prompt": "帮我算一下我们公司明年的收入预测",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "财务计算请求"
+    },
+    {
+      "id": "gsc-ec-01",
+      "type": "edge_case",
+      "prompt": "我们能否同时保持高增长和正向现金流？别人说不可能，但我不信",
+      "expected_behavior": "模糊边界：可能触发growth-sucks-cash（讨论极端困难），也可能不触发（过于绝对的问题）",
+      "notes": "高增长+正现金流的可行性"
+    },
+    {
+      "id": "gsc-ec-02",
+      "type": "edge_case",
+      "prompt": "我们增长放缓了反而更赚钱，是不是说明增长是错的？",
+      "expected_behavior": "可能触发growth-sucks-cash，讨论增长阶段的资金效率特征",
+      "notes": "增长vs盈利的辩证关系"
+    }
+  ]
+}

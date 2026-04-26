@@ -1,0 +1,55 @@
+{
+  "skill": "habits-quarterly-rotation",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "hqr-001",
+      "type": "should_trigger",
+      "prompt": "团队习惯建立了但慢慢失去效果",
+      "expected_behavior": "触发habits-quarterly-rotation skill，建议季度轮换机制",
+      "notes": "习惯效果递减"
+    },
+    {
+      "id": "hqr-002",
+      "type": "should_trigger",
+      "prompt": "怎么让好习惯持续有效",
+      "expected_behavior": "触发habits-quarterly-rotation skill，介绍轮换机制",
+      "notes": "习惯持续性"
+    },
+    {
+      "id": "hqr-003",
+      "type": "should_trigger",
+      "prompt": "一些习惯刚开始很有效，过几个月就没感觉了",
+      "expected_behavior": "触发habits-quarterly-rotation skill，分析习惯衰减原因",
+      "notes": "习惯疲劳"
+    },
+    {
+      "id": "hqr-004",
+      "type": "should_not_trigger",
+      "prompt": "什么是习惯养成",
+      "expected_behavior": "不触发habits-quarterly-rotation skill，应提供习惯养成基础",
+      "notes": "诱饵：纯概念性问题"
+    },
+    {
+      "id": "hqr-005",
+      "type": "should_not_trigger",
+      "prompt": "怎么培养好习惯",
+      "expected_behavior": "不触发habits-quarterly-rotation skill，应提供习惯培养方法",
+      "notes": "诱饵：问培养方法而非轮换机制"
+    },
+    {
+      "id": "hqr-006",
+      "type": "edge_case",
+      "prompt": "季度调整会不会太频繁",
+      "expected_behavior": "可触发habits-quarterly-rotation skill，讨论调整节奏的合理性",
+      "notes": "边界模糊：质疑轮换频率"
+    },
+    {
+      "id": "hqr-007",
+      "type": "edge_case",
+      "prompt": "有些核心习惯（如周会）需要保持稳定，也要轮换吗",
+      "expected_behavior": "可触发habits-quarterly-rotation skill，区分核心习惯与非核心习惯",
+      "notes": "边界模糊：核心习惯 vs 可轮换习惯"
+    }
+  ]
+}

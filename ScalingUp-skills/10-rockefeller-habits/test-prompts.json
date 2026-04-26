@@ -1,0 +1,76 @@
+{
+  "skill": "10-rockefeller-habits",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "rock-001",
+      "type": "should_trigger",
+      "prompt": "什么是洛克菲勒习惯？",
+      "expected_behavior": "应触发10-rockefeller-habits skill，介绍10大洛克菲勒执行习惯",
+      "notes": "直接询问洛克菲勒习惯"
+    },
+    {
+      "id": "rock-002",
+      "type": "should_trigger",
+      "prompt": "10大执行习惯包括哪些？",
+      "expected_behavior": "应触发10-rockefeller-habits skill，列出并解释10大习惯",
+      "notes": "明确要求10大习惯清单"
+    },
+    {
+      "id": "rock-003",
+      "type": "should_trigger",
+      "prompt": "Scaling Up书里的洛克菲勒习惯具体是什么？",
+      "expected_behavior": "应触发10-rockefeller-habits skill，呈现书中描述的10大习惯",
+      "notes": "指向性明确"
+    },
+    {
+      "id": "rock-004",
+      "type": "should_trigger",
+      "prompt": "有没有类似洛克菲勒习惯的执行框架可以参考？",
+      "expected_behavior": "应触发10-rockefeller-habits skill，介绍该执行框架",
+      "notes": "框架询问"
+    },
+    {
+      "id": "rock-005",
+      "type": "should_not_trigger",
+      "prompt": "洛克菲勒是谁？",
+      "expected_behavior": "不应触发，历史人物询问",
+      "notes": "不涉及执行习惯"
+    },
+    {
+      "id": "rock-006",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲成功学",
+      "expected_behavior": "不应触发，泛成功学话题",
+      "notes": "无特定执行习惯指向"
+    },
+    {
+      "id": "rock-007",
+      "type": "should_not_trigger",
+      "prompt": "石油大王洛克菲勒的创业故事是什么？",
+      "expected_behavior": "不应触发，人物传记而非执行方法",
+      "notes": "历史人物话题"
+    },
+    {
+      "id": "rock-008",
+      "type": "edge_case",
+      "prompt": "我们是小公司，只有10个人，需要10个习惯吗？是不是太多了？",
+      "expected_behavior": "可触发，指出习惯是通用的但可简化实施，从小而关键的几个习惯开始",
+      "notes": "规模适配性疑问"
+    },
+    {
+      "id": "rock-009",
+      "type": "edge_case",
+      "prompt": "洛克菲勒习惯和OKR有什么区别？",
+      "expected_behavior": "可触发，区分两者：洛克菲勒习惯是执行文化层面的，OKR是目标管理工具层面的",
+      "notes": "框架对比场景"
+    },
+    {
+      "id": "rock-010",
+      "type": "edge_case",
+      "prompt": "这10个习惯从哪个开始执行最好？优先级是什么？",
+      "expected_behavior": "可触发，建议从'最重要的事'和'数据仪表盘'等关键习惯入手",
+      "notes": "落地优先级问题"
+    }
+  ]
+}

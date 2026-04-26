@@ -1,0 +1,62 @@
+{
+  "skill": "rockefeller-habits",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "rockefeller-trigger-1",
+      "type": "should_trigger",
+      "prompt": "公司快速成长但管理越来越乱，有什么系统性的方法可以改善",
+      "expected_behavior": "应调用rockefeller-habits skill，引入Rockerfeller Habits系统",
+      "notes": "成长中的管理混乱"
+    },
+    {
+      "id": "rockefeller-trigger-2",
+      "type": "should_trigger",
+      "prompt": "怎么让团队的执行力跟上公司发展，总觉得执行力不够",
+      "expected_behavior": "应调用rockefeller-habits skill，建立执行文化和方法论",
+      "notes": "执行力提升场景"
+    },
+    {
+      "id": "rockefeller-trigger-3",
+      "type": "should_trigger",
+      "prompt": "我们公司从10个人发展到50人，感觉开始失控了",
+      "expected_behavior": "应调用rockefeller-habits skill，引入Scaling Up的登月文化体系",
+      "notes": "规模跨越阶段"
+    },
+    {
+      "id": "rockefeller-trigger-4",
+      "type": "should_trigger",
+      "prompt": "每天都很忙，但公司的战略目标却没什么进展",
+      "expected_behavior": "应调用rockefeller-habits skill，建立以战略为中心的执行节奏",
+      "notes": "忙碌但无进展的困境"
+    },
+    {
+      "id": "rockefeller-not-trigger-1",
+      "type": "should_not_trigger",
+      "prompt": "洛克菲勒有哪些好习惯？他是怎么办企业的",
+      "expected_behavior": "不应调用rockefeller-habits skill，这是关于洛克菲勒本人的历史查询",
+      "notes": "历史人物查询"
+    },
+    {
+      "id": "rockefeller-not-trigger-2",
+      "type": "should_not_trigger",
+      "prompt": "什么是执行文化？能给我讲讲这个概念",
+      "expected_behavior": "不应调用rockefeller-habits skill，这是纯概念解释",
+      "notes": "概念查询"
+    },
+    {
+      "id": "rockefeller-edge-1",
+      "type": "edge_case",
+      "prompt": "我们每天都在开会，晨会周会月会都有，但执行还是很慢",
+      "expected_behavior": "可以调用rockefeller-habits skill，优化会议体系和执行节奏",
+      "notes": "无效会议问题，边界模糊"
+    },
+    {
+      "id": "rockefeller-edge-2",
+      "type": "edge_case",
+      "prompt": "我知道要抓执行，但不知道该从哪个习惯开始改",
+      "expected_behavior": "可以调用rockefeller-habits skill，诊断当前状态并选择切入点",
+      "notes": "切入点选择困难"
+    }
+  ]
+}

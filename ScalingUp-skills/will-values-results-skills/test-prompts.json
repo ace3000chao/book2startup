@@ -1,0 +1,76 @@
+{
+  "skill": "will-values-results-skills",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "wvs-001",
+      "type": "should_trigger",
+      "prompt": "招聘时能力和价值观哪个更重要？",
+      "expected_behavior": "应触发will-values-results-skills skill，强调考察顺序和权重分配",
+      "notes": "招聘选拔标准问题"
+    },
+    {
+      "id": "wvs-002",
+      "type": "should_trigger",
+      "prompt": "怎么排序考察维度？意愿、价值观、结果、技能哪个先看？",
+      "expected_behavior": "应触发will-values-results-skills skill，提供明确的考察优先级框架",
+      "notes": "考察维度排序问题"
+    },
+    {
+      "id": "wvs-003",
+      "type": "should_trigger",
+      "prompt": "面试时怎么判断候选人的价值观是否匹配？",
+      "expected_behavior": "应触发will-values-results-skills skill，提供价值观评估的方法和面试问题设计",
+      "notes": "价值观评估方法"
+    },
+    {
+      "id": "wvs-004",
+      "type": "should_trigger",
+      "prompt": "招进来的人能力很强但价值观不合，后续管理很难，怎么在招聘时避免？",
+      "expected_behavior": "应触发will-values-results-skills skill，强调意愿/价值观优先于能力",
+      "notes": "价值观失误的后果"
+    },
+    {
+      "id": "wvs-005",
+      "type": "should_not_trigger",
+      "prompt": "什么是人才选拔？",
+      "expected_behavior": "不应触发，概念性询问",
+      "notes": "基本定义问题"
+    },
+    {
+      "id": "wvs-006",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲面试技巧",
+      "expected_behavior": "不应触发，面试技巧泛谈而非考察维度优先级",
+      "notes": "面试技巧话题"
+    },
+    {
+      "id": "wvs-007",
+      "type": "should_not_trigger",
+      "prompt": "怎么设计结构化面试？",
+      "expected_behavior": "不应触发，面试流程设计而非考察维度权重",
+      "notes": "面试设计话题"
+    },
+    {
+      "id": "wvs-008",
+      "type": "edge_case",
+      "prompt": "价值观很合但能力不足的人要吗？",
+      "expected_behavior": "可触发，分析能力可培养vs不可培养的边界，以及价值观合的长期价值",
+      "notes": "价值观优先于能力的边界"
+    },
+    {
+      "id": "wvs-009",
+      "type": "edge_case",
+      "prompt": "意愿很强但过去业绩不好的人，是不是应该给机会？",
+      "expected_behavior": "可触发，区分意愿与能力的不同评估维度，提供历史业绩与潜力评估的框架",
+      "notes": "意愿强但结果差的人才评估"
+    },
+    {
+      "id": "wvs-010",
+      "type": "edge_case",
+      "prompt": "公司发展阶段不同，考察重点会不会变化？",
+      "expected_behavior": "可触发，指出初创期更看能力/意愿契合，成熟期可更细化价值观/能力分离",
+      "notes": "企业发展阶段适配"
+    }
+  ]
+}

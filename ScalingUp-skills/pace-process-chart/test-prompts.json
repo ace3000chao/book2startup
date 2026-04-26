@@ -1,0 +1,55 @@
+{
+  "skill": "pace-process-chart",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "ppc-001",
+      "type": "should_trigger",
+      "prompt": "跨部门协作总是出现责任真空",
+      "expected_behavior": "触发pace-process-chart skill，建议通过流程图明确责任",
+      "notes": "责任真空问题"
+    },
+    {
+      "id": "ppc-002",
+      "type": "should_trigger",
+      "prompt": "流程不清导致重复工作或遗漏",
+      "expected_behavior": "触发pace-process-chart skill，建议用流程图梳理",
+      "notes": "流程不清晰"
+    },
+    {
+      "id": "ppc-003",
+      "type": "should_trigger",
+      "prompt": "每个部门都说不是自己的责任，问题一直解决不了",
+      "expected_behavior": "触发pace-process-chart skill，通过流程图明确职责边界",
+      "notes": "职责不清导致的推诿"
+    },
+    {
+      "id": "ppc-004",
+      "type": "should_not_trigger",
+      "prompt": "什么是流程图",
+      "expected_behavior": "不触发pace-process-chart skill，应提供流程图基础概念",
+      "notes": "诱饵：纯概念性问题"
+    },
+    {
+      "id": "ppc-005",
+      "type": "should_not_trigger",
+      "prompt": "给我画一个流程图",
+      "expected_behavior": "不触发pace-process-chart skill，应帮助绘制具体流程图",
+      "notes": "诱饵：请求具体交付物"
+    },
+    {
+      "id": "ppc-006",
+      "type": "edge_case",
+      "prompt": "流程太复杂导致执行僵化怎么办",
+      "expected_behavior": "可触发pace-process-chart skill，讨论流程简化与可视化的平衡",
+      "notes": "边界模糊：流程复杂度 vs 执行效率"
+    },
+    {
+      "id": "ppc-007",
+      "type": "edge_case",
+      "prompt": "我们团队小，流程都在脑子里，需要画出来吗",
+      "expected_behavior": "可能不触发pace-process-chart skill，小团队可能不需要复杂流程图",
+      "notes": "边界模糊：团队规模与流程文档需求"
+    }
+  ]
+}

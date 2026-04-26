@@ -1,0 +1,76 @@
+{
+  "skill": "bhag-goal-setting",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "bhag-trigger-1",
+      "type": "should_trigger",
+      "prompt": "我需要定一个5年目标，但不知道该定多高才合适",
+      "expected_behavior": "应调用bhag-goal-setting skill，帮助用户设定一个宏大而有激励性的BHAG目标",
+      "notes": "典型触发场景，用户需要战略愿景设定"
+    },
+    {
+      "id": "bhag-trigger-2",
+      "type": "should_trigger",
+      "prompt": "公司要做战略规划，我想设定一个激励全员的愿景",
+      "expected_behavior": "应调用bhag-goal-setting skill，引导用户设定能激励全员的宏大目标",
+      "notes": "涉及全员愿景设定的场景"
+    },
+    {
+      "id": "bhag-trigger-3",
+      "type": "should_trigger",
+      "prompt": "我们想把公司做成行业第一，但感觉这个目标太虚了不知道怎么落地",
+      "expected_behavior": "应调用bhag-goal-setting skill，将宏大愿景转化为具体的BHAG",
+      "notes": "用户有愿景但缺乏落地方法"
+    },
+    {
+      "id": "bhag-trigger-4",
+      "type": "should_trigger",
+      "prompt": "创业3年了，一直在小打小闹，想定一个大目标让团队有奔头",
+      "expected_behavior": "应调用bhag-goal-setting skill，帮助用户将小目标升级为BHAG",
+      "notes": "成长期企业需要升级目标"
+    },
+    {
+      "id": "bhag-trigger-5",
+      "type": "should_trigger",
+      "prompt": "我们的年目标是上市，但感觉这个目标太空洞了",
+      "expected_behavior": "应调用bhag-goal-setting skill，将IPO这类BHAG具体化、可衡量化",
+      "notes": "IPO作为BHAG需要具体路径"
+    },
+    {
+      "id": "bhag-not-trigger-1",
+      "type": "should_not_trigger",
+      "prompt": "帮我查一下BHAG的定义是什么",
+      "expected_behavior": "不应调用bhag-goal-setting skill，这是纯知识查询",
+      "notes": "纯概念查询，不涉及实际应用"
+    },
+    {
+      "id": "bhag-not-trigger-2",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲谷歌、苹果这些公司的目标是什么",
+      "expected_behavior": "不应调用bhag-goal-setting skill，这是案例分享而非目标设定",
+      "notes": "案例了解请求"
+    },
+    {
+      "id": "bhag-not-trigger-3",
+      "type": "should_not_trigger",
+      "prompt": "BHAG这个词是什么意思",
+      "expected_behavior": "不应调用bhag-goal-setting skill，这是术语解释请求",
+      "notes": "纯术语查询"
+    },
+    {
+      "id": "bhag-edge-1",
+      "type": "edge_case",
+      "prompt": "我已经有一个目标了——5年内开100家店，想看看这个算不算BHAG",
+      "expected_behavior": "可以调用bhag-goal-setting skill来评估用户的目标是否符合BHAG标准",
+      "notes": "目标评估场景，有一定边界模糊性"
+    },
+    {
+      "id": "bhag-edge-2",
+      "type": "edge_case",
+      "prompt": "我定了目标但团队都不信能达到，该怎么让大家相信",
+      "expected_behavior": "可以调用bhag-goal-setting skill，涉及BHAG的沟通和共识建立",
+      "notes": "目标沟通场景，边界模糊"
+    }
+  ]
+}

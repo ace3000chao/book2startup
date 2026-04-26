@@ -1,0 +1,69 @@
+{
+  "skill": "hire-for-culture-fit",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "hcf-st-01",
+      "type": "should_trigger",
+      "prompt": "招进来的人总是融入不了团队，试用期还没过就想离职，怎么办？",
+      "expected_behavior": "触发hire-for-culture-fit，分析文化匹配问题，提供筛选方法",
+      "notes": "新员工融入问题"
+    },
+    {
+      "id": "hcf-st-02",
+      "type": "should_trigger",
+      "prompt": "怎么判断候选人是否匹配公司文化？面试时感觉不错，入职后却格格不入",
+      "expected_behavior": "触发hire-for-culture-fit，提供文化匹配度评估方法",
+      "notes": "面试文化评估场景"
+    },
+    {
+      "id": "hcf-st-03",
+      "type": "should_trigger",
+      "prompt": "我们团队节奏很快，有个候选人能力很强但感觉做事风格不一样，要录取吗？",
+      "expected_behavior": "触发hire-for-culture-fit，讨论能力vs文化契合的权衡",
+      "notes": "能力与文化的取舍"
+    },
+    {
+      "id": "hcf-st-04",
+      "type": "should_trigger",
+      "prompt": "团队里有人能力不错但总和其他同事起冲突，是文化不匹配还是别的原因？",
+      "expected_behavior": "触发hire-for-culture-fit，诊断团队冲突的文化根源",
+      "notes": "团队冲突文化分析"
+    },
+    {
+      "id": "hcf-sn-01",
+      "type": "should_not_trigger",
+      "prompt": "什么是文化契合？给我讲讲这个概念",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "纯概念性问题"
+    },
+    {
+      "id": "hcf-sn-02",
+      "type": "should_not_trigger",
+      "prompt": "怎么培养公司文化？有什么方法可以建立积极的企业文化？",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "文化建设方法请求"
+    },
+    {
+      "id": "hcf-sn-03",
+      "type": "should_not_trigger",
+      "prompt": "帮我设计一套面试问题，用来测试候选人的价值观",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "面试问题设计请求"
+    },
+    {
+      "id": "hcf-ec-01",
+      "type": "edge_case",
+      "prompt": "一个能力很强但文化不太匹配的人要不要招？招了会不会破坏现有团队氛围？",
+      "expected_behavior": "模糊边界：可能触发hire-for-culture-fit，强调文化契合优先；也可能不触发（决策倾向性太明显）",
+      "notes": "能力强但文化不匹配的招聘决策"
+    },
+    {
+      "id": "hcf-ec-02",
+      "type": "edge_case",
+      "prompt": "我们公司正在转型期，文化也在变，怎么判断候选人是否匹配'未来的文化'？",
+      "expected_behavior": "可能触发hire-for-culture-fit，讨论动态文化下的匹配评估",
+      "notes": "转型期文化匹配问题"
+    }
+  ]
+}

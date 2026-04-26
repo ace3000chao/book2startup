@@ -1,0 +1,83 @@
+{
+  "skill": "strategic-thinking-council",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "strat-001",
+      "type": "should_trigger",
+      "prompt": "怎么让高管团队有战略思考时间？",
+      "expected_behavior": "应触发strategic-thinking-council skill，提供关于设立战略议会/高管战略时间块的建议",
+      "notes": "明确询问高管团队的战略思考时间，属于该skill的核心场景"
+    },
+    {
+      "id": "strat-002",
+      "type": "should_trigger",
+      "prompt": "战略决策总是被日常运营拖着走，怎么办？",
+      "expected_behavior": "应触发strategic-thinking-council skill，建议设立独立战略会议机制与运营会议分离",
+      "notes": "核心痛点：运营挤压战略空间，触发战略议会机制建议"
+    },
+    {
+      "id": "strat-003",
+      "type": "should_trigger",
+      "prompt": "我们公司高管总是救火，没有时间想战略，有什么办法？",
+      "expected_behavior": "应触发strategic-thinking-council skill，建议设立固定的战略思考时间和机制",
+      "notes": "典型的高管时间管理问题，战略议会设计可解决"
+    },
+    {
+      "id": "strat-004",
+      "type": "should_trigger",
+      "prompt": "高管团队如何建立系统化的战略规划流程？",
+      "expected_behavior": "应触发strategic-thinking-council skill，提供战略规划机制和流程建议",
+      "notes": "明确要求系统化战略规划流程"
+    },
+    {
+      "id": "strat-005",
+      "type": "should_trigger",
+      "prompt": "CEO总是一个人做战略决策，其他高管没有参与感，怎么改变？",
+      "expected_behavior": "应触发strategic-thinking-council skill，建议战略议会或集体战略决策机制",
+      "notes": "战略参与感问题，集体决策机制可解决"
+    },
+    {
+      "id": "strat-006",
+      "type": "should_not_trigger",
+      "prompt": "什么是战略会议？",
+      "expected_behavior": "不应触发，询问定义而非执行问题",
+      "notes": "仅询问基本概念，未涉及战略议会设计或高管时间分配"
+    },
+    {
+      "id": "strat-007",
+      "type": "should_not_trigger",
+      "prompt": "怎么开董事会？",
+      "expected_behavior": "不应触发，属于公司治理范畴，不是高管战略议会设计",
+      "notes": "董事会治理与高管战略议会是不同主题"
+    },
+    {
+      "id": "strat-008",
+      "type": "should_not_trigger",
+      "prompt": "给我推荐几本战略管理书籍",
+      "expected_behavior": "不应触发，属于知识推荐而非执行指导",
+      "notes": "不涉及具体场景问题"
+    },
+    {
+      "id": "strat-009",
+      "type": "edge_case",
+      "prompt": "高管团队只有3个人，需要战略议会吗？",
+      "expected_behavior": "可触发或给出务实建议：3人规模可直接讨论，但建议保持战略时间块的概念",
+      "notes": "边界场景：规模很小但仍需战略思考机制"
+    },
+    {
+      "id": "strat-010",
+      "type": "edge_case",
+      "prompt": "我们公司扁平化，没有传统高管团队，但有几个联合创始人，怎么做战略？",
+      "expected_behavior": "可以触发，给出适合扁平化组织的战略讨论机制建议",
+      "notes": "组织形态不同但战略思考需求相同"
+    },
+    {
+      "id": "strat-011",
+      "type": "edge_case",
+      "prompt": "战略议会多久开一次最好？月度还是季度？",
+      "expected_behavior": "可触发，给出频率建议但强调深度优先于频率",
+      "notes": "实施细节问题"
+    }
+  ]
+}

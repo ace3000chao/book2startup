@@ -1,0 +1,55 @@
+{
+  "skill": "right-people-right-things",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "rprt-001",
+      "type": "should_trigger",
+      "prompt": "团队有能力但总是做不成事",
+      "expected_behavior": "触发right-people-right-things skill，探讨人才与任务的匹配问题",
+      "notes": "典型症状：能力存在但成果缺失"
+    },
+    {
+      "id": "rprt-002",
+      "type": "should_trigger",
+      "prompt": "人对了为什么事情还是做错",
+      "expected_behavior": "触发right-people-right-things skill，分析任务分配问题",
+      "notes": "关注人岗匹配"
+    },
+    {
+      "id": "rprt-003",
+      "type": "should_trigger",
+      "prompt": "把任务交给某人就总是出问题，换人就好了",
+      "expected_behavior": "触发right-people-right-things skill，分析人才-任务匹配度",
+      "notes": "任务分配不当的具体表现"
+    },
+    {
+      "id": "rprt-004",
+      "type": "should_not_trigger",
+      "prompt": "什么是知人善任",
+      "expected_behavior": "不触发right-people-right-things skill，应提供基础概念",
+      "notes": "诱饵：纯概念性问题"
+    },
+    {
+      "id": "rprt-005",
+      "type": "should_not_trigger",
+      "prompt": "怎么识人用人？给我讲讲方法",
+      "expected_behavior": "不触发right-people-right-things skill，应提供通用方法论",
+      "notes": "诱饵：问方法而非诊断具体问题"
+    },
+    {
+      "id": "rprt-006",
+      "type": "edge_case",
+      "prompt": "一个人能力很强但总是拒绝新任务",
+      "expected_behavior": "可触发right-people-right-things skill，分析动机和能力不匹配",
+      "notes": "边界模糊：能力没问题但意愿有问题"
+    },
+    {
+      "id": "rprt-007",
+      "type": "edge_case",
+      "prompt": "同一个任务换了几个人都不行，是人的问题还是任务本身的问题",
+      "expected_behavior": "可能触发right-people-right-things skill，需要先确认任务设计",
+      "notes": "边界模糊：可能是任务定义问题而非人才问题"
+    }
+  ]
+}

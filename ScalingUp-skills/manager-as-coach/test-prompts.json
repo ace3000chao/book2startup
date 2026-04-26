@@ -1,0 +1,62 @@
+{
+  "skill": "manager-as-coach",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "mac-trigger-1",
+      "type": "should_trigger",
+      "prompt": "怎么从管控型转成教练型管理者，感觉自己管太多太累了",
+      "expected_behavior": "应调用manager-as-coach skill，辅导用户完成管理风格转型",
+      "notes": "管理风格转型场景"
+    },
+    {
+      "id": "mac-trigger-2",
+      "type": "should_trigger",
+      "prompt": "团队成员总需要我决策，我太累了，他们也不成长",
+      "expected_behavior": "应调用manager-as-coach skill，建立教练式辅导培养团队",
+      "notes": "授权与培养困境"
+    },
+    {
+      "id": "mac-trigger-3",
+      "type": "should_trigger",
+      "prompt": "怎么让团队成员主动承担责任，而不是什么都来问我",
+      "expected_behavior": "应调用manager-as-coach skill，从指令式管理转为教练式提问",
+      "notes": "团队主动性培养"
+    },
+    {
+      "id": "mac-trigger-4",
+      "type": "should_trigger",
+      "prompt": "我发现给答案太快会阻碍员工成长，但不知道该怎么引导",
+      "expected_behavior": "应调用manager-as-coach skill，建立GROW模型等教练框架",
+      "notes": "教练技术学习"
+    },
+    {
+      "id": "mac-not-trigger-1",
+      "type": "should_not_trigger",
+      "prompt": "什么是教练式管理？给我讲讲这个概念",
+      "expected_behavior": "不应调用manager-as-coach skill，这是概念定义查询",
+      "notes": "术语解释"
+    },
+    {
+      "id": "mac-not-trigger-2",
+      "type": "should_not_trigger",
+      "prompt": "给我推荐几本关于教练式管理的书",
+      "expected_behavior": "不应调用manager-as-coach skill，这是资源推荐而非方法咨询",
+      "notes": "资源推荐"
+    },
+    {
+      "id": "mac-edge-1",
+      "type": "edge_case",
+      "prompt": "我是一个新晋升的管理者，之前是技术专家，不知道该怎么做",
+      "expected_behavior": "可以调用manager-as-coach skill，建立新晋管理者的教练意识",
+      "notes": "新晋管理者场景"
+    },
+    {
+      "id": "mac-edge-2",
+      "type": "edge_case",
+      "prompt": "有些员工你说再多他也不听，是不是教练式管理不适合所有人",
+      "expected_behavior": "可以调用manager-as-coach skill，根据员工成熟度调整管理风格",
+      "notes": "情境领导场景"
+    }
+  ]
+}

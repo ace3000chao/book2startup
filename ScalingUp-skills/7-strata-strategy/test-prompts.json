@@ -1,0 +1,62 @@
+{
+  "skill": "7-strata-strategy",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "7strata-trigger-1",
+      "type": "should_trigger",
+      "prompt": "我想建立竞争对手无法复制的优势，应该从哪些层面考虑",
+      "expected_behavior": "应调用7-strata-strategy skill，系统讲解7层战略框架",
+      "notes": "典型触发场景，建立护城河"
+    },
+    {
+      "id": "7strata-trigger-2",
+      "type": "should_trigger",
+      "prompt": "我们的护城河到底是什么？怎么才能更宽？",
+      "expected_behavior": "应调用7-strata-strategy skill，帮助用户识别和构建护城河",
+      "notes": "护城河分析场景"
+    },
+    {
+      "id": "7strata-trigger-3",
+      "type": "should_trigger",
+      "prompt": "对手抄袭了我们的产品定价和市场策略，我们该怎么办",
+      "expected_behavior": "应调用7-strata-strategy skill，从更深层战略维度寻找不可复制的优势",
+      "notes": "竞争应对场景"
+    },
+    {
+      "id": "7strata-trigger-4",
+      "type": "should_trigger",
+      "prompt": "我们公司有技术优势但总被模仿，怎么才能建立更深的壁垒",
+      "expected_behavior": "应调用7-strata-strategy skill，从多层面构建竞争壁垒",
+      "notes": "技术优势转化场景"
+    },
+    {
+      "id": "7strata-not-trigger-1",
+      "type": "should_not_trigger",
+      "prompt": "什么是7层战略？能给我讲讲这7个层次吗",
+      "expected_behavior": "不应调用7-strata-strategy skill，这是纯概念讲解请求",
+      "notes": "纯知识查询"
+    },
+    {
+      "id": "7strata-not-trigger-2",
+      "type": "should_not_trigger",
+      "prompt": "给我看看战略的7个层次分别是哪些",
+      "expected_behavior": "不应调用7-strata-strategy skill，这是列表查询而非应用咨询",
+      "notes": "结构化知识查询"
+    },
+    {
+      "id": "7strata-edge-1",
+      "type": "edge_case",
+      "prompt": "我们的战略好像被对手模仿了，但他们只学到了表面，该怎么办",
+      "expected_behavior": "可以调用7-strata-strategy skill，区分表层和深层战略",
+      "notes": "战略深度分析，边界模糊"
+    },
+    {
+      "id": "7strata-edge-2",
+      "type": "edge_case",
+      "prompt": "我已经从产品、价格、渠道做了差异化，但竞争还是越来越激烈",
+      "expected_behavior": "可以调用7-strata-strategy skill，引导用户从更深层寻找差异化",
+      "notes": "部分维度覆盖但需要扩展"
+    }
+  ]
+}

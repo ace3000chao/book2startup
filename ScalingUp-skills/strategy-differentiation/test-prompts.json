@@ -1,0 +1,76 @@
+{
+  "skill": "strategy-differentiation",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "sd-st-01",
+      "type": "should_trigger",
+      "prompt": "我们和竞争对手没什么区别，客户总是货比三家选便宜的，怎么办？",
+      "expected_behavior": "触发strategy-differentiation，提供差异化战略指导，分析如何在同质化竞争中找到独特价值定位",
+      "notes": "典型差异化场景"
+    },
+    {
+      "id": "sd-st-02",
+      "type": "should_trigger",
+      "prompt": "怎么让客户选我们而不是竞争对手？明明产品功能都差不多",
+      "expected_behavior": "触发strategy-differentiation，引导思考价值差异化而非产品功能差异",
+      "notes": "客户选择困境"
+    },
+    {
+      "id": "sd-st-03",
+      "type": "should_trigger",
+      "prompt": "我们在一个红海市场，价格战打不起，怎么活下去？",
+      "expected_behavior": "触发strategy-differentiation，提供红海突围的差异化路径",
+      "notes": "红海竞争场景"
+    },
+    {
+      "id": "sd-st-04",
+      "type": "should_trigger",
+      "prompt": "我们的产品卖给企业客户，但投标时总是输给别人，怎么建立差异化优势？",
+      "expected_behavior": "触发strategy-differentiation，针对B2B场景的差异化战略",
+      "notes": "B2B招投标场景"
+    },
+    {
+      "id": "sd-st-05",
+      "type": "should_trigger",
+      "prompt": "同行开始模仿我们的爆款产品了，我们需要新的差异化方向吗？",
+      "expected_behavior": "触发strategy-differentiation，讨论持续差异化创新的必要性",
+      "notes": "被模仿后的策略调整"
+    },
+    {
+      "id": "sd-sn-01",
+      "type": "should_not_trigger",
+      "prompt": "什么是战略？给我讲讲战略规划的基本概念",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "纯概念性问题，不是实际问题"
+    },
+    {
+      "id": "sd-sn-02",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲迈克尔·波特的三大竞争战略",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "理论知识点查询"
+    },
+    {
+      "id": "sd-sn-03",
+      "type": "should_not_trigger",
+      "prompt": "我们的战略规划文档需要修改格式，谁能帮我看看？",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "文档格式修改，无实质战略问题"
+    },
+    {
+      "id": "sd-ec-01",
+      "type": "edge_case",
+      "prompt": "我们价格比对手低，这算差异化吗？客户好像只在乎便宜",
+      "expected_behavior": "模糊边界：可能触发，提醒价格优势≠差异化，引导思考可持续性；也可能不触发，取决于上下文",
+      "notes": "价格优势是否算差异化——需要区分战术与战略"
+    },
+    {
+      "id": "sd-ec-02",
+      "type": "edge_case",
+      "prompt": "差异化听起来很对，但我们的资源有限，到底应该差异化还是规模化？",
+      "expected_behavior": "模糊边界：可能触发strategy-differentiation或strategy-two-tests，取决于强调的是'方向选择'还是'战略取舍'",
+      "notes": "差异化vs规模化的战略选择"
+    }
+  ]
+}

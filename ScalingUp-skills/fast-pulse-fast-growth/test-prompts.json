@@ -1,0 +1,55 @@
+{
+  "skill": "fast-pulse-fast-growth",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "fpfp-001",
+      "type": "should_trigger",
+      "prompt": "怎么让团队保持高效运转",
+      "expected_behavior": "触发fast-pulse-fast-growth skill，探讨节奏与增长的关系",
+      "notes": "关注组织效率"
+    },
+    {
+      "id": "fpfp-002",
+      "type": "should_trigger",
+      "prompt": "节奏太慢，组织开始懈怠了",
+      "expected_behavior": "触发fast-pulse-fast-growth skill，建议加快节奏",
+      "notes": "组织懈怠症状"
+    },
+    {
+      "id": "fpfp-003",
+      "type": "should_trigger",
+      "prompt": "感觉公司最近死气沉沉的，怎么办",
+      "expected_behavior": "触发fast-pulse-fast-growth skill，分析组织活力问题",
+      "notes": "组织活力下降"
+    },
+    {
+      "id": "fpfp-004",
+      "type": "should_not_trigger",
+      "prompt": "什么是快节奏",
+      "expected_behavior": "不触发fast-pulse-fast-growth skill，应提供基础概念",
+      "notes": "诱饵：纯概念性问题"
+    },
+    {
+      "id": "fpfp-005",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲敏捷管理",
+      "expected_behavior": "不触发fast-pulse-fast-growth skill，应提供敏捷管理概述",
+      "notes": "诱饵：问方法论而非诊断问题"
+    },
+    {
+      "id": "fpfp-006",
+      "type": "edge_case",
+      "prompt": "节奏太快导致错误频发怎么办",
+      "expected_behavior": "可触发fast-pulse-fast-growth skill，需要平衡速度与质量",
+      "notes": "边界模糊：快节奏的副作用"
+    },
+    {
+      "id": "fpfp-007",
+      "type": "edge_case",
+      "prompt": "我们是小团队，本来就很快了，还需要刻意加快吗",
+      "expected_behavior": "可能不触发fast-pulse-fast-growth skill，小团队天然快节奏",
+      "notes": "边界模糊：规模与节奏的关系"
+    }
+  ]
+}

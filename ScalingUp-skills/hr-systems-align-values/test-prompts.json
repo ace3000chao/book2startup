@@ -1,0 +1,76 @@
+{
+  "skill": "hr-systems-align-values",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "hr-sys-001",
+      "type": "should_trigger",
+      "prompt": "核心价值观定了但落不了地，有什么办法？",
+      "expected_behavior": "应触发hr-systems-align-values skill，强调HR制度与价值观对齐",
+      "notes": "文化落地难的典型问题"
+    },
+    {
+      "id": "hr-sys-002",
+      "type": "should_trigger",
+      "prompt": "怎么让文化渗透到每个制度里？",
+      "expected_behavior": "应触发hr-systems-align-values skill，提供制度与文化对齐的具体方法",
+      "notes": "明确要求文化制度化"
+    },
+    {
+      "id": "hr-sys-003",
+      "type": "should_trigger",
+      "prompt": "我们倡导创新但考核只看KPI，怎么让制度支持价值观？",
+      "expected_behavior": "应触发hr-systems-align-values skill，指出考核制度与价值观的冲突及调整方向",
+      "notes": "制度与文化脱节的典型场景"
+    },
+    {
+      "id": "hr-sys-004",
+      "type": "should_trigger",
+      "prompt": "招聘进来的人价值观都不合，怎么从制度上解决？",
+      "expected_behavior": "应触发hr-systems-align-values skill，建议在招聘和晋升环节嵌入价值观考察",
+      "notes": "人才筛选机制与价值观对齐"
+    },
+    {
+      "id": "hr-sys-005",
+      "type": "should_not_trigger",
+      "prompt": "什么是企业文化？",
+      "expected_behavior": "不应触发，概念性询问",
+      "notes": "纯定义问题"
+    },
+    {
+      "id": "hr-sys-006",
+      "type": "should_not_trigger",
+      "prompt": "怎么建文化？",
+      "expected_behavior": "不应触发，太宽泛，非制度对齐角度",
+      "notes": "文化建设整体话题"
+    },
+    {
+      "id": "hr-sys-007",
+      "type": "should_not_trigger",
+      "prompt": "给我们公司取个文化名字，比如华为的狼性文化",
+      "expected_behavior": "不应触发，文化命名而非制度对齐",
+      "notes": "文化建设表面工作"
+    },
+    {
+      "id": "hr-sys-008",
+      "type": "edge_case",
+      "prompt": "价值观和业务冲突时怎么办？比如我们说客户第一但利润下滑严重",
+      "expected_behavior": "可触发，分析价值观与短期业务张力的根源，提供在制度层面重新校准的建议",
+      "notes": "价值观与业务权衡的边界场景"
+    },
+    {
+      "id": "hr-sys-009",
+      "type": "edge_case",
+      "prompt": "价值观考核怎么量化？会不会太主观？",
+      "expected_behavior": "可触发，提供行为化指标设计方法，将价值观转化为可观察的行为",
+      "notes": "价值观可操作化难题"
+    },
+    {
+      "id": "hr-sys-010",
+      "type": "edge_case",
+      "prompt": "收购新公司后，两家文化不同，HR系统怎么整合？",
+      "expected_behavior": "可触发，提供并购后文化整合和HR体系对齐的阶段性方法",
+      "notes": "并购场景"
+    }
+  ]
+}

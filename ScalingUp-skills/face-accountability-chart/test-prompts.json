@@ -1,0 +1,69 @@
+{
+  "skill": "face-accountability-chart",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "face-trigger-1",
+      "type": "should_trigger",
+      "prompt": "公司人越来越多了，但不知道谁该负责什么",
+      "expected_behavior": "应调用face-accountability-chart skill，建立清晰的责任分工体系",
+      "notes": "典型组织混乱场景"
+    },
+    {
+      "id": "face-trigger-2",
+      "type": "should_trigger",
+      "prompt": "组织架构调整后怎么确保责权清晰，避免互相推诿",
+      "expected_behavior": "应调用face-accountability-chart skill，重新梳理RACI或FACe责任矩阵",
+      "notes": "组织调整后的责任明确场景"
+    },
+    {
+      "id": "face-trigger-3",
+      "type": "should_trigger",
+      "prompt": "公司开会时大家都在推卸责任，怎么解决这个问题",
+      "expected_behavior": "应调用face-accountability-chart skill，建立明确的责任归属机制",
+      "notes": "责任不清导致的会议低效"
+    },
+    {
+      "id": "face-trigger-4",
+      "type": "should_trigger",
+      "prompt": "新项目上线总是出问题，研发怪运营，运营怪产品，怎么破",
+      "expected_behavior": "应调用face-accountability-chart skill，建立跨部门协作的责任定义",
+      "notes": "跨部门责任纠纷"
+    },
+    {
+      "id": "face-not-trigger-1",
+      "type": "should_not_trigger",
+      "prompt": "给我看一下我们公司的组织架构图",
+      "expected_behavior": "不应调用face-accountability-chart skill，这是纯信息查看请求",
+      "notes": "组织图查看"
+    },
+    {
+      "id": "face-not-trigger-2",
+      "type": "should_not_trigger",
+      "prompt": "什么是FACe？给我解释一下",
+      "expected_behavior": "不应调用face-accountability-chart skill，这是概念解释请求",
+      "notes": "术语解释"
+    },
+    {
+      "id": "face-not-trigger-3",
+      "type": "should_not_trigger",
+      "prompt": "能帮我画一个组织架构图吗",
+      "expected_behavior": "不应调用face-accountability-chart skill，这是绘图请求而非责任分析",
+      "notes": "制图请求"
+    },
+    {
+      "id": "face-edge-1",
+      "type": "edge_case",
+      "prompt": "我有一个核心员工很优秀，但我不知道该把他放在什么位置最合适",
+      "expected_behavior": "可以调用face-accountability-chart skill，评估岗位与人才的匹配",
+      "notes": "人才配置场景，边界模糊"
+    },
+    {
+      "id": "face-edge-2",
+      "type": "edge_case",
+      "prompt": "我们公司有2个副总实力差不多，但只能留一个负责业务，该怎么选",
+      "expected_behavior": "可以调用face-accountability-chart skill，通过责任岗位设计来做决策",
+      "notes": "人才抉择场景"
+    }
+  ]
+}

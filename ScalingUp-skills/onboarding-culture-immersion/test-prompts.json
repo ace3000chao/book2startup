@@ -1,0 +1,76 @@
+{
+  "skill": "onboarding-culture-immersion",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "onboard-001",
+      "type": "should_trigger",
+      "prompt": "新员工融入太慢，半年了还像外人，怎么改善？",
+      "expected_behavior": "应触发onboarding-culture-immersion skill，强调文化沉浸式入职设计",
+      "notes": "典型的新员工融入问题"
+    },
+    {
+      "id": "onboard-002",
+      "type": "should_trigger",
+      "prompt": "怎么让新员工快速理解公司文化？",
+      "expected_behavior": "应触发onboarding-culture-immersion skill，提供文化沉浸式入职方案",
+      "notes": "文化理解速度问题"
+    },
+    {
+      "id": "onboard-003",
+      "type": "should_trigger",
+      "prompt": "新员工总是说感觉不到公司的文化，面试说的和实际不一样",
+      "expected_behavior": "应触发onboarding-culture-immersion skill，指出文化真实传递问题，建议沉浸式体验设计",
+      "notes": "文化落差问题"
+    },
+    {
+      "id": "onboard-004",
+      "type": "should_trigger",
+      "prompt": "入职培训做了三天就结束了，新员工还是不了解公司",
+      "expected_behavior": "应触发onboarding-culture-immersion skill，建议延长文化沉浸时间和方式",
+      "notes": "入职培训不足场景"
+    },
+    {
+      "id": "onboard-005",
+      "type": "should_not_trigger",
+      "prompt": "什么是入职培训？",
+      "expected_behavior": "不应触发，概念性询问",
+      "notes": "基本定义问题"
+    },
+    {
+      "id": "onboard-006",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲新员工培训",
+      "expected_behavior": "不应触发，内容太宽泛，非聚焦文化沉浸",
+      "notes": "培训内容概述而非文化深度"
+    },
+    {
+      "id": "onboard-007",
+      "type": "should_not_trigger",
+      "prompt": "入职培训PPT模板哪里有？",
+      "expected_behavior": "不应触发，工具/资源请求",
+      "notes": "资源类请求"
+    },
+    {
+      "id": "onboard-008",
+      "type": "edge_case",
+      "prompt": "远程入职怎么进行文化灌输？",
+      "expected_behavior": "可触发，提供远程文化沉浸的具体方法和工具建议",
+      "notes": "远程办公场景下的文化传递挑战"
+    },
+    {
+      "id": "onboard-009",
+      "type": "edge_case",
+      "prompt": "新员工第一周应该做什么？有没有标准流程？",
+      "expected_behavior": "可触发，给出文化沉浸为核心的第一周日程建议",
+      "notes": "入职第一周设计问题"
+    },
+    {
+      "id": "onboard-010",
+      "type": "edge_case",
+      "prompt": "公司文化很独特，靠口耳相传，但扩张后传不下去了怎么办？",
+      "expected_behavior": "可触发，建议将隐性文化显性化、系统化，建立可规模的入职文化沉浸机制",
+      "notes": "规模化的文化传承问题"
+    }
+  ]
+}

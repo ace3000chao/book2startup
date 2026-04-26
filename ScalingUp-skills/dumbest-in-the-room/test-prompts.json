@@ -1,0 +1,55 @@
+{
+  "skill": "dumbest-in-the-room",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "dumbest-001",
+      "type": "should_trigger",
+      "prompt": "作为CEO越来越累，因为团队总要我做决定",
+      "expected_behavior": "触发dumbest-in-the-room skill，探讨CEO角色定位和授权问题",
+      "notes": "典型症状：决策瓶颈在CEO层面"
+    },
+    {
+      "id": "dumbest-002",
+      "type": "should_trigger",
+      "prompt": "什么事都要我拍板，授权不下去怎么办",
+      "expected_behavior": "触发dumbest-in-the-room skill，提供授权的具体建议",
+      "notes": "授权障碍的具体表现"
+    },
+    {
+      "id": "dumbest-003",
+      "type": "should_trigger",
+      "prompt": "团队遇到问题就停下来等我指示",
+      "expected_behavior": "触发dumbest-in-the-room skill，分析团队决策依赖问题",
+      "notes": "团队自主决策能力缺失"
+    },
+    {
+      "id": "dumbest-004",
+      "type": "should_not_trigger",
+      "prompt": "什么是授权？给我讲讲授权的概念",
+      "expected_behavior": "不触发dumbest-in-the-room skill，应提供基础概念解释",
+      "notes": "诱饵：纯概念性问题，不是具体困境"
+    },
+    {
+      "id": "dumbest-005",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲CEO的角色和职责",
+      "expected_behavior": "不触发dumbest-in-the-room skill，应提供CEO角色概述",
+      "notes": "诱饵：问角色定义而非具体问题"
+    },
+    {
+      "id": "dumbest-006",
+      "type": "edge_case",
+      "prompt": "我不在的时候团队就停止运转了",
+      "expected_behavior": "可触发dumbest-in-the-room skill，识别为严重授权问题",
+      "notes": "边界模糊：这是极度恶化的症状，但仍属于该skill范畴"
+    },
+    {
+      "id": "dumbest-007",
+      "type": "edge_case",
+      "prompt": "有些决策确实需要我来做，怎么区分哪些该授权",
+      "expected_behavior": "可触发dumbest-in-the-room skill，但需要区分决策类型",
+      "notes": "边界模糊：合理保留决策权 vs 过度集权"
+    }
+  ]
+}

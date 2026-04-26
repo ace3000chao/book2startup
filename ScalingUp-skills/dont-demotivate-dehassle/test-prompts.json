@@ -1,0 +1,55 @@
+{
+  "skill": "dont-demotivate-dehassle",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "ddd-001",
+      "type": "should_trigger",
+      "prompt": "团队有能力但总是积极性不高",
+      "expected_behavior": "触发dont-demotivate-dehassle skill，关注去障碍而非激励",
+      "notes": "典型症状：能力存在但动力不足"
+    },
+    {
+      "id": "ddd-002",
+      "type": "should_trigger",
+      "prompt": "怎么让团队发挥全部潜力",
+      "expected_behavior": "触发dont-demotivate-dehassle skill，强调移除消极因素",
+      "notes": "潜力发挥"
+    },
+    {
+      "id": "ddd-003",
+      "type": "should_trigger",
+      "prompt": "员工总是说自己有心无力，环境不允许",
+      "expected_behavior": "触发dont-demotivate-dehassle skill，分析组织障碍",
+      "notes": "组织障碍导致积极性下降"
+    },
+    {
+      "id": "ddd-004",
+      "type": "should_not_trigger",
+      "prompt": "什么是激励",
+      "expected_behavior": "不触发dont-demotivate-dehassle skill，应提供激励基础概念",
+      "notes": "诱饵：纯概念性问题"
+    },
+    {
+      "id": "ddd-005",
+      "type": "should_not_trigger",
+      "prompt": "怎么提高积极性？给我讲讲激励方法",
+      "expected_behavior": "不触发dont-demotivate-dehassle skill，应提供激励方法",
+      "notes": "诱饵：问激励而非去障碍"
+    },
+    {
+      "id": "ddd-006",
+      "type": "edge_case",
+      "prompt": "钱给够了为什么还是没干劲",
+      "expected_behavior": "可触发dont-demotivate-dehassle skill，说明非金钱障碍",
+      "notes": "边界模糊：金钱激励的局限性"
+    },
+    {
+      "id": "ddd-007",
+      "type": "edge_case",
+      "prompt": "是员工本身不积极，还是有什么东西在打击他们",
+      "expected_behavior": "可触发dont-demotivate-dehassle skill，帮助诊断根本原因",
+      "notes": "边界模糊：内因 vs 外因"
+    }
+  ]
+}

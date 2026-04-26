@@ -1,0 +1,55 @@
+{
+  "skill": "coaching-returns",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "cr-001",
+      "type": "should_trigger",
+      "prompt": "核心人才流失率高",
+      "expected_behavior": "触发coaching-returns skill，强调教练辅导对留人的价值",
+      "notes": "人才流失问题"
+    },
+    {
+      "id": "cr-002",
+      "type": "should_trigger",
+      "prompt": "怎么留住和培养优秀人才",
+      "expected_behavior": "触发coaching-returns skill，介绍教练辅导的回报",
+      "notes": "人才培养"
+    },
+    {
+      "id": "cr-003",
+      "type": "should_trigger",
+      "prompt": "高潜员工总是不久就离职，怎么留住他们",
+      "expected_behavior": "触发coaching-returns skill，分析辅导与留人关系",
+      "notes": "高潜人才流失"
+    },
+    {
+      "id": "cr-004",
+      "type": "should_not_trigger",
+      "prompt": "什么是人才发展",
+      "expected_behavior": "不触发coaching-returns skill，应提供人才发展基础概念",
+      "notes": "诱饵：纯概念性问题"
+    },
+    {
+      "id": "cr-005",
+      "type": "should_not_trigger",
+      "prompt": "给我讲讲培训体系",
+      "expected_behavior": "不触发coaching-returns skill，应提供培训体系概述",
+      "notes": "诱饵：问体系而非辅导回报"
+    },
+    {
+      "id": "cr-006",
+      "type": "edge_case",
+      "prompt": "普通员工也需要教练吗",
+      "expected_behavior": "可触发coaching-returns skill，讨论教练辅导的普遍性 vs 针对性",
+      "notes": "边界模糊：全员教练 vs 重点培养"
+    },
+    {
+      "id": "cr-007",
+      "type": "edge_case",
+      "prompt": "我花了很多时间辅导员工，但他们还是走了，教练有用吗",
+      "expected_behavior": "可触发coaching-returns skill，需要区分教练失败原因",
+      "notes": "边界模糊：教练本身 vs 其他留人因素"
+    }
+  ]
+}

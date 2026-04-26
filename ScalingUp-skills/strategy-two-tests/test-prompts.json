@@ -1,0 +1,76 @@
+{
+  "skill": "strategy-two-tests",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "st-st-01",
+      "type": "should_trigger",
+      "prompt": "怎么判断我们的战略是否足够好？有没有什么标准可以检验？",
+      "expected_behavior": "触发strategy-two-tests，介绍战略的两个核心测试（行业吸引力和战略地位）",
+      "notes": "战略验证标准场景"
+    },
+    {
+      "id": "st-st-02",
+      "type": "should_trigger",
+      "prompt": "战略制定后怎么验证？总觉得哪里不对但说不出来",
+      "expected_behavior": "触发strategy-two-tests，提供战略检验框架",
+      "notes": "战略自检场景"
+    },
+    {
+      "id": "st-st-03",
+      "type": "should_trigger",
+      "prompt": "我们花三个月做的战略规划，领导觉得不错，但执行时总是走偏，怎么验证战略质量？",
+      "expected_behavior": "触发strategy-two-tests，用两测试框架评估现有战略",
+      "notes": "战略执行偏差场景"
+    },
+    {
+      "id": "st-st-04",
+      "type": "should_trigger",
+      "prompt": "要不要进入一个新市场？有什么方法可以提前验证这个决定是否正确？",
+      "expected_behavior": "触发strategy-two-tests，用两测试框架评估市场进入决策",
+      "notes": "新市场进入决策场景"
+    },
+    {
+      "id": "st-sn-01",
+      "type": "should_not_trigger",
+      "prompt": "Gary Hamel是谁？他是哪个公司的？",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "人物背景查询"
+    },
+    {
+      "id": "st-sn-02",
+      "type": "should_not_trigger",
+      "prompt": "什么是战略测试？给我科普一下",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "纯概念性问题"
+    },
+    {
+      "id": "st-sn-03",
+      "type": "should_not_trigger",
+      "prompt": "帮我查一下我们公司去年的战略规划文档在哪里",
+      "expected_behavior": "不触发，保持沉默或说'这个我不清楚'",
+      "notes": "文档查找请求"
+    },
+    {
+      "id": "st-ec-01",
+      "type": "edge_case",
+      "prompt": "我们的战略通过了两个测试，但半年后还是失败了，为什么？",
+      "expected_behavior": "模糊边界：可能触发也可能不触发，取决于后续问题是否指向执行层面",
+      "notes": "通过测试但战略仍失败的矛盾场景"
+    },
+    {
+      "id": "st-ec-02",
+      "type": "edge_case",
+      "prompt": "两个测试都通过了，但团队觉得战略太保守，这个矛盾怎么处理？",
+      "expected_behavior": "可能触发strategy-two-tests，也可能是leadership-triple（关于战略共识）",
+      "notes": "理性测试vs感性判断的冲突"
+    },
+    {
+      "id": "st-ec-03",
+      "type": "edge_case",
+      "prompt": "我们的行业变化太快，两个测试做完市场条件就变了，还要重新测吗？",
+      "expected_behavior": "可能触发，也可能需要结合swt-analysis讨论行业动态",
+      "notes": "快速变化行业的战略测试频率问题"
+    }
+  ]
+}

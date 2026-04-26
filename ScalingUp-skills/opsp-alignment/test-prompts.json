@@ -1,0 +1,62 @@
+{
+  "skill": "opsp-alignment",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "opsp-trigger-1",
+      "type": "should_trigger",
+      "prompt": "怎么让全公司上下对齐一个战略，各个部门各干各的",
+      "expected_behavior": "应调用opsp-alignment skill，建立全员战略对齐机制",
+      "notes": "战略对齐核心场景"
+    },
+    {
+      "id": "opsp-trigger-2",
+      "type": "should_trigger",
+      "prompt": "高管和基层对战略理解不一致，开了很多会但还是各说各话",
+      "expected_behavior": "应调用opsp-alignment skill，建立战略沟通和转化系统",
+      "notes": "战略理解偏差场景"
+    },
+    {
+      "id": "opsp-trigger-3",
+      "type": "should_trigger",
+      "prompt": "公司的战略听起来很好，但到了执行层面就变样了",
+      "expected_behavior": "应调用opsp-alignment skill，解决战略到执行的最后一公里",
+      "notes": "战略执行衰减"
+    },
+    {
+      "id": "opsp-trigger-4",
+      "type": "should_trigger",
+      "prompt": "我们部门做的事好像跟公司战略没什么关系，怎么办",
+      "expected_behavior": "应调用opsp-alignment skill，建立部门战略连接",
+      "notes": "部门战略脱节"
+    },
+    {
+      "id": "opsp-not-trigger-1",
+      "type": "should_not_trigger",
+      "prompt": "OPSP是什么？给我解释一下",
+      "expected_behavior": "不应调用opsp-alignment skill，这是概念术语解释",
+      "notes": "术语查询"
+    },
+    {
+      "id": "opsp-not-trigger-2",
+      "type": "should_not_trigger",
+      "prompt": "能给我一个一页纸的战略模板吗",
+      "expected_behavior": "不应调用opsp-alignment skill，这是模板提供请求而非对齐咨询",
+      "notes": "模板请求"
+    },
+    {
+      "id": "opsp-edge-1",
+      "type": "edge_case",
+      "prompt": "我们的战略经常变，员工跟不上，这种情况下怎么保持对齐",
+      "expected_behavior": "可以调用opsp-alignment skill，在动态战略中建立敏捷对齐机制",
+      "notes": "动态战略环境，边界模糊"
+    },
+    {
+      "id": "opsp-edge-2",
+      "type": "edge_case",
+      "prompt": "老板定的战略太抽象，底下人不知道具体该做什么",
+      "expected_behavior": "可以调用opsp-alignment skill，将抽象战略转化为可操作目标",
+      "notes": "战略翻译场景"
+    }
+  ]
+}
