@@ -138,7 +138,7 @@
 
 ### ScalingUp-Skills
 
-![Scaling Up Skills](../post/postSU.jpg)
+![Scaling Up Skills](post/postSU.jpg)
 
 ---
 
