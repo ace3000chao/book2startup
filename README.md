@@ -68,7 +68,7 @@
 
 ![庄子Skills](post/postZZ.jpg)
 
----
+-
 
 ### 孙子兵法Skills（18个可执行框架）
 
@@ -95,7 +95,7 @@
 
 ![孙子兵法Skills](post/postSZBF.jpg)
 
----
+-
 
 ### 精益创业Skills（8个可执行框架）
 
@@ -123,10 +123,13 @@
 
 ![精益创业Skills](post/postJYCY.jpg)
 
+-
 
 ### 易经Skills
 
-![易经Skills](post/postYJT.jpg)
+![易经Skills](post/postYJ.jpg)
+
+-
 
 ### 菜根谭Skills
 
