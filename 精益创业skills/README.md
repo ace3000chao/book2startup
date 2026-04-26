@@ -2,9 +2,10 @@
 
 > 用《精益创业》的千年商业智慧武装你的AI Agent，让它学会科学创业
 
-[English README below]
-
 ---
+
+![精益创业Skills](../post/postJYCY.jpg)
+
 
 ## 🎯 这套Skills能解决什么问题？
 
