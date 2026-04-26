@@ -4,6 +4,8 @@
 
 ---
 
+![孙子兵法Skills](../post/postSZBF.jpg)
+
 ## 🎯 这套Skills能解决什么问题？
 
 在创业路上，你是否遇到过这些问题？
